@@ -1,0 +1,506 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          7,
+          4
+        ]
+      ],
+      "date-time": "2026-07-04T06:55:43Z",
+      "timestamp": 1783148143494,
+      "version": "3.54.6"
+    },
+    "reference-count": 35,
+    "publisher": "Informa UK Limited",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              12,
+              13
+            ]
+          ],
+          "date-time": "2022-12-13T00:00:00Z",
+          "timestamp": 1670889600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.tandfonline.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Geomatics, Natural Hazards and Risk"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          31
+        ]
+      ]
+    },
+    "DOI": "10.1080/19475705.2022.2155998",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          13
+        ]
+      ],
+      "date-time": "2022-12-13T11:01:05Z",
+      "timestamp": 1670929265000
+    },
+    "page": "76-94",
+    "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+    "source": "Crossref",
+    "is-referenced-by-count": 24,
+    "title": [
+      "Deep neural network for oil spill detection using Sentinel-1 data: application to Egyptian coastal regions"
+    ],
+    "prefix": "10.1080",
+    "volume": "14",
+    "author": [
+      {
+        "given": "Samira",
+        "family": "Ahmed",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Public Works Engineering Department, Mansoura University, Mansoura, Egypt"
+          },
+          {
+            "name": "Civil Engineering Department, Delta Higher Institute for Engineering and Technology, Talkha, Egypt"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8088-8748",
+        "authenticated-orcid": false,
+        "given": "Tamer",
+        "family": "ElGharbawi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Faculty of Engineering, Suez Canal University, Ismailia, Egypt"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-2328-5822",
+        "authenticated-orcid": false,
+        "given": "Mahmoud",
+        "family": "Salah",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Department of Surveying Engineering, Faculty of Engineering Shoubra, Benha University, Banha, Egypt"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5104-1246",
+        "authenticated-orcid": false,
+        "given": "Mahmoud",
+        "family": "El-Mewafi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Public Works Engineering Department, Mansoura University, Mansoura, Egypt"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          13
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_3_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2021.3075951"
+      },
+      {
+        "key": "e_1_3_3_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2017.09.002"
+      },
+      {
+        "key": "e_1_3_3_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s40537-021-00444-8"
+      },
+      {
+        "key": "e_1_3_3_5_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Artuso F Guijt I. 2020. Global megatrends: mapping the forces that affect us all. OXFAM Papers 12. https://oxfamilibrary.openrepository.com/bitstream/handle/10546/620942/dp-global-megatrends-mapping-forces-affect-us-all-310120-en.pdf?sequence=1&isAllowed=y.",
+        "DOI": "10.21201/2020.5648"
+      },
+      {
+        "key": "e_1_3_3_6_1",
+        "unstructured": "Badrinarayanan V Kendall A Cipolla R. 2015. SegNet: a deep convolutional encoder-decoder architecture for image segmentation . Retrieved March 15 2022 from http://mi.eng.cam.ac.uk/projects/segnet/."
+      },
+      {
+        "key": "e_1_3_3_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2004.11.015"
+      },
+      {
+        "key": "e_1_3_3_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5194/gmd-7-1247-2014"
+      },
+      {
+        "key": "e_1_3_3_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs13142733"
+      },
+      {
+        "issue": "1",
+        "key": "e_1_3_3_10_1",
+        "first-page": "599",
+        "article-title": "Digital transformation as a stimulator for maritime competitiveness: a suez canal case study",
+        "volume": "2",
+        "author": "El-Sakty KA",
+        "year": "2021",
+        "unstructured": "El-Sakty KA, Ezzat AM. 2021. Digital transformation as a stimulator for maritime competitiveness: a suez canal case study. Sci J Financial Commercial Stud Res (SJFCSR). 2(1):599\u2013642.",
+        "journal-title": "Sci J Financial Commercial Stud Res (SJFCSR)"
+      },
+      {
+        "key": "e_1_3_3_11_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1579/0044-7447-30.4.222"
+      },
+      {
+        "key": "e_1_3_3_12_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1002/lob.10036"
+      },
+      {
+        "issue": "12",
+        "key": "e_1_3_3_13_1",
+        "first-page": "2670",
+        "article-title": "Dark spot detection in SAR images of oil spill using segnet",
+        "volume": "8",
+        "author": "Guo H",
+        "year": "2018",
+        "unstructured": "Guo H, Wei G, An J. 2018. Dark spot detection in SAR images of oil spill using segnet. Appl Sci (Switzerland). 8(12):2670.",
+        "journal-title": "Appl Sci (Switzerland)"
+      },
+      {
+        "key": "e_1_3_3_14_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.neunet.2020.05.005"
+      },
+      {
+        "key": "e_1_3_3_15_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s21196645"
+      },
+      {
+        "key": "e_1_3_3_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs11151762"
+      },
+      {
+        "key": "e_1_3_3_17_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kumar D. 2021. Urban objects detection from C-band synthetic aperture radar (SAR) satellite images through simulating filter properties. Sci Rep.11(1):1\u201324.",
+        "DOI": "10.1038/s41598-021-85121-9"
+      },
+      {
+        "key": "e_1_3_3_18_1",
+        "first-page": "1033",
+        "article-title": "OpenRisk: a risk management toolbox for prevention and response of pollution from maritime activities",
+        "volume": "77",
+        "author": "Laine V",
+        "year": "2019",
+        "unstructured": "Laine V, Goerlandt F, Baldauf M, Mehdi RA, Koldenhof Y. 2019. OpenRisk: a risk management toolbox for prevention and response of pollution from maritime activities. Chem Eng Trans. 77:1033\u20131038.",
+        "journal-title": "Chem Eng Trans"
+      },
+      {
+        "key": "e_1_3_3_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs13122378"
+      },
+      {
+        "key": "e_1_3_3_20_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11220-016-0152-5"
+      },
+      {
+        "key": "e_1_3_3_21_1",
+        "first-page": "1",
+        "article-title": "Oil spill detection based on deep convolutional neural networks using polarimetric scattering information from Sentinel-1 SAR images",
+        "volume": "60",
+        "author": "Ma X",
+        "year": "2021",
+        "unstructured": "Ma X, Xu J, Wu P, Kong P. 2021. Oil spill detection based on deep convolutional neural networks using polarimetric scattering information from Sentinel-1 SAR images. IEEE Trans Geosci Remote Sens. 60:1\u201313.",
+        "journal-title": "IEEE Trans Geosci Remote Sens"
+      },
+      {
+        "key": "e_1_3_3_22_1",
+        "first-page": "379",
+        "article-title": "Oil spill identification and monitoring from Sentinel-1 SAR satellite earth observations: a machine learning approach",
+        "volume": "86",
+        "author": "Magr\u00ec S",
+        "year": "2021",
+        "unstructured": "Magr\u00ec S, Vairo T, Reverberi A, Fabiano B. 2021. Oil spill identification and monitoring from Sentinel-1 SAR satellite earth observations: a machine learning approach. Chem Eng Trans. 86:379\u2013384.",
+        "journal-title": "Chem Eng Trans"
+      },
+      {
+        "issue": "19",
+        "key": "e_1_3_3_23_1",
+        "first-page": "9255",
+        "article-title": "Patch-wise infrared and visible image fusion using spatial adaptive weights",
+        "volume": "11",
+        "author": "Minahil S",
+        "year": "2021",
+        "unstructured": "Minahil S, Kim JH, Hwang Y. 2021. Patch-wise infrared and visible image fusion using spatial adaptive weights. Appl Sci (Switzerland). 11(19):9255.",
+        "journal-title": "Appl Sci (Switzerland)"
+      },
+      {
+        "key": "e_1_3_3_24_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Oussidi A Elhassouny A. 2018. Deep generative models: survey. 2018 International Conference on Intelligent Systems and Computer Vision ISCV 2018 2018 May 1\u20138.",
+        "DOI": "10.1109/ISACV.2018.8354080"
+      },
+      {
+        "key": "e_1_3_3_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TGRS.2020.3033816"
+      },
+      {
+        "key": "e_1_3_3_26_1",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ronneberger O Fischer P Brox T. 2015. U-net: convolutional networks for biomedical image segmentation. Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics). Vol. 9351. p. 234\u2013241.",
+        "DOI": "10.1007/978-3-319-24574-4_28"
+      },
+      {
+        "key": "e_1_3_3_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s40537-021-00414-0"
+      },
+      {
+        "key": "e_1_3_3_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2022.117846"
+      },
+      {
+        "key": "e_1_3_3_29_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2013.2251864"
+      },
+      {
+        "key": "e_1_3_3_30_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/19475705.2018.1549110"
+      },
+      {
+        "key": "e_1_3_3_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs14132956"
+      },
+      {
+        "key": "e_1_3_3_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1186/s40662-022-00277-3"
+      },
+      {
+        "key": "e_1_3_3_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TIP.2002.804276"
+      },
+      {
+        "key": "e_1_3_3_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs14163900"
+      },
+      {
+        "key": "e_1_3_3_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.psep.2022.02.050"
+      },
+      {
+        "key": "e_1_3_3_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s20226673"
+      }
+    ],
+    "container-title": [
+      "Geomatics, Natural Hazards and Risk"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/19475705.2022.2155998",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          16
+        ]
+      ],
+      "date-time": "2023-12-16T09:08:55Z",
+      "timestamp": 1702717735000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.tandfonline.com/doi/full/10.1080/19475705.2022.2155998"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          13
+        ]
+      ]
+    },
+    "references-count": 35,
+    "journal-issue": {
+      "issue": "1",
+      "published-print": {
+        "date-parts": [
+          [
+            2023,
+            12,
+            31
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1080/19475705.2022.2155998"
+    ],
+    "URL": "https://doi.org/10.1080/19475705.2022.2155998",
+    "relation": {},
+    "ISSN": [
+      "1947-5705",
+      "1947-5713"
+    ],
+    "issn-type": [
+      {
+        "value": "1947-5705",
+        "type": "print"
+      },
+      {
+        "value": "1947-5713",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          12,
+          13
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+        "order": 1,
+        "name": "peerreview_statement",
+        "label": "Peer Review Statement"
+      },
+      {
+        "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tgnh20",
+        "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tgnh20",
+        "order": 2,
+        "name": "aims_and_scope_url",
+        "label": "Aim & Scope"
+      },
+      {
+        "value": "2022-09-21",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2022-12-04",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2022-12-13",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

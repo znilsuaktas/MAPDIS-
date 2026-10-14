@@ -1,0 +1,12 @@
+[
+  {
+    "source": "openalex targeted discovery",
+    "status": "success",
+    "count": 50
+  },
+  {
+    "source": "crossref DOI verification",
+    "status": "success",
+    "count": 10
+  }
+]

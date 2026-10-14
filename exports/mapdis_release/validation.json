@@ -1,0 +1,52 @@
+{
+  "incidents": 5,
+  "input_events": 5,
+  "duplicates_removed": 0,
+  "duplicate_event_ids": 0,
+  "satellite_images_confirmed_available": 0,
+  "satellite_image_availability_unknown": 5,
+  "classifier_candidates": 4,
+  "missing_values_by_column": {
+    "Event Name": 0,
+    "Pollution Type": 0,
+    "Event Date": 2,
+    "Satellite Observation Date": 2,
+    "Country": 2,
+    "Sea / Region": 0,
+    "Cause": 1,
+    "Estimated Area": 4,
+    "Image Type": 1,
+    "Source": 0,
+    "Useful for Classifier": 5,
+    "Notes": 0,
+    "Satellite Image Available": 5,
+    "Bounding Box Possible": 5,
+    "Source Type": 0,
+    "Status": 5
+  },
+  "columns": [
+    "Event Name",
+    "Pollution Type",
+    "Event Date",
+    "Satellite Observation Date",
+    "Country",
+    "Sea / Region",
+    "Cause",
+    "Estimated Area",
+    "Image Type",
+    "Source",
+    "Useful for Classifier",
+    "Notes",
+    "Satellite Image Available",
+    "Bounding Box Possible",
+    "Source Type",
+    "Status"
+  ],
+  "schema_validation": {
+    "status": "pending",
+    "errors": [
+      "Actual Select/Multi-select options not supplied"
+    ],
+    "writes_enabled": false
+  }
+}

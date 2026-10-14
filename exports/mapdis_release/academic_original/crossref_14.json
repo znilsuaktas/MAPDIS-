@@ -1,0 +1,590 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          13
+        ]
+      ],
+      "date-time": "2026-10-13T17:16:33Z",
+      "timestamp": 1791911793323,
+      "version": "4.3.4"
+    },
+    "reference-count": 51,
+    "publisher": "Informa UK Limited",
+    "issue": "6",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              3,
+              7
+            ]
+          ],
+          "date-time": "2024-03-07T00:00:00Z",
+          "timestamp": 1709769600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100002347",
+        "name": "Bundesministerium f\u00fcr Bildung und Forschung",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "03F0823B"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "03F0823B"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100002347",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100006245",
+        "name": "Ministry of Science and Technology, Israel",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "03F0823A"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "03F0823A"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100006245",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.tandfonline.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "International Journal of Remote Sensing"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          18
+        ]
+      ]
+    },
+    "DOI": "10.1080/01431161.2024.2321468",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          7
+        ]
+      ],
+      "date-time": "2024-03-07T08:10:16Z",
+      "timestamp": 1709799016000
+    },
+    "page": "1997-2027",
+    "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+    "source": "Crossref",
+    "is-referenced-by-count": 28,
+    "title": [
+      "A near real-time automated oil spill detection and early warning system using Sentinel-1 SAR imagery for the Southeastern Mediterranean Sea"
+    ],
+    "prefix": "10.1080",
+    "volume": "45",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-4098-8119",
+        "authenticated-orcid": false,
+        "given": "Yi-Jie",
+        "family": "Yang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Maritime Safety and Security Lab, Remote Sensing Technology Institute, German Aerospace Center (DLR), Bremen, Germany"
+          },
+          {
+            "name": "Research and Technology Centre Westcoast, Kiel University, B\u00fcsum, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-1880-6868",
+        "authenticated-orcid": false,
+        "given": "Suman",
+        "family": "Singha",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Maritime Safety and Security Lab, Remote Sensing Technology Institute, German Aerospace Center (DLR), Bremen, Germany"
+          },
+          {
+            "name": "National Centre for Climate Research (NCKF), Danish Meteorological Institute (DMI), Copenhagen, Denmark"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ron",
+        "family": "Goldman",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Israel Marine Data Center (ISRAMAR), Israel Oceanographic and Limnological Research (IOLR), Haifa, Israel"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "published-online": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          7
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "e_1_3_4_2_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs12203338"
+      },
+      {
+        "key": "e_1_3_4_3_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1755876X.2018.1438343"
+      },
+      {
+        "key": "e_1_3_4_4_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.48550/arXiv.2004.10934"
+      },
+      {
+        "key": "e_1_3_4_5_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2004.11.015"
+      },
+      {
+        "key": "e_1_3_4_6_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TGRS.2010.2071879"
+      },
+      {
+        "key": "e_1_3_4_7_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/698_2016_18"
+      },
+      {
+        "key": "e_1_3_4_8_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11270-022-05752-0"
+      },
+      {
+        "key": "e_1_3_4_9_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs12081352"
+      },
+      {
+        "key": "e_1_3_4_10_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs13142733"
+      },
+      {
+        "key": "e_1_3_4_11_1",
+        "unstructured": "European Maritime Safety Agency. 2017. \u201cThe CleanSeanet Service: Taking Measurements to Detect and Deter Marine Pollution.\u201d Brochure. Accessed May 31 2023. http://www.emsa.europa.eu/csn-menu/download/2913/2123/23.html."
+      },
+      {
+        "key": "e_1_3_4_12_1",
+        "unstructured": "European Space Agency. 2013. \u201cData Distribution Schedule.\u201d Accessed April 19 2023. https://sentinel.esa.int/web/sentinel/missions/sentinel-1/data-distribution-schedule."
+      },
+      {
+        "key": "e_1_3_4_13_1",
+        "unstructured": "European Space Agency. 2020. \u201cSNAP - ESA Sentinel Application Platform V8.0.\u201d http://step.esa.int."
+      },
+      {
+        "key": "e_1_3_4_14_1",
+        "unstructured": "European Space Agency. 2022a. \u201cEnd of Mission of the Copernicus Sentinel-1B Satellite.\u201d Accessed August 3 2022. https://sentinels.copernicus.eu/web/sentinel/-/end-of-mission-of-the-copernicus-sentinel-1b-satellite/."
+      },
+      {
+        "key": "e_1_3_4_15_1",
+        "unstructured": "European Space Agency. 2022b. \u201cLaunches Secured for five Sentinel Satellites.\u201d Accessed December 7 2022. https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Launches_secured_for_five_Sentinel_satellites."
+      },
+      {
+        "key": "e_1_3_4_16_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-009-0275-4"
+      },
+      {
+        "key": "e_1_3_4_17_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2023.3249680"
+      },
+      {
+        "key": "e_1_3_4_18_1",
+        "first-page": "743",
+        "volume-title": "Proceedings of the Fourth International Conference on EuroGOOS \u2018European Operational Oceanography: Present and Future\u2019",
+        "author": "Gertman I.",
+        "year": "2006",
+        "unstructured": "Gertman, I., A. Murashkovsky, V. Levin, G. Kallos, and D. S. Rosen 2006. \u201cWave Monitoring and Wind Input as Key Issues in Operational Wave Forecasting Systems.\u201d In Proceedings of the Fourth International Conference on EuroGOOS \u2018European Operational Oceanography: Present and Future\u2019, edited by H. Dahlin, N. C. Flemming, P. Marchand, and S. E. Petersson, 743\u2013749. Brest, France: EuroGOOS Office and European Commission."
+      },
+      {
+        "key": "e_1_3_4_19_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.marpolbul.2014.10.050"
+      },
+      {
+        "key": "e_1_3_4_20_1",
+        "first-page": "10332",
+        "volume-title": "EGU General Assembly Conference Abstracts",
+        "author": "Goldman R.",
+        "year": "2014",
+        "unstructured": "Goldman, R., S. Efrati, Y. Lehahn, I. Gertman, and E. Heifetz. 2014. \u201cComparison of Remotely Sensed Chlorophyll and Lagrangian Coherent Structures for Velocity Field Validation.\u201d In EGU General Assembly Conference Abstracts, 10332. Vienna, Austria."
+      },
+      {
+        "key": "e_1_3_4_21_1",
+        "volume-title": "Digital Image Processing",
+        "author": "Gonzalez R. C.",
+        "year": "2018",
+        "unstructured": "Gonzalez, R. C., and R. E. Woods. 2018. Digital Image Processing. New York, USA: Pearson Education."
+      },
+      {
+        "key": "e_1_3_4_22_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS.1994.399647"
+      },
+      {
+        "key": "e_1_3_4_23_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.marpolbul.2022.113666"
+      },
+      {
+        "key": "e_1_3_4_24_1",
+        "first-page": "17",
+        "volume-title": "Proceedings of the Symposium on Regional Weather Prediction on Parallel Computer Environments",
+        "volume": "15",
+        "author": "Kallos G.",
+        "year": "1997",
+        "unstructured": "Kallos, G., S. Nickovic, A. Papadopoulos, D. Jovic, O. Kakaliagou, N. Misirlis, L. Boukas, et al. 1997. \u201cThe Regional Weather Forecasting System SKIRON: An Overview.\u201d In Proceedings of the Symposium on Regional Weather Prediction on Parallel Computer Environments, Vol. 15, 17. Athens, Greece: University of Athens, Greece."
+      },
+      {
+        "key": "e_1_3_4_25_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5194/angeo-21-205-2003"
+      },
+      {
+        "key": "e_1_3_4_26_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-030-39593-3_11"
+      },
+      {
+        "key": "e_1_3_4_27_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs11151762"
+      },
+      {
+        "key": "e_1_3_4_28_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.jag.2022.102924"
+      },
+      {
+        "key": "e_1_3_4_29_1",
+        "first-page": "361",
+        "volume-title": "Proceedings of 1980 National Conference on Control of Hazardous Material Spills",
+        "author": "Mackay D.",
+        "year": "1980",
+        "unstructured": "Mackay, D. 1980. \u201cCalculation of the Evaporation Rate of Volatile Liquids.\u201d In Proceedings of 1980 National Conference on Control of Hazardous Material Spills, 361\u2013368. Louisville, KY, USA."
+      },
+      {
+        "key": "e_1_3_4_31_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.cageo.2016.12.013"
+      },
+      {
+        "key": "e_1_3_4_32_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01431161.2015.1057301"
+      },
+      {
+        "key": "e_1_3_4_33_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/1023673029000003543"
+      },
+      {
+        "key": "e_1_3_4_34_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.marpolbul.2021.112338"
+      },
+      {
+        "key": "e_1_3_4_35_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.91"
+      },
+      {
+        "key": "e_1_3_4_36_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s21072351"
+      },
+      {
+        "key": "e_1_3_4_37_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2013.2251864"
+      },
+      {
+        "key": "e_1_3_4_38_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2016.2559946"
+      },
+      {
+        "key": "e_1_3_4_39_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.marpolbul.2013.05.022"
+      },
+      {
+        "key": "e_1_3_4_40_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS.1996.516705"
+      },
+      {
+        "key": "e_1_3_4_41_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/36.774704"
+      },
+      {
+        "key": "e_1_3_4_42_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1117/12.688149"
+      },
+      {
+        "key": "e_1_3_4_43_1",
+        "unstructured": "Stevens J. 2020. \u201cNASA Earth Observatory Map.\u201d Accessed September 8 2020. https://visibleearth.nasa.gov/images/147190/explorer-base-map."
+      },
+      {
+        "key": "e_1_3_4_44_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/19475705.2018.1549110"
+      },
+      {
+        "key": "e_1_3_4_45_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2022.12.008"
+      },
+      {
+        "key": "e_1_3_4_46_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s8106642"
+      },
+      {
+        "key": "e_1_3_4_47_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2007.05.003"
+      },
+      {
+        "key": "e_1_3_4_48_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/96JB00104"
+      },
+      {
+        "key": "e_1_3_4_49_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01431161.2022.2109445"
+      },
+      {
+        "key": "e_1_3_4_50_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/698_2017_131"
+      },
+      {
+        "key": "e_1_3_4_51_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.dsr2.2016.07.014"
+      },
+      {
+        "key": "e_1_3_4_52_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1357/002224017823523982"
+      },
+      {
+        "key": "e_1_3_4_53_1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5194/os-8-1105-2012"
+      }
+    ],
+    "container-title": [
+      "International Journal of Remote Sensing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/01431161.2024.2321468",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          14
+        ]
+      ],
+      "date-time": "2024-03-14T12:27:44Z",
+      "timestamp": 1710419264000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.tandfonline.com/doi/full/10.1080/01431161.2024.2321468"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          7
+        ]
+      ]
+    },
+    "references-count": 51,
+    "journal-issue": {
+      "issue": "6",
+      "published-print": {
+        "date-parts": [
+          [
+            2024,
+            3,
+            18
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1080/01431161.2024.2321468"
+    ],
+    "URL": "https://doi.org/10.1080/01431161.2024.2321468",
+    "relation": {},
+    "ISSN": [
+      "0143-1161",
+      "1366-5901"
+    ],
+    "issn-type": [
+      {
+        "value": "0143-1161",
+        "type": "print"
+      },
+      {
+        "value": "1366-5901",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          3,
+          7
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+        "order": 1,
+        "name": "peerreview_statement",
+        "label": "Peer Review Statement"
+      },
+      {
+        "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tres20",
+        "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tres20",
+        "order": 2,
+        "name": "aims_and_scope_url",
+        "label": "Aim & Scope"
+      },
+      {
+        "value": "2023-10-30",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-02-11",
+        "order": 1,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2024-03-07",
+        "order": 2,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

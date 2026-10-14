@@ -1,0 +1,483 @@
+{
+  "mode": "dry_run",
+  "schema_validation": {
+    "status": "pending",
+    "errors": [
+      "Actual Select/Multi-select options not supplied"
+    ],
+    "writes_enabled": false
+  },
+  "confirmed_columns": [
+    "Event Name",
+    "Pollution Type",
+    "Event Date",
+    "Satellite Observation Date",
+    "Country",
+    "Sea / Region",
+    "Cause",
+    "Estimated Area",
+    "Image Type",
+    "Source",
+    "Useful for Classifier",
+    "Notes",
+    "Satellite Image Available",
+    "Bounding Box Possible",
+    "Source Type",
+    "Status"
+  ],
+  "unknown_checkbox_policy": "omit API properties; blank CSV; null research JSON",
+  "pages": [
+    {
+      "event_id": "wakashio-2020-mauritius",
+      "properties": {
+        "Event Name": {
+          "title": [
+            {
+              "text": {
+                "content": "MV Wakashio oil spill"
+              }
+            }
+          ]
+        },
+        "Pollution Type": {
+          "select": {
+            "name": "Oil spill"
+          }
+        },
+        "Event Date": {
+          "date": {
+            "start": "2020-08-06"
+          }
+        },
+        "Satellite Observation Date": {
+          "date": {
+            "start": "2020-08-10"
+          }
+        },
+        "Country": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Mauritius"
+              }
+            }
+          ]
+        },
+        "Sea / Region": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Indian Ocean, southeast coast of Mauritius"
+              }
+            }
+          ]
+        },
+        "Cause": {
+          "select": {
+            "name": "Vessel grounding"
+          }
+        },
+        "Estimated Area": {
+          "rich_text": []
+        },
+        "Image Type": {
+          "multi_select": [
+            {
+              "name": "SAR"
+            },
+            {
+              "name": "Optical"
+            }
+          ]
+        },
+        "Source": {
+          "url": "https://doi.org/10.33564/ijeast.2021.v06i04.002"
+        },
+        "Useful for Classifier": {
+          "select": null
+        },
+        "Notes": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Grounding: 2020-07-25; explicit oil-release date: 2020-08-06. Published SAR and Sentinel-2 mapping documented; no downloadable scene/product verified. Reported 1000 tons is oil mass, not affected surface area."
+              }
+            }
+          ]
+        },
+        "Source Type": {
+          "select": {
+            "name": "Scientific publication"
+          }
+        },
+        "Status": {
+          "select": null
+        }
+      },
+      "unknown_fields": [
+        "estimated_area",
+        "useful_for_classifier",
+        "satellite_image_available",
+        "bounding_box_possible",
+        "status"
+      ]
+    },
+    {
+      "event_id": "xpress-pearl-2021-sri-lanka",
+      "properties": {
+        "Event Name": {
+          "title": [
+            {
+              "text": {
+                "content": "MV X-Press Pearl plastic/nurdle spill"
+              }
+            }
+          ]
+        },
+        "Pollution Type": {
+          "select": {
+            "name": "Plastic pollution"
+          }
+        },
+        "Event Date": {
+          "date": null
+        },
+        "Satellite Observation Date": {
+          "date": null
+        },
+        "Country": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Sri Lanka"
+              }
+            }
+          ]
+        },
+        "Sea / Region": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "West coast of Sri Lanka"
+              }
+            }
+          ]
+        },
+        "Cause": {
+          "select": {
+            "name": "Vessel fire"
+          }
+        },
+        "Estimated Area": {
+          "rich_text": []
+        },
+        "Source": {
+          "url": "https://doi.org/10.1021/acsenvironau.1c00031"
+        },
+        "Useful for Classifier": {
+          "select": null
+        },
+        "Notes": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "The source identifies a 2021 fire and debris spill but the precise event day is not present in the retrieved text. Approximately 1680 tons describes plastic mass, not surface area. Image asset availability and classifier suitability are unknown."
+              }
+            }
+          ]
+        },
+        "Source Type": {
+          "select": {
+            "name": "Scientific publication"
+          }
+        },
+        "Status": {
+          "select": null
+        }
+      },
+      "unknown_fields": [
+        "event_date",
+        "satellite_observation_date",
+        "estimated_area",
+        "image_type",
+        "useful_for_classifier",
+        "satellite_image_available",
+        "bounding_box_possible",
+        "status"
+      ]
+    },
+    {
+      "event_id": "marmara-mucilage-2021",
+      "properties": {
+        "Event Name": {
+          "title": [
+            {
+              "text": {
+                "content": "Sea of Marmara mucilage outbreak (2021)"
+              }
+            }
+          ]
+        },
+        "Pollution Type": {
+          "select": {
+            "name": "Mucilage"
+          }
+        },
+        "Event Date": {
+          "date": null
+        },
+        "Satellite Observation Date": {
+          "date": {
+            "start": "2021-03-10",
+            "end": "2021-06-06"
+          }
+        },
+        "Country": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Turkey"
+              }
+            }
+          ]
+        },
+        "Sea / Region": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Sea of Marmara"
+              }
+            }
+          ]
+        },
+        "Cause": {
+          "select": null
+        },
+        "Estimated Area": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "12,741.94 ha (reported for observation interval 2021-05-17/2021-06-06)"
+              }
+            }
+          ]
+        },
+        "Image Type": {
+          "multi_select": [
+            {
+              "name": "Optical"
+            }
+          ]
+        },
+        "Source": {
+          "url": "https://doi.org/10.21072/mbj.2022.07.1.09"
+        },
+        "Useful for Classifier": {
+          "select": null
+        },
+        "Notes": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Spring/summer 2021 outbreak; exact onset day unknown. Observation interval is not a claim of daily image acquisition. Final interval (2021-05-17/2021-06-06) mucilage area: 12,741.94 ha; reported 1.07% of the Sea of Marmara. Random Forest classification of Sentinel-2 MSI images was documented."
+              }
+            }
+          ]
+        },
+        "Source Type": {
+          "select": {
+            "name": "Scientific publication"
+          }
+        },
+        "Status": {
+          "select": null
+        }
+      },
+      "unknown_fields": [
+        "event_date",
+        "cause",
+        "useful_for_classifier",
+        "satellite_image_available",
+        "bounding_box_possible",
+        "status"
+      ]
+    },
+    {
+      "event_id": "deepwater-horizon-2010",
+      "properties": {
+        "Event Name": {
+          "title": [
+            {
+              "text": {
+                "content": "Deepwater Horizon oil spill"
+              }
+            }
+          ]
+        },
+        "Pollution Type": {
+          "select": {
+            "name": "Oil spill"
+          }
+        },
+        "Event Date": {
+          "date": {
+            "start": "2010-04-20"
+          }
+        },
+        "Satellite Observation Date": {
+          "date": null
+        },
+        "Country": {
+          "rich_text": []
+        },
+        "Sea / Region": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Gulf of Mexico"
+              }
+            }
+          ]
+        },
+        "Cause": {
+          "select": {
+            "name": "Drilling rig explosion"
+          }
+        },
+        "Estimated Area": {
+          "rich_text": []
+        },
+        "Image Type": {
+          "multi_select": [
+            {
+              "name": "Optical"
+            }
+          ]
+        },
+        "Source": {
+          "url": "https://doi.org/10.1029/2011eo060001"
+        },
+        "Useful for Classifier": {
+          "select": null
+        },
+        "Notes": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Event day and drilling-rig explosion are explicit in the cited abstract. Satellite/airborne sensors include MERIS, MODIS, MISR, Landsat and AVIRIS. Exact observation dates, reliable affected-area estimate and downloadable imagery assets were not verified."
+              }
+            }
+          ]
+        },
+        "Source Type": {
+          "select": {
+            "name": "Scientific publication"
+          }
+        },
+        "Status": {
+          "select": null
+        }
+      },
+      "unknown_fields": [
+        "satellite_observation_date",
+        "country",
+        "estimated_area",
+        "useful_for_classifier",
+        "satellite_image_available",
+        "bounding_box_possible",
+        "status"
+      ]
+    },
+    {
+      "event_id": "kerch-volgoneft-2024",
+      "properties": {
+        "Event Name": {
+          "title": [
+            {
+              "text": {
+                "content": "Volgoneft-212/239 fuel-oil spill near Kerch Strait"
+              }
+            }
+          ]
+        },
+        "Pollution Type": {
+          "select": {
+            "name": "Oil spill"
+          }
+        },
+        "Event Date": {
+          "date": {
+            "start": "2024-12-15"
+          }
+        },
+        "Satellite Observation Date": {
+          "date": {
+            "start": "2024-12-15",
+            "end": "2025-12-31"
+          }
+        },
+        "Country": {
+          "rich_text": []
+        },
+        "Sea / Region": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "Black Sea, south of Kerch Strait"
+              }
+            }
+          ]
+        },
+        "Cause": {
+          "select": {
+            "name": "Tanker sinking"
+          }
+        },
+        "Estimated Area": {
+          "rich_text": []
+        },
+        "Image Type": {
+          "multi_select": [
+            {
+              "name": "Radar"
+            },
+            {
+              "name": "Optical"
+            }
+          ]
+        },
+        "Source": {
+          "url": "https://doi.org/10.1134/s1063074025700129"
+        },
+        "Useful for Classifier": {
+          "select": null
+        },
+        "Notes": {
+          "rich_text": [
+            {
+              "text": {
+                "content": "The event is identified by the tanker names and 2024-12-15 sinking date. A publication reports analysis of 120 radar/optical images during 2024-12-15/2025-12-31. Approx. 2400 metric tons is fuel mass, not area. Country attribution and direct imagery availability remain unknown."
+              }
+            }
+          ]
+        },
+        "Source Type": {
+          "select": {
+            "name": "Scientific publication"
+          }
+        },
+        "Status": {
+          "select": null
+        }
+      },
+      "unknown_fields": [
+        "country",
+        "estimated_area",
+        "useful_for_classifier",
+        "satellite_image_available",
+        "bounding_box_possible",
+        "status"
+      ]
+    }
+  ]
+}

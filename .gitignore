@@ -1,0 +1,14 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+output/
+
+# Keep local credentials and custom research settings out of review commits.
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+actual_notion_schema.json
+config/my_search.json

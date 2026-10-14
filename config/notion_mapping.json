@@ -1,0 +1,18 @@
+{
+  "event_name": "Event Name",
+  "pollution_type": "Pollution Type",
+  "event_date": "Event Date",
+  "satellite_observation_date": "Satellite Observation Date",
+  "country": "Country",
+  "sea_region": "Sea / Region",
+  "cause": "Cause",
+  "estimated_area": "Estimated Area",
+  "image_type": "Image Type",
+  "source_url": "Source",
+  "useful_for_classifier": "Useful for Classifier",
+  "notes": "Notes",
+  "satellite_image_available": "Satellite Image Available",
+  "bounding_box_possible": "Bounding Box Possible",
+  "source_type": "Source Type",
+  "status": "Status"
+}

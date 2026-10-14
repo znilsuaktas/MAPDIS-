@@ -1,0 +1,241 @@
+[
+  {
+    "doi": "10.1080/01431161.2024.2321468",
+    "openalex_url": "https://openalex.org/W4392550991",
+    "openalex_api_url": "https://api.openalex.org/works/W4392550991",
+    "crossref_api_url": "https://api.crossref.org/works/10.1080%2F01431161.2024.2321468",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "International Journal of Remote Sensing",
+    "authors": [
+      "Yi-Jie Yang",
+      "Suman Singha",
+      "Ron Goldman"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2024,
+        3,
+        7
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:37.291424+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1016/j.rse.2023.113872",
+    "openalex_url": "https://openalex.org/W4388168602",
+    "openalex_api_url": "https://api.openalex.org/works/W4388168602",
+    "crossref_api_url": "https://api.crossref.org/works/10.1016%2Fj.rse.2023.113872",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "Remote Sensing of Environment",
+    "authors": [
+      "Chenglei Li",
+      "Duk-jin Kim",
+      "Soyeon Park",
+      "Junwoo Kim",
+      "Juyoung Song"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2023,
+        12
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:33.878658+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1080/01431161.2022.2109445",
+    "openalex_url": "https://openalex.org/W4292601150",
+    "openalex_api_url": "https://api.openalex.org/works/W4292601150",
+    "crossref_api_url": "https://api.crossref.org/works/10.1080%2F01431161.2022.2109445",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "International Journal of Remote Sensing",
+    "authors": [
+      "Yi-Jie Yang",
+      "Suman Singha",
+      "Roberto Mayerle"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022,
+        6,
+        3
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:41.360979+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1109/lgrs.2024.3355464",
+    "openalex_url": "https://openalex.org/W4391248650",
+    "openalex_api_url": "https://api.openalex.org/works/W4391248650",
+    "crossref_api_url": "https://api.crossref.org/works/10.1109%2Flgrs.2024.3355464",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "IEEE Geoscience and Remote Sensing Letters",
+    "authors": [
+      "Soyeon Park",
+      "Chenglei Li",
+      "Hwisong Kim",
+      "Duk-jin Kim"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2024
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:38.855205+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1080/19475705.2022.2155998",
+    "openalex_url": "https://openalex.org/W4311239753",
+    "openalex_api_url": "https://api.openalex.org/works/W4311239753",
+    "crossref_api_url": "https://api.crossref.org/works/10.1080%2F19475705.2022.2155998",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "Geomatics, Natural Hazards and Risk",
+    "authors": [
+      "Samira Ahmed",
+      "Tamer ElGharbawi",
+      "Mahmoud Salah",
+      "Mahmoud El-Mewafi"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022,
+        12,
+        13
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:35.948054+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.3390/ijerph191912315",
+    "openalex_url": "https://openalex.org/W4297522844",
+    "openalex_api_url": "https://api.openalex.org/works/W4297522844",
+    "crossref_api_url": "https://api.crossref.org/works/10.3390%2Fijerph191912315",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "International Journal of Environmental Research and Public Health",
+    "authors": [
+      "Yan Chen",
+      "Zhilong Wang"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022,
+        9,
+        28
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:42.501613+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.3390/rs14163900",
+    "openalex_url": "https://openalex.org/W4290999455",
+    "openalex_api_url": "https://api.openalex.org/works/W4290999455",
+    "crossref_api_url": "https://api.crossref.org/works/10.3390%2Frs14163900",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "Remote Sensing",
+    "authors": [
+      "Jin Zhang",
+      "Hao Feng",
+      "Qingli Luo",
+      "Yu Li",
+      "Yu Zhang",
+      "Jian Li",
+      "Zhoumo Zeng"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022,
+        8,
+        11
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:34.329249+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1016/j.jag.2022.102695",
+    "openalex_url": "https://openalex.org/W4210680518",
+    "openalex_api_url": "https://api.openalex.org/works/W4210680518",
+    "crossref_api_url": "https://api.crossref.org/works/10.1016%2Fj.jag.2022.102695",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "International Journal of Applied Earth Observation and Geoinformation",
+    "authors": [
+      "N\u00e1jla Vilar Aires de Moura",
+      "Osmar Luiz Ferreira de Carvalho",
+      "Roberto Arnaldo Trancoso Gomes",
+      "Renato Fontes Guimar\u00e3es",
+      "Osmar Ab\u00edlio de Carvalho J\u00fanior"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022,
+        3
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:39.991141+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.1109/tgrs.2021.3126175",
+    "openalex_url": "https://openalex.org/W3213954057",
+    "openalex_api_url": "https://api.openalex.org/works/W3213954057",
+    "crossref_api_url": "https://api.crossref.org/works/10.1109%2Ftgrs.2021.3126175",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+    "authors": [
+      "Xiaoshuang Ma",
+      "Jiangong Xu",
+      "Penghai Wu",
+      "Peng Kong"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2022
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:33.876744+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  },
+  {
+    "doi": "10.3390/rs13112044",
+    "openalex_url": "https://openalex.org/W3165006992",
+    "openalex_api_url": "https://api.openalex.org/works/W3165006992",
+    "crossref_api_url": "https://api.crossref.org/works/10.3390%2Frs13112044",
+    "title_similarity": 1.0,
+    "crossref_type": "journal-article",
+    "journal": "Remote Sensing",
+    "authors": [
+      "Marcos Reinan Assis Concei\u00e7\u00e3o",
+      "Luis Felipe Ferreira de Mendon\u00e7a",
+      "Carlos Alessandre Domingos Lentini",
+      "Andr\u00e9 Telles da Cunha Lima",
+      "Jos\u00e9 Marques Lopes",
+      "Rodrigo Nogueira de Vasconcelos",
+      "Mainara Biazati Gouveia",
+      "Milton Jos\u00e9 Porsani"
+    ],
+    "crossref_published_date_parts": [
+      [
+        2021,
+        5,
+        22
+      ]
+    ],
+    "checked_at_utc": "2026-10-13T21:25:43.620061+00:00",
+    "scope": "DOI/title/journal-article metadata and abstract relevance; full text not verified"
+  }
+]

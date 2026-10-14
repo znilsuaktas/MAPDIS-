@@ -1,0 +1,863 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          10,
+          9
+        ]
+      ],
+      "date-time": "2026-10-09T17:26:08Z",
+      "timestamp": 1791566768750,
+      "version": "4.3.4"
+    },
+    "reference-count": 54,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              3,
+              1
+            ]
+          ],
+          "date-time": "2022-03-01T00:00:00Z",
+          "timestamp": 1646092800000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              1,
+              20
+            ]
+          ],
+          "date-time": "2022-01-20T00:00:00Z",
+          "timestamp": 1642636800000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100002322",
+        "name": "Coordena\u00e7\u00e3o de Aperfei\u00e7oamento de Pessoal de N\u00edvel Superior",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100002322",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100003593",
+        "name": "Conselho Nacional de Desenvolvimento Cientifico e Tecnologico",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100003593",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "International Journal of Applied Earth Observation and Geoinformation"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.jag.2022.102695",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          29
+        ]
+      ],
+      "date-time": "2022-01-29T10:24:46Z",
+      "timestamp": 1643451886000
+    },
+    "page": "102695",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 23,
+    "special_numbering": "C",
+    "title": [
+      "Deep-water oil-spill monitoring and recurrence analysis in the Brazilian territory using Sentinel-1 time series and deep learning"
+    ],
+    "prefix": "10.1016",
+    "volume": "107",
+    "author": [
+      {
+        "given": "N\u00e1jla Vilar Aires",
+        "family": "de Moura",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Osmar Luiz Ferreira",
+        "family": "de Carvalho",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Roberto Arnaldo Trancoso",
+        "family": "Gomes",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Renato Fontes",
+        "family": "Guimar\u00e3es",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Osmar Ab\u00edlio",
+        "family": "de Carvalho J\u00fanior",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.jag.2022.102695_b0005",
+        "series-title": "Boletim da Produ\u00e7\u00e3o de Petr\u00f3leo e G\u00e1s Natural",
+        "author": "Ag\u00eancia Nacional do Petr\u00f3leo",
+        "year": "2021"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0010",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.3390/rs12203338",
+        "article-title": "Sensors, features, and machine learning for oil spill detection and monitoring: A review",
+        "volume": "12",
+        "author": "Al-Ruzouq",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0015",
+        "first-page": "100537",
+        "article-title": "Instance segmentation of center pivot irrigation systems using multi-temporal SENTINEL-1 SAR images",
+        "volume": "23",
+        "author": "de Albuquerque",
+        "year": "2021",
+        "journal-title": "Remote Sens. Appl. Soc. Environ."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0020",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1016/j.rse.2017.09.002",
+        "article-title": "Oil spill detection by imaging radars: Challenges and pitfalls",
+        "volume": "201",
+        "author": "Alpers",
+        "year": "2017",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0025",
+        "first-page": "27",
+        "article-title": "Monitoring oil spill hotspots, contamination probability modelling and assessment of coastal impacts in the Caspian Sea using SENTINEL-1, LANDSAT-8, RADARSAT, ENVISAT and ERS satellite sensors",
+        "volume": "11",
+        "author": "Bayramov",
+        "year": "2018",
+        "journal-title": "J. Oper. Oceanogr."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0030",
+        "doi-asserted-by": "crossref",
+        "first-page": "2260",
+        "DOI": "10.3390/rs12142260",
+        "article-title": "Large-Scale Detection and Categorization of Oil Spills from SAR Images with Deep Learning",
+        "volume": "12",
+        "author": "Bianchi",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0035",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.rse.2004.11.015",
+        "article-title": "Oil spill detection by satellite remote sensing",
+        "volume": "95",
+        "author": "Brekke",
+        "year": "2005",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0040",
+        "doi-asserted-by": "crossref",
+        "first-page": "105716",
+        "DOI": "10.1016/j.asoc.2019.105716",
+        "article-title": "Oil spill segmentation in SAR images using convolutional neural networks. A comparative analysis with clustering and logistic regression algorithms",
+        "volume": "84",
+        "author": "Cantorna",
+        "year": "2019",
+        "journal-title": "Appl. Soft Comput."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0045",
+        "doi-asserted-by": "crossref",
+        "first-page": "39",
+        "DOI": "10.3390/rs13010039",
+        "article-title": "Instance Segmentation for Large, Multi-Channel Remote Sensing Imagery Using Mask-RCNN and a Mosaicking Approach",
+        "volume": "13",
+        "author": "Carvalho",
+        "year": "2021",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jag.2022.102695_b0050",
+        "doi-asserted-by": "crossref",
+        "first-page": "116",
+        "DOI": "10.1016/j.joes.2019.09.004",
+        "article-title": "An assessment of oil spill detection using Sentinel 1 SAR-C images",
+        "volume": "5",
+        "author": "Chaturvedi",
+        "year": "2020",
+        "journal-title": "J. Ocean Eng. Sci."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0055",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chaurasia, A., Culurciello, E., 2017. LinkNet: Exploiting encoder representations for efficient semantic segmentation. In: 2017 IEEE Visual Communications and Image Processing (VCIP). IEEE, St. Petersburg, FL, USA, pp. 1\u20134. https://doi.org/10.1109/VCIP.2017.8305148.",
+        "DOI": "10.1109/VCIP.2017.8305148"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.jag.2022.102695_b0060",
+        "doi-asserted-by": "crossref",
+        "first-page": "968",
+        "DOI": "10.3390/app7100968",
+        "article-title": "Application of deep networks to oil spill detection using polarimetric synthetic aperture radar images",
+        "volume": "7",
+        "author": "Chen",
+        "year": "2017",
+        "journal-title": "Appl. Sci."
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.jag.2022.102695_b0065",
+        "doi-asserted-by": "crossref",
+        "first-page": "834",
+        "DOI": "10.1109/TPAMI.2017.2699184",
+        "article-title": "DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs",
+        "volume": "40",
+        "author": "Chen",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.jag.2022.102695_b0070",
+        "doi-asserted-by": "crossref",
+        "first-page": "2960",
+        "DOI": "10.3390/en14102960",
+        "article-title": "Remote Sensing for Monitoring Photovoltaic Solar Plants in Brazil Using Deep Semantic Segmentation",
+        "volume": "14",
+        "author": "Costa",
+        "year": "2021",
+        "journal-title": "Energies"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0075",
+        "first-page": "1",
+        "article-title": "Deep semantic segmentation for detecting eucalyptus planted forests in the Brazilian territory using sentinel-2 imagery",
+        "author": "da Costa",
+        "year": "2021",
+        "journal-title": "Geocarto Int."
+      },
+      {
+        "issue": "13",
+        "key": "10.1016/j.jag.2022.102695_b0080",
+        "doi-asserted-by": "crossref",
+        "first-page": "2159",
+        "DOI": "10.3390/rs12132159",
+        "article-title": "Deep Semantic Segmentation of Center Pivot Irrigation Systems from Remotely Sensed Data",
+        "volume": "12",
+        "author": "de Albuquerque",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0085",
+        "doi-asserted-by": "crossref",
+        "first-page": "2576",
+        "DOI": "10.3390/rs12162576",
+        "article-title": "Performance Analysis of Deep Convolutional Autoencoders with Different Patch Sizes for Change Detection from Burnt Areas",
+        "volume": "12",
+        "author": "de Bem",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.jag.2022.102695_b0090",
+        "doi-asserted-by": "crossref",
+        "first-page": "8455",
+        "DOI": "10.1109/TGRS.2020.3034722",
+        "article-title": "Deep Learning for Mineral and Biogenic Oil Slick Classification With Airborne Synthetic Aperture Radar Data",
+        "volume": "59",
+        "author": "De Laurentiis",
+        "year": "2021",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0095",
+        "doi-asserted-by": "crossref",
+        "first-page": "214",
+        "DOI": "10.14393/RCG217551341",
+        "article-title": "Revis\u00e3o sobre o uso de sensoriamento remoto na detec\u00e7\u00e3o de vazamentos de \u00f3leo no mar",
+        "volume": "21",
+        "author": "de Moura",
+        "year": "2020",
+        "journal-title": "Caminhos Geogr."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0100",
+        "first-page": "11",
+        "article-title": "Sentinel-1 GRD Preprocessing Workflow",
+        "volume": "18",
+        "author": "Filipponi",
+        "year": "2019",
+        "journal-title": "Proceedings"
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0105",
+        "doi-asserted-by": "crossref",
+        "first-page": "9",
+        "DOI": "10.1016/j.marpolbul.2014.03.059",
+        "article-title": "Review of oil spill remote sensing",
+        "volume": "83",
+        "author": "Fingas",
+        "year": "2014",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0110",
+        "first-page": "1",
+        "article-title": "A review of oil spill remote sensing",
+        "volume": "18",
+        "author": "Fingas",
+        "year": "2018",
+        "journal-title": "Sensors (Switzerland)"
+      },
+      {
+        "issue": "18",
+        "key": "10.1016/j.jag.2022.102695_b0115",
+        "doi-asserted-by": "crossref",
+        "first-page": "3561",
+        "DOI": "10.1080/014311600750037589",
+        "article-title": "Oil spill detection using marine SAR images",
+        "volume": "21",
+        "author": "Fiscella",
+        "year": "2000",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.jag.2022.102695_b0120",
+        "doi-asserted-by": "crossref",
+        "first-page": "797",
+        "DOI": "10.3390/s18030797",
+        "article-title": "Segmentation of oil spills on side-looking airborne radar imagery with autoencoders",
+        "volume": "18",
+        "author": "Gallego",
+        "year": "2018",
+        "journal-title": "Sensors (Switzerland)"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.jag.2022.102695_b0125",
+        "doi-asserted-by": "crossref",
+        "first-page": "275",
+        "DOI": "10.2747/1548-1603.45.3.275",
+        "article-title": "Oceanographic applications of SAR remote sensing",
+        "volume": "45",
+        "author": "Gens",
+        "year": "2008",
+        "journal-title": "GIScience Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0130",
+        "doi-asserted-by": "crossref",
+        "first-page": "1837",
+        "DOI": "10.3390/s17081837",
+        "article-title": "Discrimination of Oil Slicks and Lookalikes in Polarimetric SAR Images Using CNN",
+        "volume": "17",
+        "author": "Guo",
+        "year": "2017",
+        "journal-title": "Sensors"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jag.2022.102695_b0135",
+        "doi-asserted-by": "crossref",
+        "first-page": "87",
+        "DOI": "10.1007/s13735-017-0141-z",
+        "article-title": "A review of semantic segmentation using deep neural networks",
+        "volume": "7",
+        "author": "Guo",
+        "year": "2018",
+        "journal-title": "Int. J. Multimed. Inf. Retr."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0140",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., Sun, J., 2016. Deep Residual Learning for Image Recognition. In: 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). IEEE, Las Vegas, NV, USA, pp. 770\u2013778. https://doi.org/10.1109/CVPR.2016.90.",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0145",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Heller, N., Dean, J., Papanikolopoulos, N., 2018. Imperfect Segmentation Labels: How Much Do They Matter? In: Intravascular Imaging and Computer Assisted Stenting and Large-Scale Annotation of Biomedical Data and Expert Label Synthesis. LABELS 2018, CVII 2018, STENT 2018. Lecture Notes in Computer Science. Springer, Cham, pp. 112\u2013120. https://doi.org/10.1007/978-3-030-01364-6_13.",
+        "DOI": "10.1007/978-3-030-01364-6_13"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0150",
+        "doi-asserted-by": "crossref",
+        "first-page": "1300",
+        "DOI": "10.1016/j.cie.2018.11.008",
+        "article-title": "A new approach to oil spill detection that combines deep learning with unmanned aerial vehicles",
+        "volume": "135",
+        "author": "Jiao",
+        "year": "2019",
+        "journal-title": "Comput. Ind. Eng."
+      },
+      {
+        "issue": "1",
+        "key": "10.1016/j.jag.2022.102695_b0155",
+        "doi-asserted-by": "crossref",
+        "first-page": "99",
+        "DOI": "10.1016/S1876-3804(18)30009-0",
+        "article-title": "Characteristics of deep water depositional system in Campos basin",
+        "volume": "45",
+        "author": "Kang",
+        "year": "2018",
+        "journal-title": "Brazil. Pet. Explor. Dev."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0160",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.3390/rs11151762",
+        "article-title": "Oil spill identification from satellite images using deep neural networks",
+        "volume": "11",
+        "author": "Krestenitis",
+        "year": "2019",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0165",
+        "doi-asserted-by": "crossref",
+        "first-page": "185",
+        "DOI": "10.1016/j.rse.2012.03.024",
+        "article-title": "State of the art satellite and airborne marine oil spill remote sensing: Application to the BP Deepwater Horizon oil spill",
+        "volume": "124",
+        "author": "Leifer",
+        "year": "2012",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.jag.2022.102695_b0170",
+        "doi-asserted-by": "crossref",
+        "first-page": "1584",
+        "DOI": "10.1093/nsr/nwaa047",
+        "article-title": "Deep learning-based information mining from ocean remote sensing imagery",
+        "volume": "7",
+        "author": "Li",
+        "year": "2020",
+        "journal-title": "Natl. Sci. Rev."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0175",
+        "first-page": "1",
+        "article-title": "Oil spill detection with multiscale conditional adversarial networks with small-data training",
+        "volume": "13",
+        "author": "Li",
+        "year": "2021",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0180",
+        "doi-asserted-by": "crossref",
+        "first-page": "166",
+        "DOI": "10.1016/j.isprsjprs.2019.04.015",
+        "article-title": "Deep learning in remote sensing applications: A meta-analysis and review",
+        "volume": "152",
+        "author": "Ma",
+        "year": "2019",
+        "journal-title": "ISPRS J. Photogramm. Remote Sens."
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.jag.2022.102695_b0185",
+        "first-page": "191",
+        "article-title": "RADARSAT automatic algorithms for detecting coastal oil spill pollution",
+        "volume": "3",
+        "author": "Marghany",
+        "year": "2001",
+        "journal-title": "Int. J. Appl. Earth Obs. Geoinf."
+      },
+      {
+        "issue": "11",
+        "key": "10.1016/j.jag.2022.102695_b0190",
+        "doi-asserted-by": "crossref",
+        "first-page": "6699",
+        "DOI": "10.1109/TGRS.2018.2841808",
+        "article-title": "Vehicle Instance Segmentation From Aerial Image and Video Using a Multitask Learning Residual Fully Convolutional Network",
+        "volume": "56",
+        "author": "Mou",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "issue": "9",
+        "key": "10.1016/j.jag.2022.102695_b0195",
+        "doi-asserted-by": "crossref",
+        "first-page": "5217",
+        "DOI": "10.1109/TGRS.2018.2812619",
+        "article-title": "Two-stage convolutional neural network for ship and spill detection using SLAR images",
+        "volume": "56",
+        "author": "Nieto-Hidalgo",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0200",
+        "doi-asserted-by": "crossref",
+        "first-page": "132",
+        "DOI": "10.1016/j.dsr2.2016.02.013",
+        "article-title": "An oceanographic survey for oil spill monitoring and model forecasting validation using remote sensing and in situ data in the Mediterranean Sea. Deep Sea Res",
+        "volume": "133",
+        "author": "Pisano",
+        "year": "2016",
+        "journal-title": "Part II Top. Stud. Oceanogr."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0205",
+        "series-title": "2020 IEEE Radar Conference (RadarConf20)",
+        "first-page": "1",
+        "article-title": "An adversarial learning approach for oil spill detection from SAR images",
+        "author": "Ronci",
+        "year": "2020"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0210",
+        "series-title": "Lecture Notes in Computer Science (Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+        "first-page": "234",
+        "article-title": "U-Net: Convolutional Networks for Biomedical Image Segmentation",
+        "author": "Ronneberger",
+        "year": "2015"
+      },
+      {
+        "issue": "10",
+        "key": "10.1016/j.jag.2022.102695_b0215",
+        "doi-asserted-by": "crossref",
+        "first-page": "2931",
+        "DOI": "10.1109/JPROC.2012.2196250",
+        "article-title": "Remote sensing of ocean oil-spill pollution",
+        "volume": "100",
+        "author": "Solberg",
+        "year": "2012",
+        "journal-title": "Proc. IEEE"
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0220",
+        "unstructured": "Tan, M., Le, Q. V., 2019. EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks. In: Proceedings of the 36th International Conference on Machine Learning. Long Beach, California, USA, pp. 6105\u20136114."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0225",
+        "doi-asserted-by": "crossref",
+        "first-page": "103910",
+        "DOI": "10.1016/j.imavis.2020.103910",
+        "article-title": "Recent advances in small object detection based on deep learning: A review",
+        "volume": "97",
+        "author": "Tong",
+        "year": "2020",
+        "journal-title": "Image Vis. Comput."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0230",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.3390/rs12213647",
+        "article-title": "Oil spill detection and mapping: A 50-year bibliometric analysis",
+        "volume": "12",
+        "author": "Vasconcelos",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0235",
+        "first-page": "1",
+        "article-title": "Detection of Oil Spill Using SAR Imagery Based on AlexNet Model",
+        "volume": "2021",
+        "author": "Wang",
+        "year": "2021",
+        "journal-title": "Comput. Intell. Neurosci."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0240",
+        "article-title": "Segmentation Models Pytorch",
+        "author": "Yakubovskiy",
+        "year": "2020",
+        "journal-title": "GitHub Repos."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0245",
+        "doi-asserted-by": "crossref",
+        "first-page": "190",
+        "DOI": "10.1016/j.isprsjprs.2020.07.011",
+        "article-title": "A novel deep learning instance segmentation model for automated marine oil spill detection",
+        "volume": "167",
+        "author": "Yekeen",
+        "year": "2020",
+        "journal-title": "ISPRS J. Photogramm. Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0250",
+        "first-page": "1",
+        "article-title": "Advances in remote sensing technology, machine learning and deep learning for marine oil spill detection, prediction and vulnerability assessment",
+        "volume": "12",
+        "author": "Yekeen",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0255",
+        "doi-asserted-by": "crossref",
+        "first-page": "111716",
+        "DOI": "10.1016/j.rse.2020.111716",
+        "article-title": "Deep learning in environmental remote sensing: Achievements and challenges",
+        "volume": "241",
+        "author": "Yuan",
+        "year": "2020",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "issue": "6",
+        "key": "10.1016/j.jag.2022.102695_b0260",
+        "doi-asserted-by": "crossref",
+        "first-page": "1015",
+        "DOI": "10.3390/rs12061015",
+        "article-title": "A deep convolutional neural network for oil spill detection from spaceborne SAR images",
+        "volume": "12",
+        "author": "Zeng",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "10.1016/j.jag.2022.102695_b0265",
+        "series-title": "Advanced Geoscience Remote Sensing",
+        "article-title": "Oil-Spill Pollution Remote Sensing by Synthetic Aperture Radar",
+        "author": "Zhang",
+        "year": "2014"
+      },
+      {
+        "issue": "4",
+        "key": "10.1016/j.jag.2022.102695_b0270",
+        "doi-asserted-by": "crossref",
+        "first-page": "181",
+        "DOI": "10.3390/ijgi8040181",
+        "article-title": "Oil film classification using deep learning-based hyperspectral remote sensing technology",
+        "volume": "8",
+        "author": "Zhu",
+        "year": "2019",
+        "journal-title": "ISPRS Int. J. Geo-Inform."
+      }
+    ],
+    "container-title": [
+      "International Journal of Applied Earth Observation and Geoinformation"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0303243422000216?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0303243422000216?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          4
+        ]
+      ],
+      "date-time": "2025-10-04T13:43:47Z",
+      "timestamp": 1759585427000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0303243422000216"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "references-count": 54,
+    "alternative-id": [
+      "S0303243422000216"
+    ],
+    "URL": "https://doi.org/10.1016/j.jag.2022.102695",
+    "relation": {},
+    "ISSN": [
+      "1569-8432"
+    ],
+    "issn-type": [
+      {
+        "value": "1569-8432",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Deep-water oil-spill monitoring and recurrence analysis in the Brazilian territory using Sentinel-1 time series and deep learning",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "International Journal of Applied Earth Observation and Geoinformation",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.jag.2022.102695",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "\u00a9 2022 The Authors. Published by Elsevier B.V.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "102695"
+  }
+}

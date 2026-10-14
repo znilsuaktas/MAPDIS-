@@ -1,0 +1,439 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          25
+        ]
+      ],
+      "date-time": "2026-09-25T04:37:30Z",
+      "timestamp": 1790311050005,
+      "version": "4.1.0"
+    },
+    "reference-count": 34,
+    "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100003604",
+        "name": "\u201cMonitoring System of Spilled Oils Using Multiple Remote Sensing Techniques\u201d",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "20210452"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "20210452"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100003604",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100011705",
+        "name": "Korea Institute of Marine Science and Technology Promotion",
+        "doi-asserted-by": "publisher",
+        "id": [
+          {
+            "id": "10.13039/501100011705",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100003604",
+        "name": "Korea Coast Guard through the Integrated Satellite-Based Applications Development for Korea Coast Guard",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "RS-2023-00238652"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "RS-2023-00238652"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100003604",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IEEE Geosci. Remote Sensing Lett."
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "DOI": "10.1109/lgrs.2024.3355464",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          26
+        ]
+      ],
+      "date-time": "2024-01-26T19:07:35Z",
+      "timestamp": 1706296055000
+    },
+    "page": "1-5",
+    "source": "Crossref",
+    "is-referenced-by-count": 6,
+    "title": [
+      "A Semi-Empirical Threshold Model for Oil Spill Detection by Analyzing Microwave Backscatter of Ocean Surface From Sentinel-1 C-Band SAR Data"
+    ],
+    "prefix": "10.1109",
+    "volume": "21",
+    "author": [
+      {
+        "given": "Soyeon",
+        "family": "Park",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "School of Earth and Environmental Sciences, Seoul National University, Seoul, South Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chenglei",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Earth and Environmental Sciences, Seoul National University, Seoul, South Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-5296-4707",
+        "authenticated-orcid": false,
+        "given": "Hwisong",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Earth and Environmental Sciences, Seoul National University, Seoul, South Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8147-7641",
+        "authenticated-orcid": false,
+        "given": "Duk-jin",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Earth and Environmental Sciences, Seoul National University, Seoul, South Korea"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "263",
+    "reference": [
+      {
+        "key": "ref1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2017.09.002"
+      },
+      {
+        "key": "ref2",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2004.11.015"
+      },
+      {
+        "key": "ref3",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2010.04.009"
+      },
+      {
+        "key": "ref4",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01431161.2010.485147"
+      },
+      {
+        "key": "ref5",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s12524-016-0553-x"
+      },
+      {
+        "key": "ref6",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2017.2671403"
+      },
+      {
+        "key": "ref7",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.oceano.2017.03.005"
+      },
+      {
+        "key": "ref8",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs13112044"
+      },
+      {
+        "key": "ref9",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/36.774704"
+      },
+      {
+        "key": "ref10",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.envsoft.2004.11.010"
+      },
+      {
+        "key": "ref11",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TGRS.2015.2490078"
+      },
+      {
+        "key": "ref12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/01431160802175488"
+      },
+      {
+        "key": "ref13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2012.01.005"
+      },
+      {
+        "key": "ref14",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2016.04.006"
+      },
+      {
+        "key": "ref15",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2007.05.003"
+      },
+      {
+        "key": "ref16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2013.2251864"
+      },
+      {
+        "key": "ref17",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/app8122670"
+      },
+      {
+        "key": "ref18",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s21072351"
+      },
+      {
+        "key": "ref19",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/97JC00190"
+      },
+      {
+        "key": "ref20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/97JC00467"
+      },
+      {
+        "key": "ref21",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/JC087iC03p01961"
+      },
+      {
+        "key": "ref22",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1017/S0022112082003139"
+      },
+      {
+        "key": "ref23",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/JC094iC05p06251"
+      },
+      {
+        "key": "ref24",
+        "volume-title": "The Dynamics of the Upper Ocean",
+        "author": "Phillips",
+        "year": "1966"
+      },
+      {
+        "key": "ref25",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/S0034-4257(98)00034-0"
+      },
+      {
+        "key": "ref26",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TGRS.2002.803798"
+      },
+      {
+        "key": "ref27",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TAP.1968.1139147"
+      },
+      {
+        "key": "ref28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/BF00913863"
+      },
+      {
+        "key": "ref29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1175/2009jtecho698.1"
+      },
+      {
+        "key": "ref30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1029/2009JC005995"
+      },
+      {
+        "key": "ref31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1175/1520-0485(1996)026<0541:WSMFTO>2.0.CO;2"
+      },
+      {
+        "key": "ref32",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TSMC.1979.4310076"
+      },
+      {
+        "key": "ref33",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/2151237X.2007.10129236"
+      },
+      {
+        "key": "ref34",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/83.902291"
+      }
+    ],
+    "container-title": [
+      "IEEE Geoscience and Remote Sensing Letters"
+    ],
+    "original-title": [],
+    "link": [
+      {
+        "URL": "http://xplorestaging.ieee.org/ielx7/8859/10365397/10415080.pdf?arnumber=10415080",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          3
+        ]
+      ],
+      "date-time": "2024-05-03T19:18:07Z",
+      "timestamp": 1714763887000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://ieeexplore.ieee.org/document/10415080/"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "references-count": 34,
+    "URL": "https://doi.org/10.1109/lgrs.2024.3355464",
+    "relation": {},
+    "ISSN": [
+      "1545-598X",
+      "1558-0571"
+    ],
+    "issn-type": [
+      {
+        "value": "1545-598X",
+        "type": "print"
+      },
+      {
+        "value": "1558-0571",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    }
+  }
+}

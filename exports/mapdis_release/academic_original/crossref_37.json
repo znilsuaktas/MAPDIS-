@@ -1,0 +1,538 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          30
+        ]
+      ],
+      "date-time": "2026-09-30T05:16:58Z",
+      "timestamp": 1790745418734,
+      "version": "4.1.0"
+    },
+    "reference-count": 47,
+    "publisher": "Informa UK Limited",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              6,
+              3
+            ]
+          ],
+          "date-time": "2022-06-03T00:00:00Z",
+          "timestamp": 1654214400000
+        },
+        "content-version": "unspecified",
+        "delay-in-days": 0,
+        "URL": "http://creativecommons.org/licenses/by-nc-nd/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100002347",
+        "name": "Bundesministerium f\u00fcr Bildung und Forschung",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "03F0823B"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "03F0823B"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100002347",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "www.tandfonline.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "International Journal of Remote Sensing"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          3
+        ]
+      ]
+    },
+    "DOI": "10.1080/01431161.2022.2109445",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          22
+        ]
+      ],
+      "date-time": "2022-08-22T06:24:38Z",
+      "timestamp": 1661149478000
+    },
+    "page": "4287-4314",
+    "update-policy": "https://doi.org/10.1080/tandf_crossmark_01",
+    "source": "Crossref",
+    "is-referenced-by-count": 57,
+    "title": [
+      "A deep learning based oil spill detector using Sentinel-1 SAR imagery"
+    ],
+    "prefix": "10.1080",
+    "volume": "43",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-4098-8119",
+        "authenticated-orcid": false,
+        "given": "Yi-Jie",
+        "family": "Yang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Research and Technology Centre Westcoast, Kiel University, B\u00fcsum, Germany"
+          },
+          {
+            "name": "Maritime Safety and Security Lab, Remote Sensing Technology Institute, German Aerospace Center (DLR), Bremen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Suman",
+        "family": "Singha",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Maritime Safety and Security Lab, Remote Sensing Technology Institute, German Aerospace Center (DLR), Bremen, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Roberto",
+        "family": "Mayerle",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Research and Technology Centre Westcoast, Kiel University, B\u00fcsum, Germany"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "301",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          22
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "cit0001",
+        "volume-title": "Maritime Traffic Effects on Biodiversity in the Mediterranean Sea: Review of Impacts, Priority Areas and Mitigation Measures",
+        "author": "Abdulla A.",
+        "year": "2008"
+      },
+      {
+        "key": "cit0002",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs12203338"
+      },
+      {
+        "key": "cit0003",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.rse.2007.10.014"
+      },
+      {
+        "key": "cit0004",
+        "unstructured": "Bochkovskiy, A., C.Y. Wang, and H.Y. Mark Liao. 2020. \u201cYOLOv4: Optimal Speed and Accuracy of Object Detection.\u201d\n                      arXiv preprint arXiv:2004.10934\n                      ."
+      },
+      {
+        "key": "cit0005",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/LGRS.2007.907174"
+      },
+      {
+        "key": "cit0006",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IROS.2018.8594067"
+      },
+      {
+        "key": "cit0007",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs11070786"
+      },
+      {
+        "key": "cit0008",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2009.5206848"
+      },
+      {
+        "key": "cit0009",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ICSCAN49426.2020.9262440"
+      },
+      {
+        "key": "cit0010",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IJCNN48605.2020.9206652"
+      },
+      {
+        "key": "cit0011",
+        "unstructured": "European Maritime Safety Agency. 2017. \u201cThe CleanSeaNet Service: Taking Measurements to Detect and Deter Marine Pollution.\u201d\n                      Brochure\n                      . http://www.emsa.europa.eu/csn-menu/download/2913/2123/23.html"
+      },
+      {
+        "key": "cit0012",
+        "unstructured": "European Space Agency. 2020 \u201cSNAP - ESA Sentinel Application Platform V8.0.\u201d http://step.esa.int"
+      },
+      {
+        "key": "cit0013",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/s11263-009-0275-4"
+      },
+      {
+        "key": "cit0014",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1080/014311600750037589"
+      },
+      {
+        "key": "cit0015",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.envpol.2021.117884"
+      },
+      {
+        "key": "cit0016",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-3-540-31865-1_25"
+      },
+      {
+        "key": "cit0017",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS.1994.399647"
+      },
+      {
+        "key": "cit0018",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.7753/IJCATR1006.1006"
+      },
+      {
+        "key": "cit0019",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/rs11151762"
+      },
+      {
+        "key": "cit0020",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/ACCESS.2020.3033289"
+      },
+      {
+        "key": "cit0021",
+        "first-page": "1",
+        "volume": "60",
+        "author": "Ma X.",
+        "year": "2022",
+        "journal-title": "IEEE Transactions on Geoscience and Remote Sensing"
+      },
+      {
+        "key": "cit0022",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/TGRS.2018.2812619"
+      },
+      {
+        "key": "cit0023",
+        "first-page": "17",
+        "volume-title": "Conference paper presented at 3rd Annual Arctic Shipping Conference, St Petersburg, Russia",
+        "author": "O\u2019Hagan C.",
+        "year": "2007"
+      },
+      {
+        "key": "cit0024",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/bf02995563"
+      },
+      {
+        "key": "cit0025",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.marpolbul.2021.112338"
+      },
+      {
+        "key": "cit0026",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR.2016.91"
+      },
+      {
+        "key": "cit0027",
+        "volume-title": "Towards Sustainable Development of the Mediterranean Region: Protecting the Mediterranean Against Maritime Accidents and Illegal Discharges from Ships",
+        "author": "REMPEC",
+        "year": "2002"
+      },
+      {
+        "key": "cit0028",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS39084.2020.9323590"
+      },
+      {
+        "key": "cit0029",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5772/60455"
+      },
+      {
+        "key": "cit0030",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s21072351"
+      },
+      {
+        "key": "cit0031",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2013.2251864"
+      },
+      {
+        "key": "cit0032",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JSTARS.2016.2559946"
+      },
+      {
+        "key": "cit0033",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/JPROC.2012.2196250"
+      },
+      {
+        "key": "cit0034",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS.1996.516705"
+      },
+      {
+        "key": "cit0035",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/36.774704"
+      },
+      {
+        "key": "cit0036",
+        "unstructured": "Stevens, J. 2020. \u201cNASA Earth Observatory Map.\u201d Accessed 8 September 2020. https://visibleearth.nasa.gov/images/147190/explorer-base-map"
+      },
+      {
+        "key": "cit0037",
+        "unstructured": "Surkes, S. 2021. \u201cSatellite Images of Oil Slicks off Coast Show Recent Spill Far from a One-Off.\u201d\n                      The Times of Israel\n                      , February 28 https://www.timesofisrael.com/satellite-images-of-oil-slicks-off-coast-show-recent-spill-far-from-a-one-off/"
+      },
+      {
+        "key": "cit0038",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.3390/s8106642"
+      },
+      {
+        "key": "cit0039",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isprsjprs.2012.01.005"
+      },
+      {
+        "key": "cit0040",
+        "unstructured": "Tzutalin. 2015. \u201cLabelImg.\u201d https://github.com/tzutalin/labelImg"
+      },
+      {
+        "key": "cit0041",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPR46437.2021.01283"
+      },
+      {
+        "key": "cit0042",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/CVPRW50498.2020.00203"
+      },
+      {
+        "key": "cit0043",
+        "volume-title": "Introduction to Microwave Remote Sensing",
+        "author": "Woodhouse I. H.",
+        "year": "2006"
+      },
+      {
+        "key": "cit0044",
+        "unstructured": "Wu, Y., A. Kirillov, F. Massa, L. Wan-Yen, and R. Girshick. 2019. \u201cDetectron2.\u201d https://github.com/facebookresearch/detectron2"
+      },
+      {
+        "key": "cit0045",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1109/IGARSS47720.2021.9553030"
+      },
+      {
+        "key": "cit0046",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.5194/isprs-archives-XLIII-B3-2020-1271-2020"
+      },
+      {
+        "key": "cit0047",
+        "first-page": "1",
+        "volume": "60",
+        "author": "Zhu Q.",
+        "year": "2022",
+        "journal-title": "IEEE Transactions on Geoscience and Remote Sensing"
+      }
+    ],
+    "container-title": [
+      "International Journal of Remote Sensing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.tandfonline.com/doi/pdf/10.1080/01431161.2022.2109445",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          25
+        ]
+      ],
+      "date-time": "2022-08-25T02:21:31Z",
+      "timestamp": 1661394091000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.tandfonline.com/doi/full/10.1080/01431161.2022.2109445"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          3
+        ]
+      ]
+    },
+    "references-count": 47,
+    "journal-issue": {
+      "issue": "11",
+      "published-print": {
+        "date-parts": [
+          [
+            2022,
+            6,
+            3
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "10.1080/01431161.2022.2109445"
+    ],
+    "URL": "https://doi.org/10.1080/01431161.2022.2109445",
+    "relation": {},
+    "ISSN": [
+      "0143-1161",
+      "1366-5901"
+    ],
+    "issn-type": [
+      {
+        "value": "0143-1161",
+        "type": "print"
+      },
+      {
+        "value": "1366-5901",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          6,
+          3
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "The publishing and review policy for this title is described in its Aims & Scope.",
+        "order": 1,
+        "name": "peerreview_statement",
+        "label": "Peer Review Statement"
+      },
+      {
+        "value": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tres20",
+        "URL": "http://www.tandfonline.com/action/journalInformation?show=aimsScope&journalCode=tres20",
+        "order": 2,
+        "name": "aims_and_scope_url",
+        "label": "Aim & Scope"
+      },
+      {
+        "value": "2022-04-27",
+        "order": 0,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2022-07-27",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      },
+      {
+        "value": "2022-08-22",
+        "order": 3,
+        "name": "published",
+        "label": "Published",
+        "group": {
+          "name": "publication_history",
+          "label": "Publication History"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+# Preserve audited CSV bytes/BOM/CRLF so export checksums survive Windows checkout.
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.zip binary
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.txt text eol=lf

@@ -1,0 +1,1061 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          8,
+          18
+        ]
+      ],
+      "date-time": "2026-08-18T05:05:31Z",
+      "timestamp": 1787029531804,
+      "version": "build-2736575974"
+    },
+    "reference-count": 54,
+    "publisher": "MDPI AG",
+    "issue": "16",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              8,
+              11
+            ]
+          ],
+          "date-time": "2022-08-11T00:00:00Z",
+          "timestamp": 1660176000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "name": "Key Project of Tianjin Natural Science Foundation",
+        "award": [
+          "21JCZDJC00670"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "21JCZDJC00670"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Key Project of Tianjin Natural Science Foundation",
+        "award": [
+          "2021ZH04"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021ZH04"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Key Project of Tianjin Natural Science Foundation",
+        "award": [
+          "2022-40"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2022-40"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Key Project of Tianjin Natural Science Foundation",
+        "award": [
+          "2020-02"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2020-02"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Key Project of Tianjin Natural Science Foundation",
+        "award": [
+          "41601446"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41601446"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Engineering Laboratory for Digital Construction and Evaluation Technology of Urban Rail Transit",
+        "award": [
+          "21JCZDJC00670"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "21JCZDJC00670"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Engineering Laboratory for Digital Construction and Evaluation Technology of Urban Rail Transit",
+        "award": [
+          "2021ZH04"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021ZH04"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Engineering Laboratory for Digital Construction and Evaluation Technology of Urban Rail Transit",
+        "award": [
+          "2022-40"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2022-40"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Engineering Laboratory for Digital Construction and Evaluation Technology of Urban Rail Transit",
+        "award": [
+          "2020-02"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2020-02"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Engineering Laboratory for Digital Construction and Evaluation Technology of Urban Rail Transit",
+        "award": [
+          "41601446"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41601446"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tianjin Transportation Science and Technology Development Project",
+        "award": [
+          "21JCZDJC00670"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "21JCZDJC00670"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tianjin Transportation Science and Technology Development Project",
+        "award": [
+          "2021ZH04"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021ZH04"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tianjin Transportation Science and Technology Development Project",
+        "award": [
+          "2022-40"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2022-40"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tianjin Transportation Science and Technology Development Project",
+        "award": [
+          "2020-02"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2020-02"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tianjin Transportation Science and Technology Development Project",
+        "award": [
+          "41601446"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41601446"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China Grant",
+        "award": [
+          "21JCZDJC00670"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "21JCZDJC00670"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China Grant",
+        "award": [
+          "2021ZH04"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021ZH04"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China Grant",
+        "award": [
+          "2022-40"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2022-40"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China Grant",
+        "award": [
+          "2020-02"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2020-02"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "National Natural Science Foundation of China Grant",
+        "award": [
+          "41601446"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41601446"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Remote Sensing"
+    ],
+    "abstract": "<jats:p>Synthetic aperture radar (SAR) has been widely applied in oil spill detection on the sea surface due to the advantages of wide area coverage, all-weather operation, and multi-polarization characteristics. Sentinel-1 satellites can provide dual-polarized SAR data, and they have high potential for successful application to oil spill detection. However, the characteristics of the sea surface and oil film on different images are not the same when imaging at different locations and in different conditions, which leads to the inconsistent accuracy of these images with the application of the current oil spill detection methods. In order to avoid the above limitation, we propose an oil spill detection method using image stretching based on superpixels and a convolutional neural network. Experiments were carried out on eight Sentinel-1 dual-pol data, and the optimal superpixel number and image stretching parameters are discussed. Mean intersection over union (MIoU) was used to evaluate classification accuracy. The proposed method could effectively improve the classification accuracy; when the expansion and inhibition coefficients of image stretching were set to 1.6 and 1.2 respectively, the experiments achieved a maximum MIoU of 85.4%, 7.3% higher than that without image stretching.</jats:p>",
+    "DOI": "10.3390/rs14163900",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          11
+        ]
+      ],
+      "date-time": "2022-08-11T21:15:05Z",
+      "timestamp": 1660252505000
+    },
+    "page": "3900",
+    "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 15,
+    "title": [
+      "Oil Spill Detection with Dual-Polarimetric Sentinel-1 SAR Using Superpixel-Level Image Stretching and Deep Convolutional Neural Network"
+    ],
+    "prefix": "10.3390",
+    "volume": "14",
+    "author": [
+      {
+        "given": "Jin",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hao",
+        "family": "Feng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          },
+          {
+            "name": "Binhai International Advanced Structural Integrity Research Centre, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0375-9947",
+        "authenticated-orcid": false,
+        "given": "Qingli",
+        "family": "Luo",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          },
+          {
+            "name": "Binhai International Advanced Structural Integrity Research Centre, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5693-5353",
+        "authenticated-orcid": false,
+        "given": "Yu",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Faculty of Information Technology, Beijing University of Technology, No. 100 PingLeYuan, Chaoyang District, Beijing 100124, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          },
+          {
+            "name": "Binhai International Advanced Structural Integrity Research Centre, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jian",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          },
+          {
+            "name": "Binhai International Advanced Structural Integrity Research Centre, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhoumo",
+        "family": "Zeng",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "State Key Laboratory of Precision Measuring Technology and Instruments, Tianjin University, Tianjin 300072, China"
+          },
+          {
+            "name": "Binhai International Advanced Structural Integrity Research Centre, Tianjin 300072, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          11
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "first-page": "205",
+        "article-title": "Monitoring and Modeling the Deepwater Horizon Oil Spill: A Record-Breaking Enterprise",
+        "volume": "195",
+        "author": "Liu",
+        "year": "2011",
+        "journal-title": "Geophys. Monogr. Ser."
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1016/j.rse.2017.09.002",
+        "article-title": "Oil spill detection by imaging radars: Challenges and pitfalls",
+        "volume": "201",
+        "author": "Alpers",
+        "year": "2017",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "91",
+        "DOI": "10.3390/s18010091",
+        "article-title": "A Review of Oil Spill Remote Sensing",
+        "volume": "18",
+        "author": "Merv",
+        "year": "2017",
+        "journal-title": "Sensors"
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "1916",
+        "DOI": "10.1109/36.774704",
+        "article-title": "Automatic detection of oil spills in ERS SAR images",
+        "volume": "37",
+        "author": "Solberg",
+        "year": "1999",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "first-page": "746",
+        "DOI": "10.1109/TGRS.2006.887019",
+        "article-title": "Oil Spill Detection in Radarsat and Envisat SAR Images",
+        "volume": "45",
+        "author": "Solberg",
+        "year": "2007",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "first-page": "2517",
+        "DOI": "10.1109/JSTARS.2013.2244061",
+        "article-title": "Oil Spill Mapping and Measurement in the Gulf of Mexico With Textural Classifier Neural Network Algorithm (TCNNA)",
+        "volume": "6",
+        "author": "MacDonald",
+        "year": "2013",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "first-page": "2895",
+        "DOI": "10.1109/JSTARS.2014.2341574",
+        "article-title": "Monitoring of Oil Spill Trajectories With COSMO-SkyMed X-Band SAR Images and Model Simulation",
+        "volume": "7",
+        "author": "Cheng",
+        "year": "2014",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "155",
+        "DOI": "10.1016/j.future.2013.09.020",
+        "article-title": "A cloud-integrated web platform for marine monitoring using GIS and remote sensing. Application to oil spill detection through SAR images",
+        "volume": "34",
+        "author": "Fustes",
+        "year": "2014",
+        "journal-title": "Future Gener. Comput. Syst."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "146",
+        "DOI": "10.1016/j.dsr2.2016.03.003",
+        "article-title": "Automatic oil slick detection from sar images: Results and improvements in the framework of the PRIMI pilot project",
+        "volume": "133",
+        "author": "Trivero",
+        "year": "2016",
+        "journal-title": "Deep Sea Res. Part II Top. Stud. Oceanogr."
+      },
+      {
+        "key": "ref_10",
+        "unstructured": "Ajadi Olaniyi, A. (2017). Unsupervised Multi-Scale Change Detection from SAR Imagery for Monitoring Natural and Anthropogenic Disasters. [Ph.D. Thesis, University of Alaska Fairbanks]."
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "first-page": "2389",
+        "DOI": "10.1109/JSTARS.2018.2827996",
+        "article-title": "Oil Spill Detection in Synthetic Aperture Radar Images Using Lipschitz-Regularity and Multiscale Techniques",
+        "volume": "11",
+        "author": "Ajadi",
+        "year": "2018",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_12",
+        "first-page": "26",
+        "article-title": "Group theory and polarization algebra",
+        "volume": "75",
+        "author": "Cloude",
+        "year": "1986",
+        "journal-title": "Optic"
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "68",
+        "DOI": "10.1109/36.551935",
+        "article-title": "An entropy based classification scheme for land applications of polarimetric SAR",
+        "volume": "35",
+        "author": "Cloude",
+        "year": "1997",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_14",
+        "unstructured": "Allain, S., Ferro-Famil, L., and Pottier, E. (2004, January 20\u201324). Two novel surface model based inversion algorithms using multi-frequency PolSAR data. Proceedings of the 2004 IEEE International Geoscience and Remote Sensing Symposium, Anchorage, AK, USA."
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "first-page": "1699",
+        "DOI": "10.1109/TGRS.2005.852084",
+        "article-title": "Four-component scattering model for polarimetric SAR image decomposition",
+        "volume": "43",
+        "author": "Yamaguchi",
+        "year": "2005",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "first-page": "5302",
+        "DOI": "10.1109/TGRS.2013.2287916",
+        "article-title": "Characterization of Marine Surface Slicks by Radarsat-2 Multipolarization Features",
+        "volume": "52",
+        "author": "Skrunes",
+        "year": "2014",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "first-page": "3751",
+        "DOI": "10.1109/JSTARS.2014.2348173",
+        "article-title": "Analysis of the Polarimetric SAR Scattering Properties of Oil-Covered Waters",
+        "volume": "8",
+        "author": "Li",
+        "year": "2015",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "first-page": "6521",
+        "DOI": "10.1109/TGRS.2013.2297193",
+        "article-title": "Oil Spill Detection in Hybrid-Polarimetric SAR Images",
+        "volume": "52",
+        "author": "Salberg",
+        "year": "2014",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "7062",
+        "DOI": "10.1109/TGRS.2018.2847724",
+        "article-title": "Classification of Ocean Surface Slicks in Simulated Hybrid-Polarimetric SAR Data",
+        "volume": "56",
+        "author": "Salberg",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1061",
+        "DOI": "10.3390/rs12071061",
+        "article-title": "Mineral Oil Slicks Identification Using Dual Co-polarized Radarsat-2 and TerraSAR-X SAR Imagery",
+        "volume": "12",
+        "author": "Dmitry",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "first-page": "4194",
+        "DOI": "10.1109/TGRS.2019.2961684",
+        "article-title": "The Impact of System Noise in Polarimetric SAR Imagery on Oil Spill Observations",
+        "volume": "58",
+        "author": "Espeseth",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "first-page": "1607",
+        "DOI": "10.3390/rs13091607",
+        "article-title": "Marine Oil Slick Detection Using Improved Polarimetric Feature Parameters Based on Polarimetric Synthetic Aperture RadAar Data",
+        "volume": "13",
+        "author": "Guannan",
+        "year": "2021",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_23",
+        "first-page": "640",
+        "article-title": "Fully Convolutional Networks for Semantic Segmentation",
+        "volume": "39",
+        "author": "Long",
+        "year": "2015",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ronneberger, O., Fischer, P., and Brox, T. (2015, January 5\u20139). U-Net: Convolutional Networks for Biomedical Image Segmentation. Proceedings of the International Conference on Medical Image Computing and Computer-Assisted Intervention, Munich, Germany.",
+        "DOI": "10.1007/978-3-319-24574-4_28"
+      },
+      {
+        "key": "ref_25",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhao, H., Shi, J., Qi, X., Wang, X., and Jia, J. (2017, January 21\u201326). Pyramid Scene Parsing Network. Proceedings of the 2017 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Honolulu, HI, USA.",
+        "DOI": "10.1109/CVPR.2017.660"
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, L.C., Zhu, Y., Papandreou, G., Schroff, F., and Adam, H. (2018, January 8\u201314). Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation. Proceedings of the European Conference on Computer Vision, Munich, Germany.",
+        "DOI": "10.1007/978-3-030-01234-2_49"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Liu, C., Chen, L.C., Schroff, F., Adam, H., Hua, W., Yuille, A.L., and Fei-Fei, L. (2019, January 15\u201320). Auto-DeepLab: Hierarchical Neural Architecture Search for Semantic Image Segmentation. Proceedings of the 2019 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), Long Beach, CA, USA.",
+        "DOI": "10.1109/CVPR.2019.00017"
+      },
+      {
+        "key": "ref_28",
+        "unstructured": "Yuan, Y., Chen, X., and Wang, J. (2018, January 8\u201314). Object-Contextual Representations for Semantic Segmentation. Proceedings of the European Conference on Computer Vision, Munich, Germany."
+      },
+      {
+        "key": "ref_29",
+        "first-page": "1015",
+        "article-title": "A Deep Convolutional Neural Network for Oil Spill Detection from Spaceborne SAR Images",
+        "volume": "6",
+        "author": "Kan",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_30",
+        "doi-asserted-by": "crossref",
+        "first-page": "4973",
+        "DOI": "10.1109/TGRS.2018.2803038",
+        "article-title": "Oil Spill Segmentation via Adversarial f-Divergence Learning",
+        "volume": "56",
+        "author": "Yu",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "first-page": "2260",
+        "DOI": "10.3390/rs12142260",
+        "article-title": "Large-Scale Detection and Categorization of Oil Spills from SAR Images with Deep Learning",
+        "volume": "12",
+        "author": "Borch",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, J., Feng, H., Luo, Q., Li, Y., and Li, J. (2020). Oil spill detection in quad-polarimetric sar images using an advanced convolutional neural network based on superpixel model. Remote Sens., 12.",
+        "DOI": "10.3390/rs12060944"
+      },
+      {
+        "key": "ref_33",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Li, Y., Lyu, X., Frery, A.C., and Ren, P. (2021). Oil Spill Detection with Multiscale Conditional Adversarial Networks with Small-Data Training. Remote Sens., 13.",
+        "DOI": "10.3390/rs13122378"
+      },
+      {
+        "key": "ref_34",
+        "doi-asserted-by": "crossref",
+        "first-page": "10941",
+        "DOI": "10.1109/JSTARS.2021.3123163",
+        "article-title": "Oil Spill Detection Based on Multiscale Multidimensional Residual CNN for Optical Remote Sensing Imagery",
+        "volume": "14",
+        "author": "Seydi",
+        "year": "2021",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_35",
+        "first-page": "5213910",
+        "article-title": "Oil Spill Contextual and Boundary-Supervised Detection Network Based on Marine SAR Images",
+        "volume": "60",
+        "author": "Zhu",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_36",
+        "doi-asserted-by": "crossref",
+        "first-page": "240",
+        "DOI": "10.1134/S1054661821020036",
+        "article-title": "Use of Sentinel-1 Dual Polarization Multi-Temporal Data with Gray Level Co-Occurrence Matrix Textural Parameters for Building Damage Assessment",
+        "volume": "31",
+        "author": "Akhmadiya",
+        "year": "2021",
+        "journal-title": "Pattern Recognit. Image Anal."
+      },
+      {
+        "key": "ref_37",
+        "doi-asserted-by": "crossref",
+        "first-page": "687",
+        "DOI": "10.1007/s11430-021-9868-9",
+        "article-title": "Complete three-dimensional coseismic displacements due to the 2021 Maduo earthquake in Qinghai Province, China from Sentinel-1 and ALOS-2 SAR images",
+        "volume": "65",
+        "author": "Liu",
+        "year": "2022",
+        "journal-title": "Sci. China Earth Sci."
+      },
+      {
+        "key": "ref_38",
+        "doi-asserted-by": "crossref",
+        "first-page": "7933",
+        "DOI": "10.3390/rs6097933",
+        "article-title": "L- and X-Band Multi-Temporal InSAR Analysis of Tianjin Subsidence",
+        "volume": "6",
+        "author": "Luo",
+        "year": "2014",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_39",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Luo, Q., Zhou, G., and Perissin, D. (2017). Monitoring of Subsidence along Jingjin Inter-city Railway by High resolution TSX MT-INSAR analysis. Remote Sens., 9.",
+        "DOI": "10.3390/rs9070717"
+      },
+      {
+        "key": "ref_40",
+        "first-page": "102705",
+        "article-title": "New insights into the 2020 Sardoba dam failure in Uzbekistan from Earth observation",
+        "volume": "107",
+        "author": "Xiao",
+        "year": "2022",
+        "journal-title": "Int. J. Appl. Earth Obs. Geoinf."
+      },
+      {
+        "key": "ref_41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Setiani, P., and Ramdani, F. (2018, January 10\u201312). Oil spill mapping using multi-sensor Sentinel data in Balikpapan Bay, Indonesia. Proceedings of the 2018 4th International Symposium on Geoinformatics (ISyG), Malang, Indonesia.",
+        "DOI": "10.1109/ISYG.2018.8612057"
+      },
+      {
+        "key": "ref_42",
+        "doi-asserted-by": "crossref",
+        "first-page": "116618",
+        "DOI": "10.1016/j.envpol.2021.116618",
+        "article-title": "Detection of Wakashio oil spill off Mauritius using Sentinel-1 and 2 data: Capability of sensors, image transformation methods and mapping",
+        "volume": "274",
+        "author": "Rajendran",
+        "year": "2021",
+        "journal-title": "Environ. Pollut."
+      },
+      {
+        "key": "ref_43",
+        "doi-asserted-by": "crossref",
+        "first-page": "111921",
+        "DOI": "10.1016/j.marpolbul.2020.111921",
+        "article-title": "Marine oil spill detection using Synthetic Aperture Radar over Indian Ocean",
+        "volume": "162",
+        "author": "Saima",
+        "year": "2021",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_44",
+        "doi-asserted-by": "crossref",
+        "first-page": "105716",
+        "DOI": "10.1016/j.asoc.2019.105716",
+        "article-title": "Oil spill segmentation in SAR images using convolutional neural networks. A comparative analysis with clustering and logistic regression algorithms",
+        "volume": "84",
+        "author": "Diego",
+        "year": "2019",
+        "journal-title": "Appl. Soft Comput."
+      },
+      {
+        "key": "ref_45",
+        "doi-asserted-by": "crossref",
+        "first-page": "116",
+        "DOI": "10.1016/j.joes.2019.09.004",
+        "article-title": "An assessment of oil spill detection using Sentinel 1 SAR-C images",
+        "volume": "5",
+        "author": "Chaturvedi",
+        "year": "2020",
+        "journal-title": "J. Ocean. Eng. Sci."
+      },
+      {
+        "key": "ref_46",
+        "doi-asserted-by": "crossref",
+        "first-page": "1183",
+        "DOI": "10.3390/rs13061183",
+        "article-title": "A Sensitivity Analysis on the Spectral Signatures of Low-Backscattering Sea Areas in Sentinel-1 SAR Images",
+        "volume": "13",
+        "author": "Valeria",
+        "year": "2021",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_47",
+        "doi-asserted-by": "crossref",
+        "first-page": "1762",
+        "DOI": "10.3390/rs11151762",
+        "article-title": "Oil Spill Identification from Satellite Images Using Deep Neural Networks",
+        "volume": "11",
+        "author": "Marios",
+        "year": "2019",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_48",
+        "first-page": "4204713",
+        "article-title": "Oil Spill Detection Based on Deep Convolutional Neural Networks Using Polarimetric Scattering Information From Sentinel-1 SAR Images",
+        "volume": "60",
+        "author": "Ma",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_49",
+        "doi-asserted-by": "crossref",
+        "first-page": "1300",
+        "DOI": "10.1126/science.abm5940",
+        "article-title": "Chronic oiling in global oceans",
+        "volume": "376",
+        "author": "Dong",
+        "year": "2022",
+        "journal-title": "Science"
+      },
+      {
+        "key": "ref_50",
+        "doi-asserted-by": "crossref",
+        "first-page": "4536",
+        "DOI": "10.1109/TGRS.2015.2401043",
+        "article-title": "Averaged Stokes Vector Based Polarimetric SAR Data Interpretation",
+        "volume": "53",
+        "author": "Shang",
+        "year": "2015",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_51",
+        "doi-asserted-by": "crossref",
+        "first-page": "317",
+        "DOI": "10.1109/LGRS.2006.871746",
+        "article-title": "Dual-polarized SAR and Stokes parameters",
+        "volume": "3",
+        "author": "Raney",
+        "year": "2006",
+        "journal-title": "IEEE Geosci. Remote Sens. Lett."
+      },
+      {
+        "key": "ref_52",
+        "doi-asserted-by": "crossref",
+        "unstructured": "He, K., Zhang, X., Ren, S., and Sun, J. (2016, January 27\u201330). Deep Residual Learning for Image Recognition. Proceedings of the 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA.",
+        "DOI": "10.1109/CVPR.2016.90"
+      },
+      {
+        "key": "ref_53",
+        "doi-asserted-by": "crossref",
+        "first-page": "2274",
+        "DOI": "10.1109/TPAMI.2012.120",
+        "article-title": "SLIC Superpixels Compared to State-of-the-Art Superpixel Methods",
+        "volume": "34",
+        "author": "Achanta",
+        "year": "2012",
+        "journal-title": "IEEE Trans. Pattern Anal. Mach. Intell."
+      },
+      {
+        "key": "ref_54",
+        "unstructured": "ScanEx (2018, January 29). Satellite Monitoring of Oil Pollution in the Persian Gulf. Available online: https://www.scanex.ru/en/company/news/satellite-monitoring-of-oil-pollution-in-the-persian-gulf/."
+      }
+    ],
+    "container-title": [
+      "Remote Sensing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2072-4292/14/16/3900/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          11
+        ]
+      ],
+      "date-time": "2025-10-11T00:07:20Z",
+      "timestamp": 1760141240000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/2072-4292/14/16/3900"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          11
+        ]
+      ]
+    },
+    "references-count": 54,
+    "journal-issue": {
+      "issue": "16",
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            8
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "rs14163900"
+    ],
+    "URL": "https://doi.org/10.3390/rs14163900",
+    "relation": {},
+    "ISSN": [
+      "2072-4292"
+    ],
+    "issn-type": [
+      {
+        "value": "2072-4292",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          8,
+          11
+        ]
+      ]
+    }
+  }
+}

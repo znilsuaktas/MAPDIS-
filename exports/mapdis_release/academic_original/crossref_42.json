@@ -1,0 +1,899 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          1
+        ]
+      ],
+      "date-time": "2026-09-01T17:07:11Z",
+      "timestamp": 1788282431996,
+      "version": "build-2803163510"
+    },
+    "reference-count": 65,
+    "publisher": "MDPI AG",
+    "issue": "11",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2021,
+              5,
+              22
+            ]
+          ],
+          "date-time": "2021-05-22T00:00:00Z",
+          "timestamp": 1621641600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Remote Sensing"
+    ],
+    "abstract": "<jats:p>A set of open-source routines capable of identifying possible oil-like spills based on two random forest classifiers were developed and tested with a Sentinel-1 SAR image dataset. The first random forest model is an ocean SAR image classifier where the labeling inputs were oil spills, biological films, rain cells, low wind regions, clean sea surface, ships, and terrain. The second one was a SAR image oil detector named \u201cRadar Image Oil Spill Seeker (RIOSS)\u201d, which classified oil-like targets. An optimized feature space to serve as input to such classification models, both in terms of variance and computational efficiency, was developed. It involved an extensive search from 42 image attribute definitions based on their correlations and classifier-based importance estimative. This number included statistics, shape, fractal geometry, texture, and gradient-based attributes. Mixed adaptive thresholding was performed to calculate some of the features studied, returning consistent dark spot segmentation results. The selected attributes were also related to the imaged phenomena\u2019s physical aspects. This process helped us apply the attributes to a random forest, increasing our algorithm\u2019s accuracy up to 90% and its ability to generate even more reliable results.</jats:p>",
+    "DOI": "10.3390/rs13112044",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          24
+        ]
+      ],
+      "date-time": "2021-05-24T00:01:20Z",
+      "timestamp": 1621814480000
+    },
+    "page": "2044",
+    "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 64,
+    "title": [
+      "SAR Oil Spill Detection System through Random Forest Classifiers"
+    ],
+    "prefix": "10.3390",
+    "volume": "13",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-4908-8846",
+        "authenticated-orcid": false,
+        "given": "Marcos Reinan Assis",
+        "family": "Concei\u00e7\u00e3o",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Geosciences Institute, Federal University of Bahia-UFBA, Salvador 40170-110,  BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7836-200X",
+        "authenticated-orcid": false,
+        "given": "Luis Felipe Ferreira",
+        "family": "de Mendon\u00e7a",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Geosciences Institute, Federal University of Bahia-UFBA, Salvador 40170-110,  BA, Brazil"
+          },
+          {
+            "name": "Geochemistry Postgraduation Program: Petroleum and Environment (POSPETRO), Federal University of Bahia-UFBA, Salvador 40170-110, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-0406-1006",
+        "authenticated-orcid": false,
+        "given": "Carlos Alessandre Domingos",
+        "family": "Lentini",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Geochemistry Postgraduation Program: Petroleum and Environment (POSPETRO), Federal University of Bahia-UFBA, Salvador 40170-110, BA, Brazil"
+          },
+          {
+            "name": "Physics Institute, Federal University of Bahia-UFBA, Salvador 40170-115, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andr\u00e9 Telles",
+        "family": "da Cunha Lima",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Physics Institute, Federal University of Bahia-UFBA, Salvador 40170-115, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-7819-6646",
+        "authenticated-orcid": false,
+        "given": "Jos\u00e9 Marques",
+        "family": "Lopes",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Physics Institute, Federal University of Bahia-UFBA, Salvador 40170-115, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Rodrigo Nogueira",
+        "family": "de Vasconcelos",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Earth and Environmental Sciences Modeling Program-PPGM, State University of Feira de Santana-UEFS, Feira de Santana 44036-900, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Mainara Biazati",
+        "family": "Gouveia",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Physics Institute, Federal University of Bahia-UFBA, Salvador 40170-115, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Milton Jos\u00e9",
+        "family": "Porsani",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Geochemistry Postgraduation Program: Petroleum and Environment (POSPETRO), Federal University of Bahia-UFBA, Salvador 40170-110, BA, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          22
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "first-page": "753",
+        "article-title": "Assessment of contamination by trace metals and petroleum hydrocarbons in sediments from the tropical estuary of Todos os Santos Bay, Brazil",
+        "volume": "38",
+        "author": "Celino",
+        "year": "2008",
+        "journal-title": "Braz. J. Geol."
+      },
+      {
+        "key": "ref_2",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fingas, M. (2001). The Basics of Oil Spill Cleanup, Lewis Publisher.",
+        "DOI": "10.1201/9781420032598"
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "44",
+        "DOI": "10.1016/j.marpolbul.2014.05.044",
+        "article-title": "Oil spill hazard assessment using a reverse trajectory method for the Egadi marine protected area (Central Mediterranean Sea)",
+        "volume": "84",
+        "author": "Ciappa",
+        "year": "2014",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_4",
+        "first-page": "63",
+        "article-title": "A multifamily GLRT for oil spill detection",
+        "volume": "55",
+        "author": "Orlando",
+        "year": "2016",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_5",
+        "doi-asserted-by": "crossref",
+        "first-page": "1935",
+        "DOI": "10.1109/TGRS.2002.803798",
+        "article-title": "SAR raw signal simulation of oil slicks in ocean environments",
+        "volume": "40",
+        "author": "Franceschetti",
+        "year": "2002",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "first-page": "49",
+        "DOI": "10.1080/014311699213596",
+        "article-title": "Satellite SAR oil spill detection using wind history information",
+        "volume": "20",
+        "author": "Espedal",
+        "year": "1999",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "first-page": "3561",
+        "DOI": "10.1080/014311600750037589",
+        "article-title": "Oil spill detection using marine SAR images",
+        "volume": "21",
+        "author": "Fiscella",
+        "year": "2000",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.rse.2004.11.015",
+        "article-title": "Oil spill detection by satellite remote sensing",
+        "volume": "95",
+        "author": "Brekke",
+        "year": "2005",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "65",
+        "DOI": "10.1109/LGRS.2007.907174",
+        "article-title": "Classifiers and confidence estimation for oil spill detection in Envisat ASAR images",
+        "volume": "5",
+        "author": "Brekke",
+        "year": "2008",
+        "journal-title": "IEEE Geosci. Remote Sens. Lett."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "first-page": "1590",
+        "DOI": "10.1016/j.rse.2010.02.013",
+        "article-title": "Oil spill detection from SAR intensity imagery using a marked point process",
+        "volume": "114",
+        "author": "Li",
+        "year": "2010",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_11",
+        "doi-asserted-by": "crossref",
+        "first-page": "4729",
+        "DOI": "10.1109/TGRS.2011.2158828",
+        "article-title": "Multi-frequency polarimetric SAR processing chain to observe oil fields in the Gulf of Mexico",
+        "volume": "49",
+        "author": "Migliaccio",
+        "year": "2011",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_12",
+        "doi-asserted-by": "crossref",
+        "first-page": "3243",
+        "DOI": "10.1080/01431161.2015.1057301",
+        "article-title": "SAR polarimetry for sea oil slick observation",
+        "volume": "36",
+        "author": "Migliaccio",
+        "year": "2015",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "6521",
+        "DOI": "10.1109/TGRS.2013.2297193",
+        "article-title": "Oil spill detection in hybrid-polarimetric SAR images",
+        "volume": "52",
+        "author": "Salberg",
+        "year": "2014",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "first-page": "1079",
+        "DOI": "10.1016/j.asr.2015.05.040",
+        "article-title": "Detection of the Hebei Spirit oil spill on SAR imagery and its temporal evolution in a coastal region of the Yellow Sea",
+        "volume": "56",
+        "author": "Kim",
+        "year": "2015",
+        "journal-title": "Adv. Space Res."
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "first-page": "3751",
+        "DOI": "10.1109/JSTARS.2014.2348173",
+        "article-title": "Analysis of the polarimetric SAR scattering properties of oil-covered waters",
+        "volume": "8",
+        "author": "Li",
+        "year": "2015",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "first-page": "4979",
+        "DOI": "10.1109/JSTARS.2016.2559946",
+        "article-title": "A combination of traditional and polarimetric features for oil spill detection using TerraSAR-X",
+        "volume": "9",
+        "author": "Singha",
+        "year": "2016",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_17",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Chen, G., Li, Y., Sun, G., and Zhang, Y. (2017). Application of deep networks to oil spill detection using polarimetric synthetic aperture radar images. Appl. Sci., 7.",
+        "DOI": "10.3390/app7100968"
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Vasconcelos, R.N., Lima, A.T.C., Lentini, C.A., Miranda, G.V., Mendon\u00e7a, L.F., Silva, M.A., Cambu\u00ed, E.C.B., Lopes, J.M., and Porsani, M.J. (2020). Oil Spill Detection and Mapping: A 50-Year Bibliometric Analysis. Remote Sens., 12.",
+        "DOI": "10.3390/rs12213647"
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "911",
+        "DOI": "10.7901/2169-3358-2001-2-911",
+        "article-title": "New space-borne sensors for oil spill response",
+        "volume": "2001",
+        "author": "Brown",
+        "year": "2001",
+        "journal-title": "Int. Oil Spill Conf. Proc."
+      },
+      {
+        "key": "ref_20",
+        "first-page": "218",
+        "article-title": "Oil-spills detection in SAR images by fractal dimension estimation",
+        "volume": "1",
+        "author": "Benelli",
+        "year": "1999",
+        "journal-title": "IEEE Int. Geosci. Remote Sens. Symp."
+      },
+      {
+        "key": "ref_21",
+        "unstructured": "Marghany, M., Hashim, M., and Cracknell, A.P. (2007, January 26\u201329). Fractal dimension algorithm for detecting oil spills using RADARSAT-1 SAR. Proceedings of the International Conference on Computational Science and Its Applications, Kuala Lumpur, Malaysia."
+      },
+      {
+        "key": "ref_22",
+        "first-page": "1711",
+        "article-title": "Discrimination between oil spill and look-alike using fractal dimension algorithm from RADARSAT-1 SAR and AIRSAR/POLSAR data",
+        "volume": "6",
+        "author": "Marghany",
+        "year": "2011",
+        "journal-title": "Int. J. Phys. Sci."
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "first-page": "2282",
+        "DOI": "10.1109/36.868885",
+        "article-title": "Neural networks for oil spill detection using ERS-SAR data",
+        "volume": "38",
+        "author": "Petrocchi",
+        "year": "2000",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Garcia-Pineda, O., MacDonald, I., and Zimmer, B. (2008, January 7\u201311). Synthetic aperture radar image processing using the supervised textural-neural network classification algorithm. Proceedings of the IGARSS 2008-2008 IEEE International Geoscience and Remote Sensing Symposium, Boston, MA, USA.",
+        "DOI": "10.1109/IGARSS.2008.4779960"
+      },
+      {
+        "key": "ref_25",
+        "doi-asserted-by": "crossref",
+        "first-page": "350",
+        "DOI": "10.1016/j.marpolbul.2010.10.005",
+        "article-title": "SAR observation and model tracking of an oil spill event in coastal waters",
+        "volume": "62",
+        "author": "Cheng",
+        "year": "2011",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Singha, S., Bellerby, T.J., and Trieschmann, O. (2012, January 22\u201327). Detection and classification of oil spill and look-alike spots from SAR imagery using an artificial neural network. Proceedings of the 2012 IEEE, International Geoscience and Remote Sensing Symposium, Munich, Germany.",
+        "DOI": "10.1109/IGARSS.2012.6352042"
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "first-page": "128837",
+        "DOI": "10.1109/ACCESS.2019.2939201",
+        "article-title": "A survey of deep learning-based object detection",
+        "volume": "7",
+        "author": "Jiao",
+        "year": "2019",
+        "journal-title": "IEEE Access"
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "first-page": "190",
+        "DOI": "10.1016/j.isprsjprs.2020.07.011",
+        "article-title": "A novel deep learning instance segmentation model for automated marine oil spill detection",
+        "volume": "167",
+        "author": "Yekeen",
+        "year": "2000",
+        "journal-title": "ISPRS J. Photogramm. Remote Sens."
+      },
+      {
+        "key": "ref_29",
+        "unstructured": "Sk\u00f8elv, \u00c5., and Wahl, T. (2021, March 27). Oil spill detection using satellite based SAR, Phase 1B competition report. Tech. Rep. Nor. Def. Res. Establ., Available online: https://www.asprs.org/wp-content/uploads/pers/1993journal/mar/1993_mar_423-428.pdf."
+      },
+      {
+        "key": "ref_30",
+        "first-page": "10",
+        "article-title": "Monitoring the coastal zone with the RADARSAT satellite",
+        "volume": "98",
+        "author": "Vachon",
+        "year": "1998",
+        "journal-title": "Oceanol. Int."
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Manore, M.J., Vachon, P.W., Bjerkelund, C., Edel, H.R., and Ramsay, B. (1998, January 8\u201312). Operational use of RADARSAT SAR in the coastal zone: The Canadian experience. Proceedings of the 27th international Symposium on Remote Sensing of the Environment, Tromso, Norway.",
+        "DOI": "10.4095/219332"
+      },
+      {
+        "key": "ref_32",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Kolokoussis, P., and Karathanassi, V. (2018). Oil spill detection and mapping using sentinel 2 imagery. J. Mar. Sci. Eng., 6.",
+        "DOI": "10.3390/jmse6010004"
+      },
+      {
+        "key": "ref_33",
+        "doi-asserted-by": "crossref",
+        "first-page": "37",
+        "DOI": "10.1016/j.isprsjprs.2016.04.006",
+        "article-title": "Object-oriented approach to oil spill detection using ENVISAT ASAR images",
+        "volume": "118",
+        "author": "Konik",
+        "year": "2016",
+        "journal-title": "ISPRS J. Photogramm. Remote Sens."
+      },
+      {
+        "key": "ref_34",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Xu, L., Javad Shafiee, M., Wong, A., Li, F., Wang, L., and Clausi, D. (2015, January 7\u201312). Oil spill candidate detection from SAR imagery using a thresholding-guided stochastic fully-connected conditional random field model. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition Workshops, Boston, MA, USA.",
+        "DOI": "10.1109/CVPRW.2015.7301386"
+      },
+      {
+        "key": "ref_35",
+        "first-page": "191",
+        "article-title": "RADARSAT automatic algorithms for detecting coastal oil spill pollution",
+        "volume": "3",
+        "author": "Marghany",
+        "year": "2001",
+        "journal-title": "Int. J. Appl. Earth Obs. Geoinf."
+      },
+      {
+        "key": "ref_36",
+        "doi-asserted-by": "crossref",
+        "first-page": "885",
+        "DOI": "10.1109/JSTARS.2012.2182760",
+        "article-title": "Ship and oil-spill detection using the degree of polarization in linear and hybrid/compact dual-pol SAR",
+        "volume": "5",
+        "author": "Shirvany",
+        "year": "2012",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_37",
+        "unstructured": "Solberg, A.S., and Solberg, R. (1996, January 31). A large-scale evaluation of features for automatic detection of oil spills in ERS SAR images. Proceedings of the IGARSS\u201996. International Geoscience and Remote Sensing Symposium, Lincoln, NE, USA."
+      },
+      {
+        "key": "ref_38",
+        "doi-asserted-by": "crossref",
+        "first-page": "1916",
+        "DOI": "10.1109/36.774704",
+        "article-title": "Automatic detection of oil spills in ERS SAR images",
+        "volume": "37",
+        "author": "Solberg",
+        "year": "1999",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_39",
+        "unstructured": "Solberg, A.H., Dokken, S.T., and Solberg, R. (2003, January 21\u201325). Automatic detection of oil spills in Envisat, Radarsat and ERS SAR images. Proceedings of the IGARSS\u2014IEEE International Geoscience and Remote Sensing Symposium, Toulouse, France. (IEEE Cat. No. 03CH37477)."
+      },
+      {
+        "key": "ref_40",
+        "doi-asserted-by": "crossref",
+        "first-page": "746",
+        "DOI": "10.1109/TGRS.2006.887019",
+        "article-title": "Oil spill detection in Radarsat and Envisat SAR images",
+        "volume": "45",
+        "author": "Solberg",
+        "year": "2007",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_41",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Awad, M. (2010). Segmentation of satellite images using Self-Organizing Maps. Intech Open Access Publ., 249\u2013260.",
+        "DOI": "10.5772/9167"
+      },
+      {
+        "key": "ref_42",
+        "doi-asserted-by": "crossref",
+        "first-page": "105716",
+        "DOI": "10.1016/j.asoc.2019.105716",
+        "article-title": "Oil spill segmentation in SAR images using convolutional neural networks. A comparative analysis with clustering and logistic regression algorithms",
+        "volume": "84",
+        "author": "Cantorna",
+        "year": "2019",
+        "journal-title": "Appl. Soft Comput."
+      },
+      {
+        "key": "ref_43",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Zhang, J., Feng, H., Luo, Q., Li, Y., Wei, J., and Li, J. (2020). Oil spill detection in quad-polarimetric SAR Images using an advanced convolutional neural network based on SuperPixel model. Remote Sens., 12.",
+        "DOI": "10.3390/rs12060944"
+      },
+      {
+        "key": "ref_44",
+        "doi-asserted-by": "crossref",
+        "first-page": "20",
+        "DOI": "10.1038/538020a",
+        "article-title": "Can we open the black box of AI?",
+        "volume": "538",
+        "author": "Castelvecchi",
+        "year": "2016",
+        "journal-title": "Nat. News"
+      },
+      {
+        "key": "ref_45",
+        "doi-asserted-by": "crossref",
+        "first-page": "5",
+        "DOI": "10.1023/A:1010933404324",
+        "article-title": "Random forests",
+        "volume": "45",
+        "author": "Breiman",
+        "year": "2001",
+        "journal-title": "Mach. Learn."
+      },
+      {
+        "key": "ref_46",
+        "first-page": "7",
+        "article-title": "A comparison of artificial neural networks and random forests to predict native fish species richness in Mediterranean rivers",
+        "volume": "409",
+        "author": "Francisco",
+        "year": "2013",
+        "journal-title": "Knowl. Manag. Aquat. Ecosyst."
+      },
+      {
+        "key": "ref_47",
+        "doi-asserted-by": "crossref",
+        "first-page": "2352",
+        "DOI": "10.1109/TGRS.2006.873853",
+        "article-title": "TOPSAR: Terrain observation by progressive scans",
+        "volume": "44",
+        "year": "2006",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_48",
+        "doi-asserted-by": "crossref",
+        "first-page": "2090",
+        "DOI": "10.1016/j.marpolbul.2012.07.018",
+        "article-title": "Adaptive thresholding algorithm based on SAR images and wind data to segment oil spills along the northwest coast of the Iberian Peninsula",
+        "volume": "64",
+        "author": "Mera",
+        "year": "2012",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_49",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1186/s40537-019-0197-0",
+        "article-title": "A survey on image data augmentation for deep learning",
+        "volume": "6",
+        "author": "Shorten",
+        "year": "2019",
+        "journal-title": "J. Big Data"
+      },
+      {
+        "key": "ref_50",
+        "first-page": "5227",
+        "article-title": "A new local adaptive thresholding technique in binarization",
+        "volume": "1201",
+        "author": "Singh",
+        "year": "2012",
+        "journal-title": "Arxiv Prepr. Arxiv"
+      },
+      {
+        "key": "ref_51",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Roy, P., Dutta, S., Dey, N., Dey, G., Chakraborty, S., and Ray, R. (2014, January 10\u201311). Adaptive thresholding: A comparative study. Proceedings of the 2014 International conference on control, Instrumentation, communication and Computational Technologies, Kanyakumari, India.",
+        "DOI": "10.1109/ICCICCT.2014.6993140"
+      },
+      {
+        "key": "ref_52",
+        "doi-asserted-by": "crossref",
+        "first-page": "2460",
+        "DOI": "10.1016/j.patcog.2009.03.001",
+        "article-title": "An improved box-counting method for image fractal dimension estimation",
+        "volume": "42",
+        "author": "Li",
+        "year": "2009",
+        "journal-title": "Pattern Recognit."
+      },
+      {
+        "key": "ref_53",
+        "doi-asserted-by": "crossref",
+        "first-page": "217",
+        "DOI": "10.1006/jvci.1996.0020",
+        "article-title": "On the validity of fractal dimension measurements in image analysis",
+        "volume": "7",
+        "author": "Soille",
+        "year": "1996",
+        "journal-title": "J. Vis. Commun. Image Represent."
+      },
+      {
+        "key": "ref_54",
+        "doi-asserted-by": "crossref",
+        "first-page": "36",
+        "DOI": "10.1016/j.mvr.2018.02.006",
+        "article-title": "Fractal dimension and lacunarity analysis of retinal microvascular morphology in hypertension and diabetes",
+        "volume": "118",
+        "author": "Popovic",
+        "year": "2018",
+        "journal-title": "Microvasc. Res."
+      },
+      {
+        "key": "ref_55",
+        "doi-asserted-by": "crossref",
+        "first-page": "261",
+        "DOI": "10.1038/s41592-019-0686-2",
+        "article-title": "SciPy 1.0: Fundamental algorithms for scientific computing in Python",
+        "volume": "17",
+        "author": "Virtanen",
+        "year": "2020",
+        "journal-title": "Nat. Methods"
+      },
+      {
+        "key": "ref_56",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cutler, A., Richard, D.C., and Stevens, J.R. (2012). Random forests. Ensemble Machine Learning, Springer.",
+        "DOI": "10.1007/978-1-4419-9326-7_5"
+      },
+      {
+        "key": "ref_57",
+        "doi-asserted-by": "crossref",
+        "first-page": "217",
+        "DOI": "10.1080/01431160412331269698",
+        "article-title": "Random forest classifier for remote sensing classification",
+        "volume": "26",
+        "author": "Pal",
+        "year": "2005",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "key": "ref_58",
+        "doi-asserted-by": "crossref",
+        "first-page": "294",
+        "DOI": "10.1016/j.patrec.2005.08.011",
+        "article-title": "Random forests for land cover classification",
+        "volume": "27",
+        "author": "Gislason",
+        "year": "2006",
+        "journal-title": "Pattern Recognit. Lett."
+      },
+      {
+        "key": "ref_59",
+        "unstructured": "F\u00fcrnkranz, J., and Peter, A.F. (2003, January 21\u201324). An analysis of rule evaluation metrics. Proceedings of the 20th international conference on machine learning (ICML-03), Washington, DC, USA."
+      },
+      {
+        "key": "ref_60",
+        "doi-asserted-by": "crossref",
+        "first-page": "137",
+        "DOI": "10.1007/s11222-009-9153-8",
+        "article-title": "Estimation of prediction error by using K-fold cross-validation",
+        "volume": "21",
+        "author": "Fushiki",
+        "year": "2011",
+        "journal-title": "Stat. Comput."
+      },
+      {
+        "key": "ref_61",
+        "doi-asserted-by": "crossref",
+        "first-page": "012001",
+        "DOI": "10.1088/1742-6596/1004/1/012001",
+        "article-title": "Image augmentation for object image classification based on combination of pre-trained CNN and SVM",
+        "volume": "1004",
+        "author": "Shima",
+        "year": "2018",
+        "journal-title": "J. Phys. Conf. Series. Iop Publ."
+      },
+      {
+        "key": "ref_62",
+        "doi-asserted-by": "crossref",
+        "first-page": "1950",
+        "DOI": "10.1109/TGRS.2003.814628",
+        "article-title": "Texture analysis and classification of ERS SAR images for map updating of urban areas in the Netherlands",
+        "volume": "41",
+        "author": "Dekker",
+        "year": "2003",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_63",
+        "doi-asserted-by": "crossref",
+        "first-page": "241",
+        "DOI": "10.1007/BF02289588",
+        "article-title": "Hierarchical clustering schemes",
+        "volume": "32",
+        "author": "Johnson",
+        "year": "1967",
+        "journal-title": "Psychometrika"
+      },
+      {
+        "key": "ref_64",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Fauvel, M., Chanussot, J., and Benediktsson, J.A. (2009). Kernel principal component analysis for the classification of hyperspectral remote sensing data over urban areas. EURASIP J. Adv. Signal Process., 1\u201314.",
+        "DOI": "10.1155/2009/783194"
+      },
+      {
+        "key": "ref_65",
+        "first-page": "2825",
+        "article-title": "Scikit-learn: Machine Learning in Python",
+        "volume": "12",
+        "author": "Pedregosa",
+        "year": "2011",
+        "journal-title": "J. Mach. Learn. Res."
+      }
+    ],
+    "container-title": [
+      "Remote Sensing"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/2072-4292/13/11/2044/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          11
+        ]
+      ],
+      "date-time": "2025-10-11T06:06:04Z",
+      "timestamp": 1760162764000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/2072-4292/13/11/2044"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          22
+        ]
+      ]
+    },
+    "references-count": 65,
+    "journal-issue": {
+      "issue": "11",
+      "published-online": {
+        "date-parts": [
+          [
+            2021,
+            6
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "rs13112044"
+    ],
+    "URL": "https://doi.org/10.3390/rs13112044",
+    "relation": {},
+    "ISSN": [
+      "2072-4292"
+    ],
+    "issn-type": [
+      {
+        "value": "2072-4292",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          5,
+          22
+        ]
+      ]
+    }
+  }
+}

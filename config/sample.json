@@ -1,0 +1,13 @@
+{
+  "keywords": ["oil spill", "marine pollution", "Sentinel-1", "SAR imagery", "satellite oil spill detection"],
+  "date_from": "2020-01-01",
+  "date_to": null,
+  "max_results_per_source": 10,
+  "request_interval_seconds": 1.0,
+  "user_agent": "MAPDIS-Research/0.1",
+  "sources": [
+    {"type": "openalex", "quality": 0.9},
+    {"type": "crossref", "quality": 0.85},
+    {"type": "website", "url": "https://example.org/", "enabled": false, "terms_reviewed": false, "quality": 0.5}
+  ]
+}

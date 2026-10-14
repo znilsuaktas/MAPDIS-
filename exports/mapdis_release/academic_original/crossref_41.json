@@ -1,0 +1,601 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          9,
+          25
+        ]
+      ],
+      "date-time": "2026-09-25T04:37:29Z",
+      "timestamp": 1790311049924,
+      "version": "4.1.0"
+    },
+    "reference-count": 36,
+    "publisher": "MDPI AG",
+    "issue": "19",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2022,
+              9,
+              28
+            ]
+          ],
+          "date-time": "2022-09-28T00:00:00Z",
+          "timestamp": 1664323200000
+        },
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "41701390"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41701390"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "2021041"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021041"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "name": "Hefei Municipal Natural Science Foundation",
+        "award": [
+          "41701390"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "41701390"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hefei Municipal Natural Science Foundation",
+        "award": [
+          "2021041"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "2021041"
+            ]
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "IJERPH"
+    ],
+    "abstract": "<jats:p>With the rapid development of marine trade, marine oil pollution is becoming increasingly severe, which can exert damage to the health of the marine environment. Therefore, detection of marine oil spills is important for effectively starting the oil-spill cleaning process and the protection of the marine environment. The polarimetric synthetic aperture radar (PolSAR) technique has been applied to the detection of marine oil spills in recent years. However, most current studies still focus on using the simple intensity or amplitude information of SAR data and the detection results are not reliable enough. This paper presents a deep-learning-based method to detect oil spills on the marine surface from Sentinel-1 PolSAR satellite images. Specifically, attention gates are added to the U-Net network architecture, which ensures that the model focuses more on feature extraction. In the training process of the model, sufficient Sentinel-1 PolSAR images are selected as sample data. The polarimetric information from the PolSAR dataset and the wind-speed information of the marine surface are both taken into account when training the model and detecting oil spills. The experimental results show that the proposed method achieves better performance than the traditional methods, and taking into account both the polarimetric and wind-speed information, can indeed improve the oil-spill detection results. In addition, the model shows pleasing performance in capturing the fine details of the boundaries of the oil-spill patches.</jats:p>",
+    "DOI": "10.3390/ijerph191912315",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          28
+        ]
+      ],
+      "date-time": "2022-09-28T20:58:47Z",
+      "timestamp": 1664398727000
+    },
+    "page": "12315",
+    "update-policy": "https://doi.org/10.3390/mdpi_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 42,
+    "title": [
+      "Marine Oil Spill Detection from SAR Images Based on Attention U-Net Model Using Polarimetric and Wind Speed Information"
+    ],
+    "prefix": "10.3390",
+    "volume": "19",
+    "author": [
+      {
+        "given": "Yan",
+        "family": "Chen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "China JIKAN Research Institute of Engineering Investigations and Design, Co., Ltd., Xi\u2019an 710043, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhilong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "School of Resources and Environmental Engineering, Anhui University, Hefei 230601, China"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "member": "1968",
+    "published-online": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          28
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "ref_1",
+        "doi-asserted-by": "crossref",
+        "first-page": "133",
+        "DOI": "10.1016/j.rse.2017.09.002",
+        "article-title": "Oil spill detection by imaging radars: Challenges and pitfalls",
+        "volume": "201",
+        "author": "Alpers",
+        "year": "2017",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_2",
+        "unstructured": "(2022, August 24). The International Tanker Owners Pollution Federation Limited Oil Tanker Spill Statistics. Available online: http://www.itopf.com/knowledge-resources/data-statistics/statistics/."
+      },
+      {
+        "key": "ref_3",
+        "doi-asserted-by": "crossref",
+        "first-page": "6709",
+        "DOI": "10.1021/es2013227",
+        "article-title": "Oil Biodegradation and Bioremediation: A Tale of the Two Worst Spills in U.S",
+        "volume": "45",
+        "author": "Atlas",
+        "year": "2011",
+        "journal-title": "History. Environ. Sci. Technol."
+      },
+      {
+        "key": "ref_4",
+        "doi-asserted-by": "crossref",
+        "first-page": "112164",
+        "DOI": "10.1016/j.marpolbul.2021.112164",
+        "article-title": "A food chain-based ecological risk assessment model for oil spills in the Arctic environment",
+        "volume": "166",
+        "author": "Fahd",
+        "year": "2021",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_5",
+        "first-page": "27",
+        "article-title": "Monitoring oil spill hotspots, contamination probability modelling and assessment of coastal impacts in the Caspian Sea using SENTINEL-1, LANDSAT-8, RADARSAT, ENVISAT and ERS satellite sensors",
+        "volume": "11",
+        "author": "Bayramov",
+        "year": "2018",
+        "journal-title": "J. Oper. Oceanogr."
+      },
+      {
+        "key": "ref_6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Vasconcelos, R.N., Lima, A.T.C., Lentini, C.A.D., Miranda, G.V., Mendon\u00e7a, L.F., Silva, M.A., Cambu\u00ed, E.C.B., Lopes, J.M., and Porsani, M.J. (2020). Oil Spill Detection and Mapping: A 50-Year Bibliometric Analysis. Remote Sens., 12.",
+        "DOI": "10.3390/rs12213647"
+      },
+      {
+        "key": "ref_7",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Al-Ruzouq, R., Gibril, M.B.A., Shanableh, A., Kais, A., Hamed, O., Al-Mansoori, S., and Khalil, M.A. (2020). Sensors, Features, and Machine Learning for Oil Spill Detection and Monitoring: A Review. Remote Sens., 12.",
+        "DOI": "10.3390/rs12203338"
+      },
+      {
+        "key": "ref_8",
+        "doi-asserted-by": "crossref",
+        "first-page": "10070",
+        "DOI": "10.1109/TGRS.2019.2931308",
+        "article-title": "Multi-scale rotation-invariant haar-Like feature integrated CNN-based ship detection algorithm of multiple-target environment in SAR Imagery",
+        "volume": "57",
+        "author": "Ai",
+        "year": "2019",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_9",
+        "doi-asserted-by": "crossref",
+        "first-page": "4729",
+        "DOI": "10.1109/TGRS.2011.2158828",
+        "article-title": "A Multifrequency Polarimetric SAR Processing Chain to Observe Oil Fields in the Gulf of Mexico",
+        "volume": "49",
+        "author": "Migliaccio",
+        "year": "2011",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_10",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Song, D., Ding, Y., Li, X., Zhang, B., and Xu, M. (2017). Ocean Oil Spill Classification with RADARSAT-2 SAR Based on an Optimized Wavelet Neural Network. Remote Sens., 9.",
+        "DOI": "10.3390/rs9080799"
+      },
+      {
+        "key": "ref_11",
+        "first-page": "37",
+        "article-title": "Theoretical Study on Microwave Scattering Mechanisms of Sea Surfaces Covered with and without Oil Film for Incidence Angle Smaller Than 30\u00b0",
+        "volume": "59",
+        "author": "Zheng",
+        "year": "2021",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_12",
+        "doi-asserted-by": "crossref",
+        "first-page": "135",
+        "DOI": "10.1016/j.isprsjprs.2012.01.005",
+        "article-title": "Oil spill feature selection and classification using decision tree forest on SAR image data",
+        "volume": "68",
+        "author": "Topouzelis",
+        "year": "2012",
+        "journal-title": "ISPRS J. Photogramm. Remote Sens."
+      },
+      {
+        "key": "ref_13",
+        "doi-asserted-by": "crossref",
+        "first-page": "14",
+        "DOI": "10.1016/j.rse.2013.10.012",
+        "article-title": "A comparative study of different classification techniques for marine oil spill identification using RADARSAT-1 imagery",
+        "volume": "141",
+        "author": "Xu",
+        "year": "2014",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_14",
+        "doi-asserted-by": "crossref",
+        "first-page": "4193",
+        "DOI": "10.1109/JSTARS.2018.2841503",
+        "article-title": "Combined Method of an Efficient Cuckoo Search Algorithm and Nonnegative Matrix Factorization of Different Zernike Moment Features for Discrimination Between Oil Spills and Lookalikes in SAR Images",
+        "volume": "11",
+        "author": "Raeisi",
+        "year": "2018",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_15",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Wu, L., Wang, L., Min, L., Hou, W., Guo, Z., Zhao, J., and Li, N. (2018). Discrimination of Algal-Bloom Using Spaceborne SAR Observations of Great Lakes in China. Remote Sens., 10.",
+        "DOI": "10.3390/rs10050767"
+      },
+      {
+        "key": "ref_16",
+        "doi-asserted-by": "crossref",
+        "first-page": "1587",
+        "DOI": "10.1080/01431160802520741",
+        "article-title": "On the co-polarized phase difference for oil spill observation",
+        "volume": "30",
+        "author": "Migliaccio",
+        "year": "2009",
+        "journal-title": "Int. J. Remote Sens."
+      },
+      {
+        "key": "ref_17",
+        "first-page": "4204713",
+        "article-title": "Oil Spill Detection Based on Deep Convolutional Neural Networks Using Polarimetric Scattering Information from Sentinel-1 SAR Images",
+        "volume": "60",
+        "author": "Ma",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_18",
+        "doi-asserted-by": "crossref",
+        "first-page": "2282",
+        "DOI": "10.1109/36.868885",
+        "article-title": "Neural networks for oil spill detection using ERS-SAR data",
+        "volume": "38",
+        "author": "Frate",
+        "year": "2000",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_19",
+        "doi-asserted-by": "crossref",
+        "first-page": "111921",
+        "DOI": "10.1016/j.marpolbul.2020.111921",
+        "article-title": "Marine oil spill detection using Synthetic Aperture Radar over Indian Ocean",
+        "volume": "162",
+        "author": "Naz",
+        "year": "2021",
+        "journal-title": "Mar. Pollut. Bull."
+      },
+      {
+        "key": "ref_20",
+        "doi-asserted-by": "crossref",
+        "first-page": "1872",
+        "DOI": "10.1109/TAES.2021.3050654",
+        "article-title": "Robust CFAR Ship Detector Based on Bilateral-Trimmed-Statistics of Complex Ocean Scenes in SAR Imagery: A Closed-Form Solution",
+        "volume": "57",
+        "author": "Ai",
+        "year": "2021",
+        "journal-title": "IEEE Trans. Aerosp. Elec. Sys."
+      },
+      {
+        "key": "ref_21",
+        "doi-asserted-by": "crossref",
+        "first-page": "5214313",
+        "DOI": "10.1109/TGRS.2021.3106915",
+        "article-title": "SAR target classification using the multi-kernel size feature fusion-based convolutional neural network",
+        "volume": "60",
+        "author": "Ai",
+        "year": "2022",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Krestenitis, M., Orfanidis, G., Ioannidis, K., Avgerinakis, K., Vrochidis, S., and Kompatsiaris, I. (2019). Oil Spill Identification from Satellite Images Using Deep Neural Networks. Remote Sens., 11.",
+        "DOI": "10.3390/rs11151762"
+      },
+      {
+        "key": "ref_23",
+        "doi-asserted-by": "crossref",
+        "first-page": "456",
+        "DOI": "10.1007/s00343-021-0255-2",
+        "article-title": "A new oil spill detection algorithm based on Dempster-Shafer evidence theory",
+        "volume": "40",
+        "author": "Zhang",
+        "year": "2021",
+        "journal-title": "J. Oceanol. Limnol."
+      },
+      {
+        "key": "ref_24",
+        "doi-asserted-by": "crossref",
+        "first-page": "2517",
+        "DOI": "10.1109/JSTARS.2013.2244061",
+        "article-title": "Oil Spill Mapping and Measurement in the Gulf of Mexico with Textural Classifier Neural Network Algorithm (TCNNA)",
+        "volume": "6",
+        "author": "Garcia",
+        "year": "2013",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_25",
+        "doi-asserted-by": "crossref",
+        "first-page": "1015",
+        "DOI": "10.3390/rs12061015",
+        "article-title": "A Deep Convolutional Neural Network for Oil Spill Detection from Spaceborne SAR Images",
+        "volume": "12",
+        "author": "Zeng",
+        "year": "2020",
+        "journal-title": "Remote Sens."
+      },
+      {
+        "key": "ref_26",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1016/j.rse.2004.11.015",
+        "article-title": "Oil spill detection by satellite remote sensing",
+        "volume": "95",
+        "author": "Brekke",
+        "year": "2005",
+        "journal-title": "Remote Sens. Environ."
+      },
+      {
+        "key": "ref_27",
+        "doi-asserted-by": "crossref",
+        "first-page": "8807",
+        "DOI": "10.1109/TGRS.2020.2990978",
+        "article-title": "SAR Image Despeckling by Noisy Reference-Based Deep Learning Method",
+        "volume": "58",
+        "author": "Ma",
+        "year": "2020",
+        "journal-title": "IEEE Trans. Geosci. Remote"
+      },
+      {
+        "key": "ref_28",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Sun, W., Li, P., Du, B., Yang, J., Tian, L., Li, M., and Zhao, L. (2020). Scatter Matrix Based Domain Adaptation for Bi-Temporal Polarimetric SAR Images. Remote Sens., 12.",
+        "DOI": "10.3390/rs12040658"
+      },
+      {
+        "key": "ref_29",
+        "doi-asserted-by": "crossref",
+        "first-page": "2440",
+        "DOI": "10.1109/TGRS.2017.2780195",
+        "article-title": "Assessment of the Potential of H/A/Alpha Decomposition for Polarimetric Interferometric SAR Data",
+        "volume": "56",
+        "author": "Salehi",
+        "year": "2018",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_30",
+        "doi-asserted-by": "crossref",
+        "first-page": "2332",
+        "DOI": "10.1109/36.964969",
+        "article-title": "Unsupervised classification of multifrequency and fully polarimetric SAR images based on the H/A/Alpha-Wishart classifier",
+        "volume": "39",
+        "author": "Ferro",
+        "year": "2001",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_31",
+        "doi-asserted-by": "crossref",
+        "first-page": "68",
+        "DOI": "10.1109/36.551935",
+        "article-title": "An entropy based classification scheme for land applications of polarimetric SAR",
+        "volume": "35",
+        "author": "Cloude",
+        "year": "1997",
+        "journal-title": "IEEE Trans. Geosci. Remote Sens."
+      },
+      {
+        "key": "ref_32",
+        "doi-asserted-by": "crossref",
+        "first-page": "4948",
+        "DOI": "10.1109/JSTARS.2016.2565063",
+        "article-title": "A Multisensor Comparison of Experimental Oil Spills in Polarimetric SAR for High Wind Conditions",
+        "volume": "9",
+        "author": "Skrunes",
+        "year": "2016",
+        "journal-title": "IEEE J. Sel. Top. Appl. Earth Obs. Remote Sens."
+      },
+      {
+        "key": "ref_33",
+        "doi-asserted-by": "crossref",
+        "first-page": "1",
+        "DOI": "10.1029/2006JC003743",
+        "article-title": "An improved C-band scatterometer ocean geophysical model function: CMOD5",
+        "volume": "112",
+        "author": "Hersbach",
+        "year": "2007",
+        "journal-title": "J. Geophys. Res Oceans"
+      },
+      {
+        "key": "ref_34",
+        "unstructured": "Oktay, O., Schlemper, J., and Folgoc, L. (2018). Attention U-Net: Learning where to look for the pancreas. arXiv."
+      },
+      {
+        "key": "ref_35",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ronneberger, O., Fischer, P., and Brox, T. (2015). U-Net: Convolutional networks for biomedical image segmentation. arXiv.",
+        "DOI": "10.1007/978-3-319-24574-4_28"
+      },
+      {
+        "key": "ref_36",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Nava, L., Bhuyan, K., Meena, S.R., Monserrat, O., and Catani, F. (2022). Rapid Mapping of Landslides on SAR Data by Attention U-Net. Remote Sens., 14.",
+        "DOI": "10.3390/rs14061449"
+      }
+    ],
+    "container-title": [
+      "International Journal of Environmental Research and Public Health"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.mdpi.com/1660-4601/19/19/12315/pdf",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2025,
+          10,
+          11
+        ]
+      ],
+      "date-time": "2025-10-11T00:40:58Z",
+      "timestamp": 1760143258000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.mdpi.com/1660-4601/19/19/12315"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          28
+        ]
+      ]
+    },
+    "references-count": 36,
+    "journal-issue": {
+      "issue": "19",
+      "published-online": {
+        "date-parts": [
+          [
+            2022,
+            10
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "ijerph191912315"
+    ],
+    "URL": "https://doi.org/10.3390/ijerph191912315",
+    "relation": {},
+    "ISSN": [
+      "1660-4601"
+    ],
+    "issn-type": [
+      {
+        "value": "1660-4601",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          9,
+          28
+        ]
+      ]
+    }
+  }
+}
