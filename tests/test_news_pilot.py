@@ -126,3 +126,47 @@ def test_proxy_hint_does_not_assume_windows_is_codex():
     assert result['error_origin']=='proxy_CONNECT_403'
     assert 'Windows' in result['troubleshooting_hint']
     assert result['http_status'] is None
+
+
+def test_rss_provider_does_not_call_gdelt(monkeypatch):
+    from datetime import date
+    import mapdis_research.feeds
+    settings=config();settings.update(provider='rss',feeds=[{'url':'https://publisher.example/feed','topic':'oil','enabled':True,'terms_reviewed':True}])
+    def feed(client,cfg,source):
+        return [dict(title='Oil spilled into sea',url='https://publisher.example/story',date=date.today().isoformat(),text='Public feed summary.')]
+    monkeypatch.setattr(mapdis_research.feeds,'discover_feed',feed)
+    def deny(*a,**k):raise AssertionError('RSS must not send GDELT requests')
+    monkeypatch.setattr('mapdis_research.pilot.Client.get',deny)
+    data,statuses=collect_news(settings)
+    records,summary=build_sample(data,settings)
+    assert len(records)==1 and records[0]['source']=='rss'
+    assert records[0]['publication_date']==date.today().isoformat()
+    assert records[0]['gdelt_seen_at'] is None
+    assert records[0]['text']=='Public feed summary.'
+    assert summary['publication_dates_known']==1
+
+
+def test_unreviewed_rss_not_contacted(monkeypatch):
+    settings=config();settings.update(provider='rss',feeds=[{'url':'https://publisher.example/feed','topic':'oil','enabled':True,'terms_reviewed':False}])
+    def deny(*a,**k):raise AssertionError('Unreviewed source must not be requested')
+    monkeypatch.setattr('mapdis_research.pilot.Client.get',deny)
+    raw_rows,statuses=collect_news(settings)
+    assert not raw_rows and statuses[0]['status']=='review_required'
+
+
+def test_rss_config_and_cli_provider_dispatch(tmp_path,monkeypatch):
+    settings=load_pilot_config('config/news_rss_pilot.json')
+    assert settings['provider']=='rss'
+    monkeypatch.setattr('mapdis_research.pilot.collect_news',lambda c:([],[]))
+    assert main(['news-pilot','--provider','rss','--output',str(tmp_path/'rss')])==1
+    saved=json.loads((tmp_path/'rss/pilot_config.json').read_text())
+    assert saved['provider']=='rss'
+
+
+def test_rss_old_date_is_filtered_but_unknown_not_invented(monkeypatch):
+    import mapdis_research.feeds
+    settings=config();settings.update(provider='rss',feeds=[{'url':'https://publisher.example/feed','topic':'oil','enabled':True,'terms_reviewed':True}])
+    monkeypatch.setattr(mapdis_research.feeds,'discover_feed',lambda *a:[dict(title='Old',url='https://publisher.example/old',date='2000-01-01',text=''),dict(title='Unknown date',url='https://publisher.example/unknown',date=None,text='')])
+    rows,statuses=collect_news(settings)
+    assert len(rows)==1 and rows[0]['article']['publication_date'] is None
+    assert statuses[0]['outside_window']==1

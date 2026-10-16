@@ -206,3 +206,5 @@ Use `news-pilot` for a bounded news-only discovery sample, then manually review 
 ```
 
 GDELT metadata supplies titles and discovery timestamps, not article bodies, publication/event dates or source reliability. Topics are sampled before filtering on algorithm relevance. Missing/blocked results produce a shortfall and nonzero exit; zero records do not establish readiness. Cloud access currently needs the saved GDELT domain permissions applied. Large-scale collection and Notion import remain separate, explicitly approved work.
+
+Repeated GDELT rate-limit responses can be avoided by selecting the **independent** RSS provider with `news-pilot --provider rss`. It never calls GDELT. Candidate feeds remain disabled until actual access/usage terms are reviewed; the cloud has not verified those candidate publishers. RSS publication dates and feed summaries are preserved without inventing event dates. A finite feed or single publisher does not guarantee 50–100 relevant or diverse stories. See the pilot guide before enabling a source.

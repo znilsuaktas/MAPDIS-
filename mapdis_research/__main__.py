@@ -30,6 +30,7 @@ def main(argv=None):
     parser.add_argument("--profile", help="marine_pollution, oil_spill, plastic, mucilage, or all (advanced config)")
     parser.add_argument("--max-queries", type=int, help="Bound API queries per source (1..100)")
     parser.add_argument("--pages", type=int, help="Bound pages per query (1..20)")
+    parser.add_argument("--provider", choices=["gdelt", "rss"], help="Independent news source; does not bypass provider limits")
     args = parser.parse_args(argv)
     if args.output is None:
         args.output = str(Path("output") / datetime.now().strftime("run_%Y%m%d_%H%M%S_%f"))
@@ -44,7 +45,9 @@ def main(argv=None):
                 raise ValueError("Output directory must be new or empty; validated files are never overwritten")
         if args.command == "news-pilot":
             from .pilot import load_pilot_config, collect_news, write_pilot
-            config = load_pilot_config("config/news_pilot.json" if args.config == "config/sample.json" else args.config)
+            config = load_pilot_config(("config/news_rss_pilot.json" if args.provider == "rss" else "config/news_pilot.json") if args.config == "config/sample.json" else args.config)
+            if args.provider and config.get("provider", "gdelt") != args.provider:
+                raise ValueError("Selected provider must match its configuration")
             raw, statuses = collect_news(config)
             summary = write_pilot(raw, statuses, config, args.output)
             logging.info("News pilot: %d/%d records. Output: %s", summary["sample_count"], summary["target"], args.output)

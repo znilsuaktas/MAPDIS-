@@ -28,9 +28,16 @@ def load_pilot_config(path):
         value=config.get(key)
         if type(value) is not int or not minimum<=value<=maximum:
             raise ValueError(f'{key} must be {minimum}..{maximum}')
-    if not isinstance(config.get('queries'),list) or not 1<=len(config['queries'])<=20:
+    provider=config.get('provider','gdelt')
+    if provider not in {'gdelt','rss'}:raise ValueError('Unknown news provider')
+    if provider=='rss':
+        feeds=config.get('feeds')
+        if not isinstance(feeds,list) or not 1<=len(feeds)<=30:raise ValueError('RSS pilot requires 1..30 explicit feeds')
+        for feed in feeds:
+            if urlsplit(feed.get('url','')).scheme!='https' or not feed.get('topic'):raise ValueError('Each feed requires HTTPS URL and topic')
+    if provider=='gdelt' and (not isinstance(config.get('queries'),list) or not 1<=len(config['queries'])<=20):
         raise ValueError('1..20 explicit pilot queries are required')
-    for query in config['queries']:
+    for query in config.get('queries',[]):
         if not isinstance(query.get('query'),str) or not query['query'].strip() or not query.get('topic'):
             raise ValueError('Each query requires a topic and query string')
     interval=config.get('request_interval_seconds',5)
@@ -61,6 +68,8 @@ def news_error_details(exc):
 
 
 def collect_news(config):
+    if config.get('provider')=='rss':
+        return collect_rss_news(config)
     client=Client(config)
     now=datetime.now(timezone.utc)
     statuses=[]; raw=[]
@@ -91,6 +100,35 @@ def collect_news(config):
     return raw,statuses
 
 
+def collect_rss_news(config):
+    """Independent RSS provider; never used to retry the rejected GDELT endpoint."""
+    from .feeds import discover_feed
+    client=Client(config)
+    raw=[];statuses=[]
+    for feed in config['feeds']:
+        if not feed.get('enabled',False) or not feed.get('terms_reviewed',False):
+            statuses.append(dict(topic=feed['topic'],source_url=feed['url'],status='review_required',count=0))
+            log.warning('RSS source disabled pending explicit usage-terms review: %s',feed['url'])
+            continue
+        try:
+            records=discover_feed(client,{'max_results_per_source':config['max_records_per_query']},dict(feed,type='rss'))
+            now=datetime.now(timezone.utc).isoformat()
+            cutoff=(datetime.now(timezone.utc)-timedelta(days=config['lookback_days'])).date().isoformat()
+            outside_window=0
+            for r in records:
+                if r['date'] and r['date']<cutoff:
+                    outside_window+=1
+                    continue
+                raw.append(dict(article={'title':r['title'],'url':r['url'],'publication_date':r['date'],'summary':r['text']},
+                                provider='rss',topic=feed['topic'],query=feed['url'],retrieved_at_utc=now,feed_url=feed['url']))
+            statuses.append(dict(topic=feed['topic'],source_url=feed['url'],status='success',count=len(records)-outside_window,outside_window=outside_window))
+        except Exception as exc:
+            details=news_error_details(exc)
+            statuses.append(dict(topic=feed['topic'],source_url=feed['url'],status='failed',**details))
+            log.error('RSS failed: %s (HTTP %s; %s)',feed['url'],details['http_status'] or 'unknown',details['error_type'])
+    return raw,statuses
+
+
 def build_sample(raw,config):
     by_url={}; rejected=0
     for envelope in raw:
@@ -104,10 +142,12 @@ def build_sample(raw,config):
         if url in by_url:
             if provenance not in by_url[url]['discovered_by']:by_url[url]['discovered_by'].append(provenance)
             continue
-        record=dict(id=hashlib.sha256(url.encode()).hexdigest()[:16],title=title.strip(),url=url,doi=None,date=None,
-                    publication_date=None,gdelt_seen_at=article.get('seendate'),source='gdelt_news',
+        provider=envelope.get('provider','gdelt')
+        publication_date=article.get('publication_date') if provider=='rss' else None
+        record=dict(id=hashlib.sha256(url.encode()).hexdigest()[:16],title=title.strip(),url=url,doi=None,date=publication_date,
+                    publication_date=publication_date,gdelt_seen_at=article.get('seendate'),source='rss' if provider=='rss' else 'gdelt_news',
                     domain=parts.hostname.lower(),language=article.get('language'),publisher_country=article.get('sourcecountry'),
-                    text='',source_quality=None,content_scope='discovery_title_only',discovered_by=[provenance],
+                    text=article.get('summary','') if provider=='rss' else '',source_quality=None,content_scope='feed_summary_only' if provider=='rss' else 'discovery_title_only',discovered_by=[provenance],
                     retrieved_at_utc=envelope.get('retrieved_at_utc'),article_body_checked=False,source_url_http_status=None,
                     event_date=None,country=None,longitude=None,estimated_area=None,verified_incident=False)
         record['pollution_assessment']=assess(record)
@@ -133,7 +173,7 @@ def build_sample(raw,config):
                  by_domain=dict(Counter(r['domain'] for r in selected)),by_topic=dict(Counter(r['discovered_by'][0]['topic'] for r in selected)),
                  algorithm_relevant=sum(r['pollution_assessment']['marine_pollution_relevant'] for r in selected),
                  algorithm_incident_candidates=sum(r['pollution_assessment']['record_kind']=='incident_candidate' for r in selected),
-                 confirmed_incidents=0,full_texts_checked=0,publication_dates_known=0,
+                 confirmed_incidents=0,full_texts_checked=0,publication_dates_known=sum(r['publication_date'] is not None for r in selected),
                  human_reviewed=0,precision=None,notion_writes=0)
     return selected,metrics
 
@@ -156,16 +196,16 @@ def write_pilot(raw,statuses,config,output):
             row={key:record.get(key) for key in fields}
             a=record['pollution_assessment']
             row.update(algorithm_relevant=a['marine_pollution_relevant'],algorithm_record_kind=a['record_kind'],pollution_categories='; '.join(a['pollution_categories']),
-                       missing_information='Article body, publication date, incident date/location, original evidence, publisher credibility not verified')
+                       missing_information='Article body, incident date/location, original evidence, publisher credibility not verified; publication date may be unknown')
             writer.writerow({key:safe(value) for key,value in row.items()})
-    display=[dict(r,date=r['gdelt_seen_at'],score=None,matched_groups=r['pollution_assessment']['pollution_categories'],supporting_excerpt='Discovery title only; open source URL and review. This date is first-seen time, not publication/event date.') for r in records]
+    display=[dict(r,date=r['publication_date'] or r['gdelt_seen_at'],score=None,matched_groups=r['pollution_assessment']['pollution_categories'],supporting_excerpt=r['text'] or 'Discovery title only; open source URL and review. GDELT date is first-seen time, not publication/event date.') for r in records]
     write_dashboard(display,path)
     # Replace academic-oriented labels in this metadata-only pilot view.
-    dashboard=(path/'dashboard.html').read_text().replace('Yayın tarihi','GDELT ilk görülme zamanı')
+    dashboard=(path/'dashboard.html').read_text().replace('Yayın tarihi','RSS yayın tarihi / GDELT ilk görülme zamanı')
     (path/'dashboard.html').write_text(dashboard,encoding='utf-8')
     lines=['# MAPDIS haber kalite pilotu','',f"Hedef: {metrics['target']}; örnekleme alınan gerçek haber bağlantısı: {len(records)}; eksik: {metrics['shortfall']}.",'',
            'Bu örneklem sorgu sonuçlarından konu sırasıyla dengelenir; algoritmanın ilgili bulmadığı adaylar da korunur. Sıra/sorgu/kaynak seçimi nedeniyle rastgele veya tüm haber evrenini temsil eden bir örneklem değildir.','',
-           '## Kontrol kapsamı','', 'GDELT keşif başlıkları ve URL metadatası kullanılır. Yayıncı sayfaları/tam metinler, kaynak doğruluğu ve olay gerçekliği kontrol edilmiş sayılmaz. GDELT seendate yayın veya olay tarihi değildir; sourcecountry olay ülkesi değildir.','',
+           '## Kontrol kapsamı','', 'GDELT keşif başlıkları veya izinli RSS özetleri ve URL metadatası kullanılır. Yayıncı sayfaları/tam metinler, kaynak doğruluğu ve olay gerçekliği kontrol edilmiş sayılmaz. GDELT seendate yayın veya olay tarihi değildir; sourcecountry olay ülkesi değildir.','',
            'quality_review.csv dosyasındaki insan değerlendirme alanları bilerek boştur. Otomatik sinyaller kalite kararı veya ölçülmüş başarı oranı değildir.','',
            '## İnceleme ölçütleri','',
            '- human_relevance: yes / no / uncertain — gerçekten deniz/kıyı kirliliğiyle ilgili mi?',

@@ -71,3 +71,17 @@ Get-ChildItem .\output -Filter collection_status.json -Recurse | Sort-Object Las
 ```
 
 `http_status` 429 ise API hız sınırına ulaşıldı; varsa `retry_after` süresini bekle. 403 tek başına Codex bulut proxy'sini göstermez: kullanıcı Windows'ta çalışıyorsa API veya yerel ağ güvenlik katmanı olabilir. Proxy CONNECT reddi ayrı `proxy_CONNECT_403` olarak kaydedilir. 401 erişim/kimlik doğrulaması, 5xx hizmet erişilebilirliği için ayrıca incelenmelidir. Kod artık terminalde HTTP kodunu ve varsa bekleme başlığını gösterir. API anahtarı, `.env` içeriği veya tüm ortam değişkenlerini paylaşmayın.
+
+## Tekrarlayan GDELT 429: bağımsız RSS seçeneği
+
+`--provider rss` GDELT'e hiç istek göndermez. Yapılandırması `config/news_rss_pilot.json` dosyasıdır. Dört Guardian çevre feed'i **aday URL** olarak listelenir; bu bulut makinesinde robots/koşul erişimi engellendiği için canlı çalıştıkları ve yeniden kullanım koşulları doğrulanmış değildir. Kaynaklar bu yüzden varsayılan olarak kapalıdır. Bu seçenek, GDELT kısıtlamasını başka IP/proxy ile aşmaya çalışmaz; bağımsız sağlayıcıdır.
+
+Yerel erişim ve kullanım koşulları kontrol edilip izinli olduğu doğrulanan feed için `enabled` ve `terms_reviewed` true yapılabilir. robots izni ayrıca kontrol edilir. Ardından:
+
+```powershell
+.\.venv\Scripts\python.exe -m mapdis_research news-pilot --provider rss
+```
+
+İncelenmemiş/kapalı kaynaklar okunmaz; eksik hedef yine başarı sayılmaz. RSS akışları sonlu olduğundan 50–100 kayıt garanti edilmez. Aynı yayıncının farklı konu feed'leri bağımsız yayıncı çeşitliliği değildir; alternatif örnekte `max_per_domain=100` tek yayıncı pilotunu mümkün kılar, kaliteyi veya temsil gücünü doğrulamaz.
+
+RSS'de feed'in yayın tarihi GDELT ilk-görülme zamanından ayrı tutulur; yayın tarihi olay tarihi değildir. `lookback_days` dışındaki bilinen eski tarihler elenir, bilinmeyen tarihler null kalır. Yayıncı sayfaları otomatik indirilmez. Pilot, tam metin teyidi ve Notion aktarımı yapmaz.
