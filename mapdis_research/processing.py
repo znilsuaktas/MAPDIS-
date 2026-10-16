@@ -1,6 +1,7 @@
 import re
 from .measurements import extract_measurements
 from .matching import contains
+from .context import assess
 from datetime import date
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
@@ -40,6 +41,10 @@ def process(records, config):
         doi, url = normalize_doi(rec["doi"]), canonical_url(rec["url"])
         rec = dict(rec, doi=doi or None, url=url)
         corpus = f"{rec['title']} {rec['text']}".casefold()
+        assessment = assess(rec)
+        rec["pollution_assessment"] = assessment
+        if config.get("contextual_detection") and not assessment["marine_pollution_relevant"]:
+            continue
         matches = [k for k in config["keywords"] if contains(corpus, k)]
         if any(contains(corpus, k) for k in config.get("exclude_keywords", [])):
             continue
@@ -49,7 +54,7 @@ def process(records, config):
         rec["matched_groups"] = matched_groups
         rec["discovery"] = list({(d["source"], d["query"], d["page"]): d for r in group for d in r.get("discovery", [])}.values())
         rec["supporting_sources"] = list(dict.fromkeys(r["source"] for r in group))
-        if not matches:
+        if not matches and not (config.get("contextual_detection") and assessment["marine_pollution_relevant"]):
             continue
         published = None
         try:
@@ -67,7 +72,7 @@ def process(records, config):
         rec["keyword_matches"] = matches
         lexical = len(matches) / len(config["keywords"])
         if config.get("score_mode") == "grouped":
-            lexical = min(1, len(matches) / config.get("relevance_match_target", 5))
+            lexical = min(1, max(len(matches), 1 if assessment["marine_pollution_relevant"] else 0) / config.get("relevance_match_target", 5))
         components = dict(relevance=round(0.65 * lexical, 4), recency=round(0.2 * recency, 4), quality=round(0.15 * rec["source_quality"], 4))
         rec["score_components"] = components
         rec["score"] = round(sum(components.values()), 4)

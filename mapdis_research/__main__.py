@@ -27,7 +27,7 @@ def main(argv=None):
     parser.add_argument("--notion-write", action="store_true", help="Disabled: Notion writes are prohibited in this workflow")
     parser.add_argument("--schema", help="Actual Notion schema JSON snapshot for option validation")
     parser.add_argument("--notion-read-schema", action="store_true", help="Read only the actual Notion database schema")
-    parser.add_argument("--profile", help="oil_spill, plastic, mucilage, or all (advanced config)")
+    parser.add_argument("--profile", help="marine_pollution, oil_spill, plastic, mucilage, or all (advanced config)")
     parser.add_argument("--max-queries", type=int, help="Bound API queries per source (1..100)")
     parser.add_argument("--pages", type=int, help="Bound pages per query (1..20)")
     args = parser.parse_args(argv)
@@ -74,7 +74,7 @@ def main(argv=None):
             return 0
         if args.command == "plan":
             queries = config.get("queries", config["keywords"])[:config.get("max_queries", 100)]
-            api_sources = sum(s.get("enabled", True) and s["type"] != "website" for s in config["sources"])
+            api_sources = sum(s.get("enabled", True) and s["type"] in {"openalex", "crossref"} for s in config["sources"])
             calls = len(queries) * config.get("pages_per_query", 1) * api_sources
             print(json.dumps({"profile": config.get("selected_profile"), "keywords": len(config["keywords"]), "queries": queries,
                 "max_api_requests": calls, "max_raw_api_records": calls * config.get("max_results_per_source", 10),
@@ -131,7 +131,7 @@ def save_run_details(output, config, records, results, diagnostics, replay=False
     # Public research inputs only; credentials are never read from configuration.
     allowed = {"keywords", "queries", "exclude_keywords", "keyword_groups", "required_keyword_groups", "selected_profile",
                "date_from", "date_to", "max_results_per_source", "request_interval_seconds", "user_agent", "sources",
-               "pages_per_query", "max_queries", "score_mode", "relevance_match_target"}
+               "pages_per_query", "max_queries", "score_mode", "relevance_match_target", "contextual_detection"}
     snapshot = {k: v for k, v in config.items() if k in allowed}
     for filename, data in (("raw_records.json", records), ("effective_config.json", snapshot), ("search_log.json", diagnostics)):
         (path / filename).write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -141,6 +141,7 @@ def save_run_details(output, config, records, results, diagnostics, replay=False
                    records_without_abstract=sum(not r["text"] for r in results),
                    records_by_source=dict(Counter(r["source"] for r in results)),
                    records_by_group=dict(Counter(g for r in results for g in r.get("matched_groups", []))),
+                   records_by_kind=dict(Counter(r.get("pollution_assessment", {}).get("record_kind", "unknown") for r in results)),
                    failed_pages=sum(d["status"] == "failed" for d in diagnostics))
     (path / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8")
 

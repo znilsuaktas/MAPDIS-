@@ -2,11 +2,21 @@
 
 A modular Python 3.10+ MVP for scientific literature, news, and public incident records about marine pollution and satellite detection. Uses OpenAlex/Crossref metadata APIs and explicitly approved public HTML sources. No API key or LLM is required for extractive research.
 
+## Pollution relevance without satellite keywords
+
+The default advanced profile is now `marine_pollution`: papers and news summaries can be relevant without Sentinel/SAR imagery. Explainable rules examine pollution concepts, marine context, event signals and uncertainty. They do not claim general language understanding or verify an incident. Academic records stay academic; unverified news/web candidates are written separately to `incident_candidates.json` and never automatically imported into Notion.
+
+RSS/Atom metadata support is available through a `rss` source. The included feed remains disabled pending usage-terms review. After an initial proxy failure, its robots policy and live RSS endpoint returned HTTP 200 and actual feed metadata was parsed; article bodies and incident facts were not verified. See [docs/POLLUTION_RELEVANCE_TR.md](docs/POLLUTION_RELEVANCE_TR.md) for behavior, examples and limits.
+
+```powershell
+.\.venv\Scripts\python.exe -m mapdis_research run --profile marine_pollution --max-queries 4 --pages 1
+```
+
 ## Advanced local workflow
 
 Türkçe adım adım kurulum ve hoca sunumu: [docs/LOCAL_DEMO_TR.md](docs/LOCAL_DEMO_TR.md).
 
-The original sample workflow is preserved. `config/advanced.json` adds 89 distinct Turkish/English matching phrases across four profiles (`oil_spill`, `plastic`, `mucilage`, `all`), bounded API pagination (OpenAlex basic pages; Crossref cursors), explicit query planning, required topic groups, exclusions, provenance-preserving deduplication, richer metadata, an offline searchable HTML dashboard, and offline replay.
+The original sample workflow is preserved. `config/advanced.json` adds five profiles, with 93 broad pollution phrases in `marine_pollution` and 150 combined phrases in `all` (`oil_spill`, `plastic`, `mucilage` remain available), bounded API pagination (OpenAlex basic pages; Crossref cursors), explicit query planning, required topic groups, exclusions, provenance-preserving deduplication, richer metadata, an offline searchable HTML dashboard, and offline replay.
 
 ```powershell
 .\.venv\Scripts\python.exe -m mapdis_research profiles

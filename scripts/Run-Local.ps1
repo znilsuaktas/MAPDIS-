@@ -1,8 +1,8 @@
 [CmdletBinding()]
 param(
     [Alias('Profile')]
-    [ValidateSet('oil_spill','plastic','mucilage','all')]
-    [string]$SearchProfile = 'oil_spill',
+    [ValidateSet('oil_spill','plastic','mucilage','all','marine_pollution')]
+    [string]$SearchProfile = 'marine_pollution',
     [ValidateRange(1,100)][int]$MaxQueries = 2,
     [ValidateRange(1,20)][int]$Pages = 1,
     [string]$ReplayInput = '',

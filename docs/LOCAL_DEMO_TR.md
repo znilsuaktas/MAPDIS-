@@ -36,9 +36,12 @@ VS Code komut paletinde **Python: Select Interpreter** → `.venv\Scripts\python
 | oil_spill | 51 | Petrol, tanker, SAR ve uydu tespiti |
 | plastic | 52 | Deniz plastiği, mikroplastik, nurdle, optik uydu |
 | mucilage | 56 | Müsilaj, alg patlaması, Marmara ve uzaktan algılama |
-| all | 89 | Birleşik araştırma |
+| all | 150 | Birleşik araştırma |
+| marine_pollution | 93 | Uydu şartı olmadan geniş kirlilik bağlamı |
 
-Profillerde ortak sensör/yöntem kelimeleri bulunur; sayılar birbirine eklenmez. Türkçe/İngilizce varyantlar `config/advanced.json` dosyasında açıkça listelenir. Arama sorguları (`queries`) ile yerel eşleşme sözlüğü (`keywords`) ayrıdır. 89 kelimenin her biri için API çağrısı yapılmaz. Bu sözlük bilimsel kapsama garantisi veya otomatik çeviri değildir.
+Varsayılan gelişmiş profil `marine_pollution` oldu. [Uydu şartı olmadan kirlilik tespiti](POLLUTION_RELEVANCE_TR.md) haber/RSS durumu ve sınırlamaları açıklar.
+
+Profillerde ortak sensör/yöntem kelimeleri bulunur; sayılar birbirine eklenmez. Türkçe/İngilizce varyantlar `config/advanced.json` dosyasında açıkça listelenir. Arama sorguları (`queries`) ile yerel eşleşme sözlüğü (`keywords`) ayrıdır. Her kelimenin ayrı ayrı için API çağrısı yapılmaz. Bu sözlük bilimsel kapsama garantisi veya otomatik çeviri değildir.
 
 Önce ağ çağrısı yapmadan tarama sınırını göster:
 

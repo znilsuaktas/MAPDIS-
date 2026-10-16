@@ -54,10 +54,10 @@ def load_config(path, profile=None):
     for source in config.get("sources", []):
         if not isinstance(source, dict):
             raise ValueError("each source must be an object")
-        if source["type"] not in {"openalex", "crossref", "website"}:
+        if source["type"] not in {"openalex", "crossref", "website", "rss"}:
             raise ValueError("unsupported source type")
         if not 0 <= source.get("quality", 0.5) <= 1:
             raise ValueError("source quality must be 0..1")
-        if source["type"] == "website" and urlsplit(source.get("url", "")).scheme != "https":
+        if source["type"] in {"website", "rss"} and urlsplit(source.get("url", "")).scheme != "https":
             raise ValueError("websites must use HTTPS")
     return config

@@ -25,6 +25,9 @@ def discover(client, config, source):
     limit = config.get("max_results_per_source", 10)
     quality = source.get("quality", 0.5)
     kind = source["type"]
+    if kind == "rss":
+        from .feeds import discover_feed
+        return discover_feed(client, config, source)
     if kind == "website":
         if not source.get("terms_reviewed", False):
             raise PermissionError("Public website requires terms_reviewed=true after manual review")

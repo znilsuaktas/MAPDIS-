@@ -27,3 +27,9 @@ OpenAlex cursor page 2 initially returned HTTP 401 with `API key required for cu
 - `output/advanced_replay_20261016/`
 
 These runs are ignored by Git; source/configuration/tests and this validation note are versioned. Use the CLI to create new local runs. The pre-existing verified academic and incident release remains under `exports/mapdis_release/`.
+
+## Broader pollution relevance update
+
+The subsequent suite passed **127 tests**. A bounded sensor-independent literature run returned 15 records (all without Sentinel/SAR imagery keywords in title/abstract); a separate wastewater/chemical query run returned 17 records. These samples overlap and must not be summed as unique incidents. Both remain academic records, not automatically verified pollution events.
+
+The BBC science/environment RSS endpoint and robots.txt eventually returned HTTP 200 after an initial proxy block. 42 actual feed entries were parsed, and zero met the marine-pollution contextual filter at that time. No successful pollution-news yield is claimed. The default RSS source remains disabled pending usage-terms review. Rule-based triage, false/uncertain statements, source separation and RSS/Atom handling are covered by tests; this does not establish universal semantic understanding or a measured real-world accuracy rate.

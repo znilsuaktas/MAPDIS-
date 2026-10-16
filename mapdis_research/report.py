@@ -32,9 +32,10 @@ def write_outputs(records, output, statuses, analysis=None):
     path.mkdir(parents=True, exist_ok=True)
     write_dashboard(records, path)
     (path / "results.json").write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
-    (path / "academic_notion_preview.json").write_text(json.dumps([{"properties": properties(r)} for r in records], ensure_ascii=False, indent=2), encoding="utf-8")
+    (path / "academic_notion_preview.json").write_text(json.dumps([{"properties": properties(r)} for r in records if r.get("pollution_assessment", {}).get("record_kind", "academic_research") == "academic_research"], ensure_ascii=False, indent=2), encoding="utf-8")
+    (path / "incident_candidates.json").write_text(json.dumps({"warning": "Unverified candidates only; not eligible for Notion incident import without evidence review", "records": [r for r in records if r.get("pollution_assessment", {}).get("record_kind") == "incident_candidate"]}, ensure_ascii=False, indent=2), encoding="utf-8")
     fields = ["title", "date", "url", "doi", "source", "source_quality", "score", "keyword_matches", "supporting_excerpt", "text", "longitude", "longitude_role", "estimated_area_km2", "measurement_evidence"]
-    extras = ["authors", "journal", "publication_type", "matched_groups", "supporting_sources", "discovery", "score_components"]
+    extras = ["authors", "journal", "publication_type", "matched_groups", "supporting_sources", "discovery", "score_components", "pollution_assessment", "content_scope", "feed_url"]
     fields += extras
     with (path / "results.csv").open("w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
@@ -55,7 +56,11 @@ def write_outputs(records, output, statuses, analysis=None):
     for i, r in enumerate(records, 1):
         lines += [f"### {i}. {r['title']}", "", f"Source: <{r['url']}> — date: {r['date'] or 'unknown'} — matches: {', '.join(r['keyword_matches'])}", "",
                   "```text", r["supporting_excerpt"].replace("```", "'''"), "```", f"Citation: <{r['url']}>", "", f"Longitude: {r['longitude'] if r['longitude'] is not None else 'unknown'}; role: {r['longitude_role'] or 'unknown'}. Estimated Area (km²): {r['estimated_area_km2'] if r['estimated_area_km2'] is not None else 'unknown'}.", "", "Measurement evidence: " + json.dumps(r["measurement_evidence"], ensure_ascii=False), ""]
-    lines += ["## Disagreements", "", "No automated claim of agreement or disagreement is made. Cross-source factual comparison requires review of the cited evidence.", "",
+    lines += ["## Pollution relevance triage", "", "Rule-based candidates are not verified incidents. Academic papers stay research records; sensor names are not required.", ""]
+    for r in records:
+        assessment = r.get("pollution_assessment", {})
+        lines += [f"- {assessment.get('record_kind', 'unclassified')}: {r['title']} — categories: {', '.join(assessment.get('pollution_categories', []))}. Source: <{r['url']}>"]
+    lines += ["", "## Disagreements", "", "No automated claim of agreement or disagreement is made. Cross-source factual comparison requires review of the cited evidence.", "",
               "## Missing information and coverage", "", "Search results are bounded and are not exhaustive. Missing abstracts, unknown dates, inaccessible pages, and unpublished incidents limit coverage. Records with unknown dates are excluded when date filters are configured.", ""]
     for status in statuses:
         lines.append(f"- {status['source']}: {status['status']} ({status.get('count', 0)} raw records).")
