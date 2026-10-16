@@ -17,7 +17,7 @@ from .report import write_outputs, llm_analysis
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="MAPDIS scientific and public-web research")
-    parser.add_argument("command", choices=["run", "validate", "notion-export", "incidents", "profiles", "plan", "replay"])
+    parser.add_argument("command", choices=["run", "validate", "notion-export", "incidents", "profiles", "plan", "replay", "news-pilot", "review-pilot"])
     parser.add_argument("--config", default="config/sample.json")
     parser.add_argument("--output", help="New output directory; default is timestamped")
     parser.add_argument("--llm", action="store_true", help="Send excerpts to configured LLM; output is an unverified draft")
@@ -37,11 +37,22 @@ def main(argv=None):
     try:
         if args.notion_write:
             raise ValueError("Notion writes are disabled; explicit approval must be handled in a separate task")
-        if args.command in {"run", "replay", "incidents", "notion-export"}:
+        if args.command in {"run", "replay", "incidents", "notion-export", "news-pilot"}:
             target = Path(args.output)
             if target.exists() and (not target.is_dir() or any(target.iterdir())):
                 logging.error("Choose a new or empty --output directory; previous results were preserved")
                 raise ValueError("Output directory must be new or empty; validated files are never overwritten")
+        if args.command == "news-pilot":
+            from .pilot import load_pilot_config, collect_news, write_pilot
+            config = load_pilot_config("config/news_pilot.json" if args.config == "config/sample.json" else args.config)
+            raw, statuses = collect_news(config)
+            summary = write_pilot(raw, statuses, config, args.output)
+            logging.info("News pilot: %d/%d records; review required", summary["sample_count"], summary["target"])
+            return 1 if summary["shortfall"] or any(s["status"] == "failed" for s in statuses) else 0
+        if args.command == "review-pilot":
+            from .pilot import evaluate_reviews
+            print(json.dumps(evaluate_reviews(args.input), ensure_ascii=False, indent=2))
+            return 0
         schema = json.loads(Path(args.schema).read_text(encoding="utf-8")) if args.schema else None
         if args.notion_read_schema:
             schema = read_schema()

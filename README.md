@@ -195,3 +195,14 @@ The user-confirmed **Estimated Area** property remains **Rich Text**, with its o
 ## Download the reviewed exports from GitHub
 
 After the branch is pushed, select `feature/mapdis-scraper` on GitHub, open `exports/mapdis_release/MAPDIS_exports.zip`, and use **Download raw file**. Alternatively use **Code → Download ZIP** while viewing that branch to retrieve source and exports together, then extract it in Windows. Individual incident and academic CSVs are `exports/mapdis_release/notion_import.csv` and `exports/mapdis_release/academic_research.csv`. Their integrity and ZIP contents were checked locally; browser download behavior was not tested by the agent.
+
+## News quality pilot: 50–100 before scaling
+
+Use `news-pilot` for a bounded news-only discovery sample, then manually review `quality_review.csv`. No paper records fill the target, no unreviewed precision is claimed, and no Notion writes occur. Details and Windows commands: [docs/NEWS_PILOT_TR.md](docs/NEWS_PILOT_TR.md).
+
+```powershell
+.\.venv\Scripts\python.exe -m mapdis_research news-pilot
+.\.venv\Scripts\python.exe -m mapdis_research review-pilot --input output/YOUR_PILOT/quality_review_incelendi.csv
+```
+
+GDELT metadata supplies titles and discovery timestamps, not article bodies, publication/event dates or source reliability. Topics are sampled before filtering on algorithm relevance. Missing/blocked results produce a shortfall and nonzero exit; zero records do not establish readiness. Cloud access currently needs the saved GDELT domain permissions applied. Large-scale collection and Notion import remain separate, explicitly approved work.

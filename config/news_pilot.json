@@ -1,0 +1,13 @@
+{
+  "target_records": 100,
+  "lookback_days": 60,
+  "max_records_per_query": 100,
+  "max_per_domain": 15,
+  "request_interval_seconds": 5,
+  "queries": [
+    {"topic": "oil", "query": "\"oil spill\" (sea OR ocean OR coast OR beach)"},
+    {"topic": "plastic", "query": "(\"plastic pollution\" OR microplastic OR nurdles) (sea OR ocean OR coast OR beach)"},
+    {"topic": "wastewater", "query": "(sewage OR wastewater) (sea OR coast OR beach OR marine)"},
+    {"topic": "mucilage_chemical", "query": "(mucilage OR \"chemical spill\" OR \"algal bloom\") (sea OR coast OR marine OR Marmara)"}
+  ]
+}
