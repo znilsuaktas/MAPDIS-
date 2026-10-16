@@ -76,7 +76,7 @@ def test_proxy_403_diagnosis_stops_repeated_requests(monkeypatch):
     settings=config();settings['queries']*=4
     rows,status=collect_news(settings)
     assert not rows and len(calls)==1
-    assert status[0]['error_origin']=='cloud_proxy_CONNECT_403'
+    assert status[0]['error_origin']=='proxy_CONNECT_403'
 
 
 def test_existing_outputs_not_overwritten(tmp_path):
@@ -97,3 +97,32 @@ def test_bounded_pilot_settings(tmp_path,field,value):
     c=config();c[field]=value
     p=tmp_path/'config.json';p.write_text(json.dumps(c))
     with pytest.raises(ValueError):load_pilot_config(p)
+
+
+@pytest.mark.parametrize('code',[401,403,429,503])
+def test_http_error_details_and_no_repeated_calls(monkeypatch,caplog,code):
+    import requests
+    calls=[]
+    def fail(*a,**k):
+        calls.append(1)
+        response=requests.Response();response.status_code=code
+        response.headers['Retry-After']='60'
+        response.headers['Server']='example-gateway'
+        raise requests.HTTPError(response=response)
+    monkeypatch.setattr('mapdis_research.pilot.Client.get',fail)
+    settings=config();settings['queries']*=4
+    records,statuses=collect_news(settings)
+    assert not records and len(calls)==1
+    assert statuses[0]['http_status']==code
+    assert statuses[0]['error_origin']=='http_response_origin_unverified'
+    assert statuses[0]['retry_after']=='60'
+    assert f'HTTP {code}' in caplog.text
+
+
+def test_proxy_hint_does_not_assume_windows_is_codex():
+    import requests
+    from mapdis_research.pilot import news_error_details
+    result=news_error_details(requests.exceptions.ProxyError('Tunnel connection failed: 403 Forbidden'))
+    assert result['error_origin']=='proxy_CONNECT_403'
+    assert 'Windows' in result['troubleshooting_hint']
+    assert result['http_status'] is None

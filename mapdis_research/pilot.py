@@ -39,6 +39,27 @@ def load_pilot_config(path):
     return config
 
 
+def news_error_details(exc):
+    """Expose useful status metadata, without logging headers/tokens or body."""
+    response = getattr(exc, 'response', None)
+    code = response.status_code if response is not None else None
+    tunnel_denied = 'Tunnel connection failed: 403' in str(exc)
+    origin = 'proxy_CONNECT_403' if tunnel_denied else 'http_response_origin_unverified' if code else 'transport_or_payload_error'
+    hints = {
+        401: 'API authentication/access rejected; check the provider requirements.',
+        403: 'HTTP access denied. Could be provider/security gateway; this alone does not prove a Codex proxy block.',
+        429: 'API rate limit reached. Wait for Retry-After if supplied; do not repeatedly rerun.',
+    }
+    hint = hints.get(code, 'Provider unavailable; retry later.' if code and code >= 500 else 'Inspect the status file; response did not produce a usable article list.')
+    if tunnel_denied:
+        hint = 'The configured HTTPS proxy rejected CONNECT before the API response. On Windows check local proxy/network policy; cloud settings do not change your PC.'
+    def header(name):
+        value = response.headers.get(name) if response is not None else None
+        return ''.join(c for c in value[:120] if c.isprintable()) if value else None
+    return dict(error_type=type(exc).__name__, http_status=code, error_origin=origin,
+                retry_after=header('Retry-After'), response_server=header('Server'), troubleshooting_hint=hint)
+
+
 def collect_news(config):
     client=Client(config)
     now=datetime.now(timezone.utc)
@@ -57,14 +78,16 @@ def collect_news(config):
                             'retrieved_at_utc':now.isoformat(),'discovery_api':ENDPOINT})
             statuses.append(dict(topic=query['topic'],query=query['query'],status='success',count=len(data['articles'])))
         except Exception as exc:
-            response=getattr(exc,'response',None)
-            status_code=response.status_code if response is not None else None
-            proxy_denied='Tunnel connection failed: 403' in str(exc)
-            statuses.append(dict(topic=query['topic'],status='failed',error_type=type(exc).__name__,http_status=status_code,
-                                 error_origin='cloud_proxy_CONNECT_403' if proxy_denied else 'API_or_transport_unknown'))
-            log.error('News query failed: %s (%s)',query['topic'],type(exc).__name__)
-            # Do not hammer the endpoint after access denial, rate limits or proxy failure.
-            if proxy_denied or status_code in {401,403,429}:break
+            details = news_error_details(exc)
+            statuses.append(dict(topic=query['topic'], status='failed', **details))
+            log.error('News query failed: %s (%s; HTTP %s; origin=%s; Retry-After=%s)',
+                      query['topic'], details['error_type'], details['http_status'] or 'unknown',
+                      details['error_origin'], details['retry_after'] or 'not supplied')
+            log.error('%s', details['troubleshooting_hint'])
+            # No automatic repeated requests after rejection, rate limits or outages.
+            code = details['http_status']
+            if details['error_origin'] == 'proxy_CONNECT_403' or code in {401,403,429} or (code and code >= 500):
+                break
     return raw,statuses
 
 

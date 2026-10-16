@@ -47,7 +47,11 @@ def main(argv=None):
             config = load_pilot_config("config/news_pilot.json" if args.config == "config/sample.json" else args.config)
             raw, statuses = collect_news(config)
             summary = write_pilot(raw, statuses, config, args.output)
-            logging.info("News pilot: %d/%d records; review required", summary["sample_count"], summary["target"])
+            logging.info("News pilot: %d/%d records. Output: %s", summary["sample_count"], summary["target"], args.output)
+            if not summary["sample_count"]:
+                logging.error("No news collected; quality review cannot start. Inspect %s/collection_status.json", args.output)
+            else:
+                logging.info("Manual review required: %s/quality_review.csv", args.output)
             return 1 if summary["shortfall"] or any(s["status"] == "failed" for s in statuses) else 0
         if args.command == "review-pilot":
             from .pilot import evaluate_reviews

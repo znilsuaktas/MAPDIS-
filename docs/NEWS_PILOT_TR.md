@@ -61,3 +61,13 @@ Etiketli pilotta ilgili haber oranını, somut olay oranını, aynı olayın tek
 GDELT API'si bu çalışan bulut makinesinde `Tunnel connection failed: 403 Forbidden` ile engellendi. Hata HTTPS tüneli kurulurken Codex cloud proxy'den geliyor; hedef API'nin verdiği bir HTTP 403 olduğuna dair kanıt yok. Sonuç **0/100 haber**; 100 gerçek haber toplanmış veya kalitesi doğrulanmış değildir. Hata çıktısı `output/news_pilot_attempt_20261016/` altında; bu dizin Git'e eklenmez.
 
 `api.gdeltproject.org` ve dokümantasyon için `blog.gdeltproject.org` alan adları mevcut ağ kuralları korunarak ortam taslağına eklendi. Ortam ayarlarında bunları inceleyip kaydetmek/yayınlamak ve erişimi yeniden test etmek gerekir. Taslak kaydetmek tek başına çalışan makineyi güncellediğini kanıtlamaz. Yerel bilgisayarda API erişimi de ayrıca test edilmelidir. API erişimi açılmadan sayıyı akademik makale veya uydurma haberlerle tamamlamıyoruz.
+
+## Windows'ta HTTPError görülürse
+
+Önce taramayı tekrar tekrar başlatmadan mevcut hata dosyasını oku:
+
+```powershell
+Get-ChildItem .\output -Filter collection_status.json -Recurse | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { Get-Content -LiteralPath $_.FullName -Raw }
+```
+
+`http_status` 429 ise API hız sınırına ulaşıldı; varsa `retry_after` süresini bekle. 403 tek başına Codex bulut proxy'sini göstermez: kullanıcı Windows'ta çalışıyorsa API veya yerel ağ güvenlik katmanı olabilir. Proxy CONNECT reddi ayrı `proxy_CONNECT_403` olarak kaydedilir. 401 erişim/kimlik doğrulaması, 5xx hizmet erişilebilirliği için ayrıca incelenmelidir. Kod artık terminalde HTTP kodunu ve varsa bekleme başlığını gösterir. API anahtarı, `.env` içeriği veya tüm ortam değişkenlerini paylaşmayın.
