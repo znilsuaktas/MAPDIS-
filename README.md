@@ -2,6 +2,28 @@
 
 A modular Python 3.10+ MVP for scientific literature, news, and public incident records about marine pollution and satellite detection. Uses OpenAlex/Crossref metadata APIs and explicitly approved public HTML sources. No API key or LLM is required for extractive research.
 
+## Advanced local workflow
+
+Türkçe adım adım kurulum ve hoca sunumu: [docs/LOCAL_DEMO_TR.md](docs/LOCAL_DEMO_TR.md).
+
+The original sample workflow is preserved. `config/advanced.json` adds 89 distinct Turkish/English matching phrases across four profiles (`oil_spill`, `plastic`, `mucilage`, `all`), bounded API pagination (OpenAlex basic pages; Crossref cursors), explicit query planning, required topic groups, exclusions, provenance-preserving deduplication, richer metadata, an offline searchable HTML dashboard, and offline replay.
+
+```powershell
+.\.venv\Scripts\python.exe -m mapdis_research profiles
+.\.venv\Scripts\python.exe -m mapdis_research plan --profile oil_spill --max-queries 2 --pages 2
+.\.venv\Scripts\python.exe -m mapdis_research run --profile oil_spill --max-queries 2 --pages 2
+```
+
+Without `--output`, commands choose a timestamped directory. An existing nonempty output directory is rejected, protecting reviewed exports. `summary.json`, `search_log.json`, `raw_records.json`, and `effective_config.json` accompany each research run. `dashboard.html` opens directly in a browser with no local server. Replay an existing run without API calls:
+
+```powershell
+.\.venv\Scripts\python.exe -m mapdis_research replay --input output/YOUR_RUN/raw_records.json --config output/YOUR_RUN/effective_config.json
+```
+
+`queries` limits API discovery requests; `keywords` is a separate local matching dictionary. `max_results_per_source` is the page size per query, and `pages_per_query` bounds API pages. Both API 401/403/429 and transport failures stop that source without aggressive retries; partial results remain, and live runs return exit 1 when a page fails. Required keyword groups must all match. Source quality is a heuristic; topic matches do not verify real-world incidents. The original sample keeps its legacy score, while advanced profiles use bounded phrase-count saturation so adding synonyms does not dilute every result.
+
+The `.ps1` helpers (`Setup-Local.ps1`, `Run-Local.ps1`) and VS Code F5 configuration simplify local use. Direct Python commands remain available if script execution policy blocks the helpers. Windows execution itself is not tested by Linux cloud validation.
+
 ## Windows setup and VS Code demonstration (PowerShell)
 
 Install Git for Windows, Python 3.10 or newer (with the Python launcher), and VS Code with Microsoft's Python extension. Open PowerShell and run:

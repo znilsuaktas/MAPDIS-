@@ -1,5 +1,6 @@
 import re
 from .measurements import extract_measurements
+from .matching import contains
 from datetime import date
 from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
 
@@ -39,7 +40,15 @@ def process(records, config):
         doi, url = normalize_doi(rec["doi"]), canonical_url(rec["url"])
         rec = dict(rec, doi=doi or None, url=url)
         corpus = f"{rec['title']} {rec['text']}".casefold()
-        matches = [k for k in config["keywords"] if k.casefold() in corpus]
+        matches = [k for k in config["keywords"] if contains(corpus, k)]
+        if any(contains(corpus, k) for k in config.get("exclude_keywords", [])):
+            continue
+        matched_groups = [name for name, terms in config.get("keyword_groups", {}).items() if any(contains(corpus, term) for term in terms)]
+        if any(name not in matched_groups for name in config.get("required_keyword_groups", [])):
+            continue
+        rec["matched_groups"] = matched_groups
+        rec["discovery"] = list({(d["source"], d["query"], d["page"]): d for r in group for d in r.get("discovery", [])}.values())
+        rec["supporting_sources"] = list(dict.fromkeys(r["source"] for r in group))
         if not matches:
             continue
         published = None
@@ -56,9 +65,14 @@ def process(records, config):
                 continue
         recency = max(0, 1 - max(0, (date.today() - published).days) / 3650) if published else 0
         rec["keyword_matches"] = matches
-        rec["score"] = round(0.65 * len(matches) / len(config["keywords"]) + 0.2 * recency + 0.15 * rec["source_quality"], 4)
+        lexical = len(matches) / len(config["keywords"])
+        if config.get("score_mode") == "grouped":
+            lexical = min(1, len(matches) / config.get("relevance_match_target", 5))
+        components = dict(relevance=round(0.65 * lexical, 4), recency=round(0.2 * recency, 4), quality=round(0.15 * rec["source_quality"], 4))
+        rec["score_components"] = components
+        rec["score"] = round(sum(components.values()), 4)
         sentences = re.split(r"(?<=[.!?])\s+", rec["text"])
-        excerpts = [s for s in sentences if any(k.casefold() in s.casefold() for k in matches)]
+        excerpts = [s for s in sentences if any(contains(s, k) for k in matches)]
         rec["supporting_excerpt"] = " ".join(excerpts[:2])[:1000] or rec["title"]
         unique.append(extract_measurements(rec))
     return sorted(unique, key=lambda r: r["score"], reverse=True)

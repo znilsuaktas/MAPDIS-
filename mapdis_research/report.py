@@ -5,6 +5,7 @@ from pathlib import Path
 import requests
 from .measurements import extract_measurements
 from .legacy_notion import properties
+from .dashboard import write_dashboard
 
 
 def llm_analysis(records):
@@ -29,14 +30,20 @@ def write_outputs(records, output, statuses, analysis=None):
     records = [extract_measurements(r) for r in records]
     path = Path(output)
     path.mkdir(parents=True, exist_ok=True)
+    write_dashboard(records, path)
     (path / "results.json").write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding="utf-8")
     (path / "academic_notion_preview.json").write_text(json.dumps([{"properties": properties(r)} for r in records], ensure_ascii=False, indent=2), encoding="utf-8")
     fields = ["title", "date", "url", "doi", "source", "source_quality", "score", "keyword_matches", "supporting_excerpt", "text", "longitude", "longitude_role", "estimated_area_km2", "measurement_evidence"]
+    extras = ["authors", "journal", "publication_type", "matched_groups", "supporting_sources", "discovery", "score_components"]
+    fields += extras
     with (path / "results.csv").open("w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(f, fieldnames=fields)
         writer.writeheader()
         for record in records:
-            row = {k: record[k] for k in fields}
+            row = {k: record.get(k) for k in fields}
+            for key in extras:
+                if isinstance(row[key], (list, dict)):
+                    row[key] = json.dumps(row[key], ensure_ascii=False)
             row["measurement_evidence"] = json.dumps(row["measurement_evidence"], ensure_ascii=False)
             row["keyword_matches"] = "; ".join(row["keyword_matches"])
             # Prevent spreadsheet formula injection from untrusted website text.

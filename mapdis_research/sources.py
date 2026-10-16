@@ -1,5 +1,6 @@
 """API metadata discovery and explicitly approved public-page extraction."""
 import logging
+import requests
 from urllib.parse import urljoin, urlsplit
 from bs4 import BeautifulSoup
 
@@ -69,34 +70,83 @@ def discover(client, config, source):
                                   canonical_url, content.get_text(" ", strip=True) if content else "", None, "website", quality))
         return results
     results = []
-    for keyword in config["keywords"]:
-        params = {}
-        filters = []
-        if kind == "openalex":
-            endpoint = "https://api.openalex.org/works"
-            params = {"search": keyword, "per-page": limit}
-            for key, prefix in (("date_from", "from_publication_date"), ("date_to", "to_publication_date")):
-                if config.get(key):
-                    filters.append(f"{prefix}:{config[key]}")
-        else:
-            endpoint = "https://api.crossref.org/works"
-            params = {"query": keyword, "rows": limit}
-            for key, prefix in (("date_from", "from-pub-date"), ("date_to", "until-pub-date")):
-                if config.get(key):
-                    filters.append(f"{prefix}:{config[key]}")
-        if filters:
-            params["filter"] = ",".join(filters)
-        data = client.get(endpoint, params=params).json()
-        items = data.get("results", []) if kind == "openalex" else data.get("message", {}).get("items", [])
-        for item in items:
+    if not hasattr(client, "diagnostics"):
+        client.diagnostics = []
+    queries = config.get("queries", config["keywords"])[:config.get("max_queries", 100)]
+    for keyword in queries:
+        cursor = "*"
+        previous_pages = set()
+        for page in range(1, config.get("pages_per_query", 1) + 1):
+            filters = []
             if kind == "openalex":
-                location = item.get("primary_location") or {}
-                results.append(record(item.get("display_name", ""), item.get("publication_date"),
-                                      location.get("landing_page_url") or item.get("doi") or item["id"],
-                                      abstract_from_index(item.get("abstract_inverted_index")), item.get("doi"), kind, quality))
+                endpoint = "https://api.openalex.org/works"
+                params = {"search": keyword, "per-page": limit, "page": page}
+                names = (("date_from", "from_publication_date"), ("date_to", "to_publication_date"))
             else:
-                dates = (item.get("published") or {}).get("date-parts", [[]])[0]
-                published = "-".join(str(n).zfill(2) if i else str(n) for i, n in enumerate(dates)) if len(dates) == 3 else None
-                results.append(record((item.get("title") or [""])[0], published, item.get("URL", ""),
-                                      item.get("abstract", ""), item.get("DOI"), kind, quality))
+                endpoint = "https://api.crossref.org/works"
+                params = {"query": keyword, "rows": limit, "cursor": cursor}
+                names = (("date_from", "from-pub-date"), ("date_to", "until-pub-date"))
+            for key, prefix in names:
+                if config.get(key):
+                    filters.append(f"{prefix}:{config[key]}")
+            if filters:
+                params["filter"] = ",".join(filters)
+            diagnostic = dict(source=kind, query=keyword, page=page)
+            try:
+                data = client.get(endpoint, params=params).json()
+                items = data.get("results", []) if kind == "openalex" else data.get("message", {}).get("items", [])
+                page_keys = tuple(str(item.get("DOI") or item.get("doi") or item.get("id") or item.get("URL") or item.get("title")) for item in items)
+                if items and page_keys in previous_pages:
+                    diagnostic.update(status="success", count=0, repeated_page=True)
+                    client.diagnostics.append(diagnostic)
+                    break
+                previous_pages.add(page_keys)
+                for item in items:
+                    result = api_record(item, kind, quality)
+                    result["discovery"] = [dict(source=kind, query=keyword, page=page)]
+                    results.append(result)
+                diagnostic.update(status="success", count=len(items))
+                client.diagnostics.append(diagnostic)
+                log.info("%s | query %s/%s | page %s | %s records", kind, queries.index(keyword)+1, len(queries), page, len(items))
+                if not items or len(items) < limit:
+                    break
+                if kind == "crossref":
+                    next_cursor = data.get("message", {}).get("next-cursor")
+                    if not next_cursor:
+                        break
+                    # Crossref scroll cursors may legitimately remain unchanged.
+                    # Stop on repeated result pages, not repeated cursor strings.
+                    cursor = next_cursor
+                # OpenAlex basic page pagination is supported without cursor credentials.
+                # The configured maximum is 20*200=4000 records, below its 10000-record ceiling.
+            except (requests.RequestException, ValueError, KeyError, TypeError) as exc:
+                response = getattr(exc, "response", None)
+                status_code = response.status_code if response is not None else None
+                diagnostic.update(status="failed", error_type=type(exc).__name__, http_status=status_code)
+                client.diagnostics.append(diagnostic)
+                log.error("%s page failed (%s; HTTP %s); partial results retained", kind, type(exc).__name__, status_code)
+                # Do not repeat requests after auth/rate-limit/transport failures.
+                if status_code in {401, 403, 429} or isinstance(exc, (requests.ConnectionError, requests.Timeout)):
+                    return results
+                break
     return results
+
+
+def api_record(item, kind, quality):
+    if kind == "openalex":
+        location = item.get("primary_location") or {}
+        result = record(item.get("display_name", ""), item.get("publication_date"),
+                        location.get("landing_page_url") or item.get("doi") or item["id"],
+                        abstract_from_index(item.get("abstract_inverted_index")), item.get("doi"), kind, quality)
+        result["authors"] = [a.get("author", {}).get("display_name", "") for a in item.get("authorships", [])]
+        result["journal"] = (location.get("source") or {}).get("display_name")
+        result["publication_type"] = item.get("type")
+    else:
+        dates = (item.get("published") or {}).get("date-parts", [[]])[0]
+        published = "-".join(str(n).zfill(2) if i else str(n) for i, n in enumerate(dates)) if len(dates) == 3 else None
+        result = record((item.get("title") or [""])[0], published, item.get("URL", ""),
+                        item.get("abstract", ""), item.get("DOI"), kind, quality)
+        result["authors"] = [" ".join(filter(None, [a.get("given"), a.get("family")])) for a in item.get("author", [])]
+        result["journal"] = (item.get("container-title") or [None])[0]
+        result["publication_type"] = item.get("type")
+    return result

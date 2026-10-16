@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MAPDIS: yerel petrol taraması",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "mapdis_research",
+      "args": ["run", "--config", "config/advanced.json", "--profile", "oil_spill", "--max-queries", "2", "--pages", "1"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    }
+  ]
+}
