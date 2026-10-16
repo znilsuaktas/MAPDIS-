@@ -170,3 +170,8 @@ def test_rss_old_date_is_filtered_but_unknown_not_invented(monkeypatch):
     rows,statuses=collect_news(settings)
     assert len(rows)==1 and rows[0]['article']['publication_date'] is None
     assert statuses[0]['outside_window']==1
+
+
+def test_windows_powershell_utf8_bom_config(tmp_path):
+    p=tmp_path/'pilot.json';p.write_text(json.dumps(config()),encoding='utf-8-sig')
+    assert load_pilot_config(p)['target_records']==50

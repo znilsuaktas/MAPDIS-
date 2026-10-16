@@ -5,7 +5,7 @@ from urllib.parse import urlsplit
 
 
 def load_config(path, profile=None):
-    with open(path, encoding="utf-8") as f:
+    with open(path, encoding="utf-8-sig") as f:
         config = json.load(f)
     if not isinstance(config, dict):
         raise ValueError("configuration must be a JSON object")

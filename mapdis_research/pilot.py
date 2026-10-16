@@ -23,7 +23,7 @@ REVIEW_FIELDS = ['human_relevance','human_incident','human_source_quality','huma
 
 
 def load_pilot_config(path):
-    config=json.loads(Path(path).read_text(encoding='utf-8'))
+    config=json.loads(Path(path).read_text(encoding='utf-8-sig'))
     for key,minimum,maximum in [('target_records',50,100),('lookback_days',1,89),('max_records_per_query',1,250),('max_per_domain',1,100)]:
         value=config.get(key)
         if type(value) is not int or not minimum<=value<=maximum:

@@ -137,3 +137,9 @@ def test_crossref_same_scroll_cursor_with_distinct_pages():
     client=Client()
     r=discover(client,{'keywords':['oil spill'],'pages_per_query':3,'max_results_per_source':1},{'type':'crossref'})
     assert len(r)==3 and client.n==3
+
+
+def test_windows_bom_search_config(tmp_path):
+    config={'keywords':['oil spill'],'sources':[{'type':'openalex'}]}
+    p=tmp_path/'search.json';p.write_text(json.dumps(config),encoding='utf-8-sig')
+    assert load_config(p)['keywords']==['oil spill']
