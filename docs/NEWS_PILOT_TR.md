@@ -85,3 +85,19 @@ Yerel erişim ve kullanım koşulları kontrol edilip izinli olduğu doğrulanan
 İncelenmemiş/kapalı kaynaklar okunmaz; eksik hedef yine başarı sayılmaz. RSS akışları sonlu olduğundan 50–100 kayıt garanti edilmez. Aynı yayıncının farklı konu feed'leri bağımsız yayıncı çeşitliliği değildir; alternatif örnekte `max_per_domain=100` tek yayıncı pilotunu mümkün kılar, kaliteyi veya temsil gücünü doğrulamaz.
 
 RSS'de feed'in yayın tarihi GDELT ilk-görülme zamanından ayrı tutulur; yayın tarihi olay tarihi değildir. `lookback_days` dışındaki bilinen eski tarihler elenir, bilinmeyen tarihler null kalır. Yayıncı sayfaları otomatik indirilmez. Pilot, tam metin teyidi ve Notion aktarımı yapmaz.
+
+## Windows UnicodeDecodeError sonrası haberleri yeniden indirmeden onarma
+
+2026-10-17'de pilot raporunda bir Windows kodlama hatası yeniden üretildi: `dashboard.html` UTF-8 yazıldığı halde kodlama belirtmeden okunuyordu. Windows varsayılanı cp1254 olduğunda bazı haber başlıkları `UnicodeDecodeError` üretebiliyordu. Okuma artık açıkça UTF-8 kullanır; karakterleri silme/değiştirme veya `errors=ignore` uygulanmaz. Bu, Türkçe dışındaki haber başlıklarının da korunmasını sağlar. Windows cp1254 varsayılanını taklit eden regresyon testi eklendi; gerçek Windows çalışması kullanıcı makinesinde ayrıca kontrol edilir.
+
+Bu adım ham JSON/CSV üretiminden sonra gerçekleştiği için hata alınmış olsa da veriler kaydedilmiş olabilir. Önce güncelle, sonra önceki ham veriden **ağ isteği göndermeden** yeni klasörde rapor üret:
+
+```powershell
+git pull --ff-only
+$kayit = Get-ChildItem .\output -Filter raw_news_metadata.json -Recurse | Sort-Object LastWriteTime -Descending | Select-Object -First 1
+.\.venv\Scripts\python.exe -m mapdis_research repair-pilot --input $kayit.DirectoryName
+```
+
+Belirli bir denemeyi seçmek için `--input` değerine o çıktı klasörünü yaz. Klasörde `pilot_config.json`, `raw_news_metadata.json`, `collection_status.json` bulunmalıdır. `repair-pilot` yeni zaman damgalı klasör açar; mevcut CSV/JSON dosyalarını ve varsa insan etiketlerini değiştirmez. Yeni üretilen inceleme tablosu ham kayıtlardan oluşturulur; eski tabloda yapılmış insan etiketleri otomatik taşınmaz, eski dosyada korunur. Tamamlanan rapor, geçmiş kaynak hatalarını başarı diye gizlemez. Sıfır kayıt varsa sıfır kalır; hedefe ulaşmış gibi gösterilmez.
+
+`plastic-waste/rss` adresi kullanıcı makinesinde HTTP 404 döndüğü için kaynak şablonunda `available_for_pilot=false` ile işaretlendi; alternatif URL doğrulanmadan tahmin edilmez. Yeni şablonda tüm `enabled` alanları true yapılsa bile bu kaynak atlanır. Eski yerel yapılandırmada hâlâ bulunuyorsa 404 ayrı kaydedilir ve diğer kaynakların verileri korunur.

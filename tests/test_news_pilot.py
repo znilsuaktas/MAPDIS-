@@ -175,3 +175,59 @@ def test_rss_old_date_is_filtered_but_unknown_not_invented(monkeypatch):
 def test_windows_powershell_utf8_bom_config(tmp_path):
     p=tmp_path/'pilot.json';p.write_text(json.dumps(config()),encoding='utf-8-sig')
     assert load_pilot_config(p)['target_records']==50
+
+
+def test_pilot_report_with_windows_default_encoding(tmp_path,monkeypatch):
+    from pathlib import Path
+    original=Path.read_text
+    def windows_read(path,encoding=None,errors=None,**kwargs):
+        return original(path,encoding=encoding or 'cp1254',errors=errors,**kwargs)
+    monkeypatch.setattr(Path,'read_text',windows_read)
+    rows=raw(3);rows[0]['article']['title']='Oil spill: Łódź, İstanbul, 漏油'
+    write_pilot(rows,[],config(),tmp_path)
+    assert 'Łódź' in (tmp_path/'dashboard.html').read_text(encoding='utf-8')
+    assert 'İstanbul' in (tmp_path/'quality_report.md').read_text(encoding='utf-8')
+
+
+def test_repair_saved_pilot_without_network_or_overwrite(tmp_path,monkeypatch):
+    from mapdis_research.pilot import repair_pilot
+    from pathlib import Path
+    original=tmp_path/'original';original.mkdir()
+    (original/'pilot_config.json').write_text(json.dumps(config()),encoding='utf-8')
+    (original/'raw_news_metadata.json').write_text(json.dumps(raw(3)),encoding='utf-8')
+    (original/'collection_status.json').write_text(json.dumps([{'status':'failed','http_status':404}]),encoding='utf-8')
+    (original/'quality_review.csv').write_text('preserve this existing CSV',encoding='utf-8')
+    before={p.name:p.read_bytes() for p in original.iterdir()}
+    def deny(*a,**k):raise AssertionError('Repair must not use network')
+    monkeypatch.setattr('requests.Session.get',deny)
+    repaired=tmp_path/'repaired'
+    summary=repair_pilot(original,repaired)
+    assert summary['sample_count']==3
+    assert (repaired/'quality_report.md').is_file()
+    assert {p.name:p.read_bytes() for p in original.iterdir()}==before
+    assert main(['repair-pilot','--input',str(original),'--output',str(tmp_path/'cli')])==0
+    assert main(['repair-pilot','--input',str(original),'--output',str(original)])==2
+
+
+def test_rss_404_keeps_valid_source_records(monkeypatch):
+    import requests
+    settings=config();settings.update(provider='rss',feeds=[
+        {'url':'https://publisher.example/valid','topic':'oil','enabled':True,'terms_reviewed':True},
+        {'url':'https://publisher.example/missing','topic':'plastic','enabled':True,'terms_reviewed':True}])
+    def fetch(client,cfg,source):
+        if source['topic']=='plastic':
+            response=requests.Response();response.status_code=404
+            raise requests.HTTPError(response=response)
+        return [dict(title='Oil spill at sea',url='https://publisher.example/story',date=None,text='Feed excerpt')]
+    monkeypatch.setattr('mapdis_research.feeds.discover_feed',fetch)
+    rows,status=collect_news(settings)
+    assert len(rows)==1
+    assert status[0]['status']=='success' and status[1]['http_status']==404
+
+
+def test_known_bad_rss_stays_disabled_when_all_enabled(monkeypatch):
+    settings=config();settings.update(provider='rss',feeds=[{'url':'https://publisher.example/missing','topic':'plastic','enabled':True,'terms_reviewed':True,'available_for_pilot':False}])
+    def deny(*a,**k):raise AssertionError('Known unavailable source should not be fetched')
+    monkeypatch.setattr('mapdis_research.feeds.discover_feed',deny)
+    rows,status=collect_news(settings)
+    assert rows==[] and status[0]['status']=='unavailable'

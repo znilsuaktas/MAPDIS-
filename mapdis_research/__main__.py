@@ -17,7 +17,7 @@ from .report import write_outputs, llm_analysis
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description="MAPDIS scientific and public-web research")
-    parser.add_argument("command", choices=["run", "validate", "notion-export", "incidents", "profiles", "plan", "replay", "news-pilot", "review-pilot"])
+    parser.add_argument("command", choices=["run", "validate", "notion-export", "incidents", "profiles", "plan", "replay", "news-pilot", "review-pilot", "repair-pilot"])
     parser.add_argument("--config", default="config/sample.json")
     parser.add_argument("--output", help="New output directory; default is timestamped")
     parser.add_argument("--llm", action="store_true", help="Send excerpts to configured LLM; output is an unverified draft")
@@ -38,11 +38,15 @@ def main(argv=None):
     try:
         if args.notion_write:
             raise ValueError("Notion writes are disabled; explicit approval must be handled in a separate task")
-        if args.command in {"run", "replay", "incidents", "notion-export", "news-pilot"}:
+        if args.command in {"run", "replay", "incidents", "notion-export", "news-pilot", "repair-pilot"}:
             target = Path(args.output)
             if target.exists() and (not target.is_dir() or any(target.iterdir())):
                 logging.error("Choose a new or empty --output directory; previous results were preserved")
                 raise ValueError("Output directory must be new or empty; validated files are never overwritten")
+        if args.command == "repair-pilot":
+            from .pilot import repair_pilot
+            summary = repair_pilot(args.input, args.output)
+            return 1 if not summary["sample_count"] else 0
         if args.command == "news-pilot":
             from .pilot import load_pilot_config, collect_news, write_pilot
             config = load_pilot_config(("config/news_rss_pilot.json" if args.provider == "rss" else "config/news_pilot.json") if args.config == "config/sample.json" else args.config)

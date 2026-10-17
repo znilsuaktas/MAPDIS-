@@ -106,6 +106,10 @@ def collect_rss_news(config):
     client=Client(config)
     raw=[];statuses=[]
     for feed in config['feeds']:
+        if feed.get('available_for_pilot') is False:
+            statuses.append(dict(topic=feed['topic'],source_url=feed['url'],status='unavailable',count=0,reason=feed.get('unavailable_reason','Source disabled')) )
+            log.warning('Skipping unavailable RSS source: %s',feed['url'])
+            continue
         if not feed.get('enabled',False) or not feed.get('terms_reviewed',False):
             statuses.append(dict(topic=feed['topic'],source_url=feed['url'],status='review_required',count=0))
             log.warning('RSS source disabled pending explicit usage-terms review: %s',feed['url'])
@@ -201,7 +205,7 @@ def write_pilot(raw,statuses,config,output):
     display=[dict(r,date=r['publication_date'] or r['gdelt_seen_at'],score=None,matched_groups=r['pollution_assessment']['pollution_categories'],supporting_excerpt=r['text'] or 'Discovery title only; open source URL and review. GDELT date is first-seen time, not publication/event date.') for r in records]
     write_dashboard(display,path)
     # Replace academic-oriented labels in this metadata-only pilot view.
-    dashboard=(path/'dashboard.html').read_text().replace('Yayın tarihi','RSS yayın tarihi / GDELT ilk görülme zamanı')
+    dashboard=(path/'dashboard.html').read_text(encoding='utf-8').replace('Yayın tarihi','RSS yayın tarihi / GDELT ilk görülme zamanı')
     (path/'dashboard.html').write_text(dashboard,encoding='utf-8')
     lines=['# MAPDIS haber kalite pilotu','',f"Hedef: {metrics['target']}; örnekleme alınan gerçek haber bağlantısı: {len(records)}; eksik: {metrics['shortfall']}.",'',
            'Bu örneklem sorgu sonuçlarından konu sırasıyla dengelenir; algoritmanın ilgili bulmadığı adaylar da korunur. Sıra/sorgu/kaynak seçimi nedeniyle rastgele veya tüm haber evrenini temsil eden bir örneklem değildir.','',
@@ -221,6 +225,24 @@ def write_pilot(raw,statuses,config,output):
     if any(s['status']=='failed' for s in statuses):lines+=['','Bazı sorgular engellendi/başarısız. collection_status.json dosyasındaki hata kökenini inceleyin; sıfır/eksik veri başarı değildir.']
     (path/'quality_report.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
     return metrics
+
+
+def repair_pilot(snapshot, output):
+    """Regenerate reports from already saved inputs; no network or overwrites."""
+    source=Path(snapshot)
+    if not source.is_dir():
+        raise ValueError('Repair input must be the previous pilot output directory')
+    config=load_pilot_config(source/'pilot_config.json')
+    raw=json.loads((source/'raw_news_metadata.json').read_text(encoding='utf-8-sig'))
+    statuses=json.loads((source/'collection_status.json').read_text(encoding='utf-8-sig'))
+    if not isinstance(raw,list) or not isinstance(statuses,list):
+        raise ValueError('Invalid pilot snapshot format')
+    summary=write_pilot(raw,statuses,config,output)
+    log.info('Repaired pilot: %d/%d records. New output: %s',summary['sample_count'],summary['target'],output)
+    log.info('Original files preserved. Review: %s/quality_review.csv',output)
+    if any(s['status']=='failed' for s in statuses):
+        log.warning('Original source failures are retained in collection_status.json; they did not prevent report repair')
+    return summary
 
 
 def evaluate_reviews(path):

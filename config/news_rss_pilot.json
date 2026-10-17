@@ -6,9 +6,31 @@
   "max_per_domain": 100,
   "request_interval_seconds": 5,
   "feeds": [
-    {"topic": "oil", "url": "https://www.theguardian.com/environment/oil-spills/rss", "enabled": false, "terms_reviewed": false},
-    {"topic": "plastic", "url": "https://www.theguardian.com/environment/plastic-waste/rss", "enabled": false, "terms_reviewed": false},
-    {"topic": "water", "url": "https://www.theguardian.com/environment/water/rss", "enabled": false, "terms_reviewed": false},
-    {"topic": "pollution", "url": "https://www.theguardian.com/environment/pollution/rss", "enabled": false, "terms_reviewed": false}
+    {
+      "topic": "oil",
+      "url": "https://www.theguardian.com/environment/oil-spills/rss",
+      "enabled": false,
+      "terms_reviewed": false
+    },
+    {
+      "topic": "plastic",
+      "url": "https://www.theguardian.com/environment/plastic-waste/rss",
+      "enabled": false,
+      "terms_reviewed": false,
+      "available_for_pilot": false,
+      "unavailable_reason": "Reported HTTP 404 on 2026-10-17; no replacement URL has been verified."
+    },
+    {
+      "topic": "water",
+      "url": "https://www.theguardian.com/environment/water/rss",
+      "enabled": false,
+      "terms_reviewed": false
+    },
+    {
+      "topic": "pollution",
+      "url": "https://www.theguardian.com/environment/pollution/rss",
+      "enabled": false,
+      "terms_reviewed": false
+    }
   ]
 }
